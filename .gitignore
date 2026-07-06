@@ -1,0 +1,19 @@
+# Next.js
+.next/
+node_modules/
+out/
+build/
+.env.local
+.env*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+medcortex.db
+.DS_Store

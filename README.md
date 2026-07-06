@@ -50,9 +50,10 @@ The system uses a **FastAPI backend** with a **Next.js 14 frontend**, featuring 
 | 🎯 **Cited Answers** | Every response cites the exact book and section the information came from |
 | 🚫 **No Hallucinations** | Strictly grounded — refuses to answer if the context doesn't contain the answer |
 | 👨‍⚕️ **Doctor Recommendations** | Egypt-specific clinic/doctor search with Google Maps integration |
+| 💊 **Pre-computed tabs** | Parallel preloaded Specialist tabs (Drugs, Nutrition, Rehab) using optimized 8B models |
 | 🔐 **Full Auth System** | JWT-based login/signup with optional Google OAuth |
-| 💬 **Conversation History** | Persistent chat sessions with message history |
-| 🎨 **Beautiful UI** | Next.js 14 + Tailwind CSS with animated wave layouts and floating inputs |
+| 💬 **Conversation History** | Persistent chat sessions with message history and preloaded clinical plans |
+| 🎨 **Premium UI/Dashboard** | Glassmorphism dashboard with progress timelines, metrics, and animated wave layouts |
 
 ---
 
@@ -524,10 +525,12 @@ Run the notebooks in order:
 
 ## 🔮 Roadmap
 
+- [x] Parallel Specialist Branches (Drugs, Nutrition, Rehab)
+- [x] Drug interaction checker module
+- [x] Geographically aware Egypt-specific doctor recommendations
 - [ ] Add structured NIH MedlinePlus chunks to Pinecone (separate namespace)
 - [ ] Implement hybrid search (dense + sparse BM25)
 - [ ] Add multi-turn conversation memory with context retention
-- [ ] Drug interaction checker module
 - [ ] Symptom checker with differential diagnosis scoring
 - [ ] Mobile app (React Native)
 - [ ] Fine-tuned medical embedding model

@@ -1,0 +1,2 @@
+"""MedCortex backend application package."""
+
