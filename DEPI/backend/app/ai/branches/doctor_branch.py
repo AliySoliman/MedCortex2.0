@@ -317,7 +317,7 @@ def get_embedding(text: str) -> list:
 
 
 # ── Main search function ───────────────────────────────
-def search_egyptian_doctors(query: str, location: str = None, specialty: str = None) -> List[Dict[str, Any]]:
+def search_egyptian_doctors(query: str, location: str = None, specialty: str = None, user_coordinates: dict = None) -> List[Dict[str, Any]]:
     """
     Main Egyptian doctor search function.
     
@@ -325,6 +325,7 @@ def search_egyptian_doctors(query: str, location: str = None, specialty: str = N
         query: The search query (may include symptoms, specialty, location)
         location: Optional specific location override
         specialty: Optional specific specialty override
+        user_coordinates: Optional user coordinates dict with 'lat' and 'lng' keys
     
     Returns: Ranked list of doctor dicts
     """
@@ -365,9 +366,14 @@ def search_egyptian_doctors(query: str, location: str = None, specialty: str = N
     if geo_lat is not None:
         REF_LAT, REF_LNG = geo_lat, geo_lng
         location_detected = True
+    elif user_coordinates is not None and user_coordinates.get('lat') and user_coordinates.get('lng'):
+        REF_LAT, REF_LNG = float(user_coordinates['lat']), float(user_coordinates['lng'])
+        location_detected = True
+        print(f"  ✓ Using user coordinates: {REF_LAT}, {REF_LNG}")
     else:
         REF_LAT, REF_LNG = USER_LAT, USER_LNG
         boundary_polygon  = None
+        print(f"  ⚠️  No location detected, using default Cairo coordinates")
 
     geo_filter = None
     query_top_k = TOP_K

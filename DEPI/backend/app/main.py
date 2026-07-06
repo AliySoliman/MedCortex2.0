@@ -30,6 +30,7 @@ from app.api.history import router as history_router
 from app.api.upload import router as upload_router
 from app.api.transcribe import router as transcribe_router
 from app.api.egyptian_doctors import router as egyptian_doctors_router
+from app.api.egyptian_hospitals import router as egyptian_hospitals_router
 from app.api.drugs import router as drugs_router
 from app.api.nutrition import router as nutrition_router
 from app.api.rehab import router as rehab_router
@@ -63,6 +64,7 @@ app.include_router(history_router)
 app.include_router(upload_router)
 app.include_router(transcribe_router)
 app.include_router(egyptian_doctors_router)
+app.include_router(egyptian_hospitals_router)
 app.include_router(drugs_router)
 app.include_router(nutrition_router)
 app.include_router(rehab_router)

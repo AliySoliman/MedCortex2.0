@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { useState, useEffect, useCallback } from "react";
 import { useDoctorRecommendations, type Doctor as RecommendedDoctor } from "@/hooks/useDoctorRecommendations";
 import { useEgyptianDoctors } from "@/hooks/useEgyptianDoctors";
+import { useEgyptianHospitals } from "@/hooks/useEgyptianHospitals";
 import { useDrugs } from "@/hooks/useDrugs";
 import { useNutrition } from "@/hooks/useNutrition";
 import { useRehab } from "@/hooks/useRehab";
@@ -33,7 +34,7 @@ interface ResponseCardProps {
   userQuery?: string;
 }
 
-type Tab = "diagnosis" | "lifestyle" | "doctors" | "drugs" | "nutrition" | "rehab";
+type Tab = "diagnosis" | "lifestyle" | "doctors" | "hospitals" | "drugs" | "nutrition" | "rehab";
 type DoctorTab = "foreign" | "egyptian";
 
 type DisplayDoctor = {
@@ -154,6 +155,14 @@ export default function ResponseCard({ data, referral = null, coordinates = null
     searchEgyptianDoctors,
   } = useEgyptianDoctors();
 
+  // ── Egyptian Hospitals ─────────────────────────────────────────────────────
+  const {
+    hospitals: egyptianHospitals,
+    loading: hospitalsLoading,
+    error: hospitalsError,
+    searchEgyptianHospitals,
+  } = useEgyptianHospitals();
+
   // ── Drugs / Nutrition / Rehab ─────────────────────────────────────────────
   const { answer: drugsAnswer, loading: drugsLoading, error: drugsError, getDrugInfo } = useDrugs(data.drugs_answer);
   const { answer: nutritionAnswer, loading: nutritionLoading, error: nutritionError, getNutritionInfo } = useNutrition(data.nutrition_answer);
@@ -174,9 +183,15 @@ export default function ResponseCard({ data, referral = null, coordinates = null
   useEffect(() => {
     if (activeTab === "doctors" && activeDoctorTab === "egyptian") {
       const specialty = referral?.specialist || data.suspected_conditions[0] || "general";
-      searchEgyptianDoctors(specialty);
+      searchEgyptianDoctors(specialty, undefined, undefined, coordinates);
     }
-  }, [activeTab, activeDoctorTab, referral, data.suspected_conditions, searchEgyptianDoctors]);
+  }, [activeTab, activeDoctorTab, referral, data.suspected_conditions, searchEgyptianDoctors, coordinates]);
+
+  useEffect(() => {
+    if (activeTab === "hospitals") {
+      searchEgyptianHospitals(undefined, coordinates);
+    }
+  }, [activeTab, coordinates, searchEgyptianHospitals]);
 
   useEffect(() => {
     if (activeTab === "drugs" && !drugsAnswer && !drugsLoading) {
@@ -245,6 +260,7 @@ export default function ResponseCard({ data, referral = null, coordinates = null
     { key: "diagnosis", label: "Diagnosis", emoji: "🩺" },
     { key: "lifestyle", label: "Lifestyle", emoji: "🥗" },
     { key: "doctors", label: "Doctors", emoji: "👨‍⚕️" },
+    { key: "hospitals", label: "Hospitals", emoji: "🏥" },
     { key: "drugs", label: "Drugs", emoji: "💊" },
     { key: "nutrition", label: "Nutrition", emoji: "🥗" },
     { key: "rehab", label: "Rehab", emoji: "🏃" },
@@ -420,6 +436,69 @@ export default function ResponseCard({ data, referral = null, coordinates = null
                 ) : (
                   egyptianDoctorsForDisplay.map((doc, i) => <DoctorCard key={i} doctor={doc} />)
                 )}
+              </div>
+            )}
+          </div>
+        )}
+
+        {activeTab === "hospitals" && (
+          <div className="space-y-3">
+            <p className="text-xs text-[#8f8f95]">
+              Egyptian hospitals are searched based on your location using our local database.
+            </p>
+            {hospitalsLoading ? (
+              <div className="space-y-3">
+                <div className="animate-pulse rounded-xl border border-[#ebebef] bg-[#fafafa] p-4">
+                  <div className="h-4 w-40 rounded bg-[#ececf2]" />
+                  <div className="mt-3 h-3 w-64 rounded bg-[#ececf2]" />
+                </div>
+              </div>
+            ) : hospitalsError ? (
+              <p className="py-6 text-center text-sm text-red-600">
+                {hospitalsError}
+              </p>
+            ) : egyptianHospitals.length === 0 ? (
+              <p className="py-6 text-center text-sm text-[#8f8f95]">
+                No Egyptian hospital results available. Try providing more specific location information.
+              </p>
+            ) : (
+              <div className="space-y-3">
+                {egyptianHospitals.slice(0, 10).map((hospital, i) => (
+                  <div
+                    key={`${hospital.name}-${hospital.address}-${i}`}
+                    className="rounded-xl border border-[#ebebef] bg-[#fafafa] p-3"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="font-semibold text-[#111]">{hospital.name}</p>
+                        <p className="mt-1 text-xs text-[#6b6b76]">{hospital.address}</p>
+                        <p className="mt-1 text-xs text-[#6b6b76]">
+                          <span className="font-medium">Governorate:</span> {hospital.governorate}
+                        </p>
+                        {hospital.distance !== null ? (
+                          <p className="mt-1 text-xs text-[#6b6b76]">
+                            📍 {hospital.distance.toFixed(2)} km away
+                          </p>
+                        ) : null}
+                      </div>
+                      <div className="text-right">
+                        <span className="rounded-full bg-[#f4eeff] px-2 py-1 text-[11px] font-medium text-[#6f4ef2]">
+                          Egyptian Hospital
+                        </span>
+                        {hospital.latitude && hospital.longitude ? (
+                          <a
+                            href={`https://www.google.com/maps/search/?api=1&query=${hospital.latitude},${hospital.longitude}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 block text-xs font-medium text-[#6f4ef2] hover:underline"
+                          >
+                            View on Maps
+                          </a>
+                        ) : null}
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             )}
           </div>

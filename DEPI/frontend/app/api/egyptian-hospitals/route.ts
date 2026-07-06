@@ -1,6 +1,6 @@
-// frontend/app/api/egyptian-doctors/route.ts
+// frontend/app/api/egyptian-hospitals/route.ts
 // ─────────────────────────────────────────────────────────────────────────────
-// API route for Egyptian doctors search
+// API route for Egyptian hospitals search
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { NextRequest, NextResponse } from "next/server";
@@ -8,10 +8,10 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { query, location, specialty, userCoordinates } = body;
+    const { query, userCoordinates, governorate } = body;
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/egyptian-doctors`,
+      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/egyptian-hospitals`,
       {
         method: "POST",
         headers: {
@@ -19,9 +19,8 @@ export async function POST(request: NextRequest) {
         },
         body: JSON.stringify({
           query,
-          location,
-          specialty,
           userCoordinates,
+          governorate,
         }),
       }
     );
@@ -33,9 +32,9 @@ export async function POST(request: NextRequest) {
     const data = await response.json();
     return NextResponse.json(data);
   } catch (error) {
-    console.error("Egyptian doctors API error:", error);
+    console.error("Egyptian hospitals API error:", error);
     return NextResponse.json(
-      { error: "Failed to search Egyptian doctors" },
+      { error: "Failed to search Egyptian hospitals" },
       { status: 500 }
     );
   }

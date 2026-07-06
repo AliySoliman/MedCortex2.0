@@ -18,6 +18,7 @@ class DoctorSearchRequest(BaseModel):
     query: str
     location: str | None = None
     specialty: str | None = None
+    userCoordinates: dict | None = None
 
 
 @router.post("", status_code=status.HTTP_200_OK)
@@ -35,6 +36,7 @@ async def search_egyptian_doctors(request: DoctorSearchRequest):
             query=request.query,
             location=request.location,
             specialty=request.specialty,
+            user_coordinates=request.userCoordinates,
         )
         
         return JSONResponse(content={

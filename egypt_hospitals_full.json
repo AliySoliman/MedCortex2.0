@@ -1,0 +1,4834 @@
+[
+    {
+        "osm_id": "node/366500797",
+        "governorate": "الجيزة",
+        "name": "معهد القلب (Maahad El Qalb)",
+        "address": "معهد القلب، شارع النبوى المهندس، كيت كات، الجيزة",
+        "latitude": 30.064775,
+        "longitude": 31.2098013
+    },
+    {
+        "osm_id": "node/411676470",
+        "governorate": "القاهرة",
+        "name": "مستشفى القوات الجوية (Al-Quwat Al-Gaweya Hospital)",
+        "address": "مستشفى القوات الجوية، شارع احمد سعيد، العباسيه الشرقيه، الوايلى، القاهرة",
+        "latitude": 30.0624158,
+        "longitude": 31.2738254
+    },
+    {
+        "osm_id": "node/411895460",
+        "governorate": "القاهرة",
+        "name": "مستشفى القاهرة التخصصي (Cairo Specialized Hospital)",
+        "address": "مستشفى القاهرة التخصصي، شارع ابو عبيد البكرى، قسم مصر الجديدة، الزيتون، القاهرة",
+        "latitude": 30.0945129,
+        "longitude": 31.317617
+    },
+    {
+        "osm_id": "node/414554419",
+        "governorate": "القاهرة",
+        "name": "دار المقطم (Dar Al-Moqattam)",
+        "address": "دار المقطم، شارع 14، الخليفة، القاهرة",
+        "latitude": 30.0112377,
+        "longitude": 31.2854199
+    },
+    {
+        "osm_id": "node/443368255",
+        "governorate": "القاهرة",
+        "name": "مركز الإيمان الطبي (El Eman Medical Center)",
+        "address": "مركز الإيمان الطبي، شارع لوساكا، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.0642054,
+        "longitude": 31.3455818
+    },
+    {
+        "osm_id": "node/452376256",
+        "governorate": "القاهرة",
+        "name": "النزهة الدولي (Al-Nozha Al-Dawly)",
+        "address": "النزهة الدولي، شارع كمال الدين حسين، شيراتون، القاهرة",
+        "latitude": 30.1058829,
+        "longitude": 31.3661322
+    },
+    {
+        "osm_id": "node/475367904",
+        "governorate": "القاهرة",
+        "name": "مستشفى الفتح الإسلامي (Alfath Islamic Hospital)",
+        "address": "مستشفى الفتح الإسلامي، شارع 9، معادي الخبيري، الفاروقية، القاهرة",
+        "latitude": 29.9660774,
+        "longitude": 31.2542684
+    },
+    {
+        "osm_id": "node/517381615",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى ذهب الإختصاصي (Dahab Specialised Hospital)",
+        "address": "مستشفى ذهب الإختصاصي، شارع عباس العقاد، مدينه دهب، مشربة، دهب، جنوب سيناء",
+        "latitude": 28.4883845,
+        "longitude": 34.5114594
+    },
+    {
+        "osm_id": "node/523254716",
+        "governorate": "القاهرة",
+        "name": "مستشفى عامة",
+        "address": "شارع ابن هانى الاندلسى، المنطقة الأولى، مدينة نصر، القاهرة",
+        "latitude": 30.062687,
+        "longitude": 31.3270141
+    },
+    {
+        "osm_id": "node/570069182",
+        "governorate": "الشرقية",
+        "name": "مستشفى ابن سينا",
+        "address": "مستشفى ابن سينا، شارع عمر بن عبد العزيز، المجاورة 9، العاشر من رمضان، الشرقية",
+        "latitude": 30.293659,
+        "longitude": 31.7307662
+    },
+    {
+        "osm_id": "node/570069186",
+        "governorate": "الشرقية",
+        "name": "ميتشفى شرف",
+        "address": "ميتشفى شرف، شارع عمر بن عبد العزيز، المجاورة 9، العاشر من رمضان، الشرقية",
+        "latitude": 30.2890918,
+        "longitude": 31.7314033
+    },
+    {
+        "osm_id": "node/570069286",
+        "governorate": "الشرقية",
+        "name": "مستشفى التأمين الصحي",
+        "address": "مستشفى التأمين الصحي، شارع ابو بكر الصديق، م ج 2، العاشر من رمضان، الشرقية",
+        "latitude": 30.2863681,
+        "longitude": 31.7492561
+    },
+    {
+        "osm_id": "node/595353701",
+        "governorate": "مطروح",
+        "name": "مستشفى مطروح العام (Matrouh General Hospital)",
+        "address": "مستشفى مطروح العام، شارع اسكندرية، محدرة، مرسى مطروح، مطروح",
+        "latitude": 31.3492419,
+        "longitude": 27.2413592
+    },
+    {
+        "osm_id": "node/653596105",
+        "governorate": "القاهرة",
+        "name": "مستشفي النصر (El nasr)",
+        "address": "مستشفي النصر، شارع عمر بن عبد العزيز، حلوان، القاهرة",
+        "latitude": 29.8399443,
+        "longitude": 31.3229757
+    },
+    {
+        "osm_id": "node/662158924",
+        "governorate": "القاهرة",
+        "name": "مستشفى طلبة البؤث (Talabat Al-Boouth Hospital)",
+        "address": "مستشفى طلبة البؤث، شارع الفردوس، الجنزورى، الوايلى، القاهرة",
+        "latitude": 30.0579734,
+        "longitude": 31.2771374
+    },
+    {
+        "osm_id": "node/663080305",
+        "governorate": "القاهرة",
+        "name": "مستشفى المقطم (Al-Muqattam Hospital)",
+        "address": "مستشفى المقطم، شارع مجري العيون، حدائق زينهم، عين الصيرة، القاهرة",
+        "latitude": 30.0209068,
+        "longitude": 31.2431749
+    },
+    {
+        "osm_id": "node/665450260",
+        "governorate": "القاهرة",
+        "name": "مستشفى كوبري القبة العسكري (Kobry Alkoba Military Hospital)",
+        "address": "مستشفى كوبري القبة العسكري، شارع الخليفه المأمون، قسم مصر الجديدة، منشية البكرى، الدمرداش، القاهرة",
+        "latitude": 30.0846029,
+        "longitude": 31.2973393
+    },
+    {
+        "osm_id": "node/678457937",
+        "governorate": "القاهرة",
+        "name": "مستشفى الميرغنى (El Merghany hospital)",
+        "address": "مستشفى الميرغنى، شارع محمود ابو الليل، الجولف، مدينة نصر، القاهرة",
+        "latitude": 30.0815072,
+        "longitude": 31.3317412
+    },
+    {
+        "osm_id": "node/687745925",
+        "governorate": "الجيزة",
+        "name": "مستشفى عامة",
+        "address": "شارع جلال الدين الحمامصى، ميت عقبة، الجيزة",
+        "latitude": 30.0664715,
+        "longitude": 31.1951099
+    },
+    {
+        "osm_id": "node/741702670",
+        "governorate": "القاهرة",
+        "name": "مستشفى مصر للطيران (Egypt Air Hospital)",
+        "address": "مستشفى مصر للطيران، شارع ابو بكر الصديق، مصر الجديدة، القاهرة",
+        "latitude": 30.091848,
+        "longitude": 31.3489159
+    },
+    {
+        "osm_id": "node/768600810",
+        "governorate": "الغربية",
+        "name": "صيدلية د / أسماء عبيد (DrAsmaaEbeidPharmacy)",
+        "address": "صيدلية د / أسماء عبيد، شارع السكة الحديد، مدينه سمنود، الغربية",
+        "latitude": 30.962778,
+        "longitude": 31.244444
+    },
+    {
+        "osm_id": "node/903481454",
+        "governorate": "الجيزة",
+        "name": "مستشفى الرماد (Al-Ramad Hospital)",
+        "address": "مستشفى الرماد، شارع الاهرام، بين السرايات، الجيزة",
+        "latitude": 30.0152542,
+        "longitude": 31.2156569
+    },
+    {
+        "osm_id": "node/1179121562",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى ماري مرقص (Al-Qiddissin)",
+        "address": "مستشفى ماري مرقص، شارع زيد بن ثابت، ميامي، الإسكندرية",
+        "latitude": 31.2636249,
+        "longitude": 29.9917679
+    },
+    {
+        "osm_id": "node/1438270139",
+        "governorate": "القاهرة",
+        "name": "منظمه الصحه العالمية (World Health Organisation)",
+        "address": "منظمه الصحه العالمية، شارع دكتور محمود ياسين، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.0637093,
+        "longitude": 31.3473432
+    },
+    {
+        "osm_id": "node/1493105013",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى عامة",
+        "address": "طريق القصير، مرسى علم، Madinat Coraya، البحر الأحمر",
+        "latitude": 25.9148007,
+        "longitude": 34.4046055
+    },
+    {
+        "osm_id": "node/1698478723",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي مصطفي كامل (Mostafa Kamel Hospital)",
+        "address": "مستشفي مصطفي كامل، شارع المشير احمد اسماعيل، الإسكندرية",
+        "latitude": 31.2258268,
+        "longitude": 29.9408078
+    },
+    {
+        "osm_id": "node/1844289361",
+        "governorate": "الإسكندرية",
+        "name": "معهد البحوث الطبيه (Institute for Medical Research)",
+        "address": "معهد البحوث الطبيه، شارع مسجد المواساه، إبراهيمية، الإسكندرية",
+        "latitude": 31.2052904,
+        "longitude": 29.9275717
+    },
+    {
+        "osm_id": "node/1844290834",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي المواساه (Al-Muwasah Hospital)",
+        "address": "مستشفي المواساه، شارع مسجد المواساه، إبراهيمية، الإسكندرية",
+        "latitude": 31.2043914,
+        "longitude": 29.9286838
+    },
+    {
+        "osm_id": "node/1888411221",
+        "governorate": "المنيا",
+        "name": "بنك الدم الإقليمى (Regional Blood Bank)",
+        "address": "بنك الدم الإقليمى، شارع محمد بدوى، خاطر على، المنيا",
+        "latitude": 28.0912713,
+        "longitude": 30.7643128
+    },
+    {
+        "osm_id": "node/1888411228",
+        "governorate": "المنيا",
+        "name": "معهد الأورام (Cancer Institute)",
+        "address": "معهد الأورام، شارع كورنيش النيل، خاطر على، المنيا",
+        "latitude": 28.0916688,
+        "longitude": 30.7645596
+    },
+    {
+        "osm_id": "node/1888411235",
+        "governorate": "المنيا",
+        "name": "مستوصف الجمعية الشرعية (Legal Assembly Hospital)",
+        "address": "مستوصف الجمعية الشرعية، شارع مرسى، عمار حسين، المنيا",
+        "latitude": 28.0841913,
+        "longitude": 30.7624353
+    },
+    {
+        "osm_id": "node/1888451891",
+        "governorate": "المنيا",
+        "name": "مستشفى المبرة (Al-Mabra Hospital)",
+        "address": "مستشفى المبرة، شارع محمود فهمي النقراشى، سيد جلال، المنيا",
+        "latitude": 28.0965337,
+        "longitude": 30.759458
+    },
+    {
+        "osm_id": "node/1920589480",
+        "governorate": "الجيزة",
+        "name": "مركز عدن الطبى",
+        "address": "مركز عدن الطبى، شارع ترعه الزمر، ارض الواء، المهندسين، نزلة بهجت، الجيزة",
+        "latitude": 30.0540358,
+        "longitude": 31.1896206
+    },
+    {
+        "osm_id": "node/1939482580",
+        "governorate": "الجيزة",
+        "name": "مستشفى المروة التخصصى (Al-Marwa Specialised Hospital)",
+        "address": "مستشفى المروة التخصصى، شارع صلاح سالم، الجيزة",
+        "latitude": 29.9972489,
+        "longitude": 31.2092094
+    },
+    {
+        "osm_id": "node/2001022531",
+        "governorate": "جنوب سيناء",
+        "name": "Nabq Dental Clinic",
+        "address": "Nabq Dental Clinic، طريق السلام، النبق، خليج نبق، جنوب سيناء",
+        "latitude": 28.0347708,
+        "longitude": 34.4329047
+    },
+    {
+        "osm_id": "node/2007861753",
+        "governorate": "الدقهلية",
+        "name": "Makka Hospital",
+        "address": "Makka Hospital، شارع النزهة، مدينه السنبلاوين، السنبلاوين، الدقهلية",
+        "latitude": 30.8844477,
+        "longitude": 31.4574967
+    },
+    {
+        "osm_id": "node/2268006755",
+        "governorate": "القاهرة",
+        "name": "مستشفى النور المحمدى (Al-Nour Al-Mohammady Hospital)",
+        "address": "مستشفى النور المحمدى، طريق مسطرد القديم، المطريه الغربيه، عين شمس، القاهرة",
+        "latitude": 30.1269386,
+        "longitude": 31.3077521
+    },
+    {
+        "osm_id": "node/2268006756",
+        "governorate": "القليوبية",
+        "name": "مستشفى الحق (Al-Haqq Hospital)",
+        "address": "مستشفى الحق، شارع المشروع، عرب الطويلة، مسطرد، شبرا الخيمة، القليوبية",
+        "latitude": 30.1333088,
+        "longitude": 31.3139962
+    },
+    {
+        "osm_id": "node/2297109152",
+        "governorate": "شمال سيناء",
+        "name": "مستشفى رفح (Rafah Hopital)",
+        "address": "مستشفى رفح، el Bahr، شمال سيناء",
+        "latitude": 31.2562276,
+        "longitude": 34.2279393
+    },
+    {
+        "osm_id": "node/2429005805",
+        "governorate": "جنوب سيناء",
+        "name": "El Wekala Medical Centre",
+        "address": "El Wekala Medical Centre، طريق نويبع، طابا، مدينه طابا، Taba Heights، طابا، جنوب سيناء",
+        "latitude": 29.3925571,
+        "longitude": 34.7926172
+    },
+    {
+        "osm_id": "node/2524330848",
+        "governorate": "الشرقية",
+        "name": "مستشفى عامة",
+        "address": "شارع الحسين، المجاورة 32، العاشر من رمضان، الشرقية",
+        "latitude": 30.3023768,
+        "longitude": 31.7703995
+    },
+    {
+        "osm_id": "node/2524331007",
+        "governorate": "الشرقية",
+        "name": "مستشفى خميس التخصصي",
+        "address": "مستشفى خميس التخصصي، شارع الطائف، المجاورة 22، العاشر من رمضان، الشرقية",
+        "latitude": 30.2917256,
+        "longitude": 31.7566488
+    },
+    {
+        "osm_id": "node/2549916507",
+        "governorate": "الجيزة",
+        "name": "د.محمد البراغى (Dr.Mohamed El baraghi)",
+        "address": "د.محمد البراغى، محور الكفراوى، المحور المركزي السكني، الحى الثالث، السادس من أكتوبر، الجيزة",
+        "latitude": 29.9667244,
+        "longitude": 30.9337571
+    },
+    {
+        "osm_id": "node/2550066152",
+        "governorate": "الجيزة",
+        "name": "مركز الحصرى الصحى (AL Hosary medical department)",
+        "address": "مركز الحصرى الصحى، طريق التحرير، المحور المركزي السكني، الحى الثامن، السادس من أكتوبر، الجيزة",
+        "latitude": 29.9730095,
+        "longitude": 30.9437865
+    },
+    {
+        "osm_id": "node/2621106542",
+        "governorate": "القاهرة",
+        "name": "مستشفى جوهار (Gohar Hospital)",
+        "address": "مستشفى جوهار، شارع الامام البخاري، قباء، القاهرة",
+        "latitude": 30.1459715,
+        "longitude": 31.3955566
+    },
+    {
+        "osm_id": "node/2624645240",
+        "governorate": "الجيزة",
+        "name": "مركز الأهرام للأشعة",
+        "address": "مركز الأهرام للأشعة، المحور المركزى، المحور المركزي السكني، الحى الثالث، السادس من أكتوبر، الجيزة",
+        "latitude": 29.9673265,
+        "longitude": 30.9359698
+    },
+    {
+        "osm_id": "node/2722597993",
+        "governorate": "الإسماعيلية",
+        "name": "عيادة الدكتور عبد الحميد صبح",
+        "address": "عيادة الدكتور عبد الحميد صبح، شارع طارق بن زياد، الإسماعيلية",
+        "latitude": 30.5902189,
+        "longitude": 32.2626943
+    },
+    {
+        "osm_id": "node/3118523495",
+        "governorate": "الدقهلية",
+        "name": "مستشفى الجزيرة الدولى - السلاب (Gezeera International Hospital - El Sallab)",
+        "address": "مستشفى الجزيرة الدولى - السلاب، شارع محمد عاطف المنجى، اول ميت طلخا، طلخا، الدقهلية",
+        "latitude": 31.0453946,
+        "longitude": 31.3656479
+    },
+    {
+        "osm_id": "node/3119668295",
+        "governorate": "الدقهلية",
+        "name": "Al-Hekma Hospital",
+        "address": "Al-Hekma Hospital، شارع الشيخ سعد، خامس صيام، المنصورة، الدقهلية",
+        "latitude": 31.0475408,
+        "longitude": 31.3886277
+    },
+    {
+        "osm_id": "node/3157884695",
+        "governorate": "القاهرة",
+        "name": "مستشفي الدعاة",
+        "address": "مستشفي الدعاة، شارع محمد شفيق، مصر الجديدة، القاهرة",
+        "latitude": 30.1042297,
+        "longitude": 31.338523
+    },
+    {
+        "osm_id": "node/3208430197",
+        "governorate": "الجيزة",
+        "name": "فيني",
+        "address": "فيني، شارع عبد الرحيم صبري، الدقى، الجيزة",
+        "latitude": 30.0414944,
+        "longitude": 31.2143358
+    },
+    {
+        "osm_id": "node/3214300154",
+        "governorate": "الجيزة",
+        "name": "مستشفى 6 اكتوبر (6 October Hospiatl)",
+        "address": "مستشفى 6 اكتوبر، شارع الموسيقار على اسماعيل، الدقى، الجيزة",
+        "latitude": 30.0374677,
+        "longitude": 31.2144598
+    },
+    {
+        "osm_id": "node/3290355573",
+        "governorate": "الشرقية",
+        "name": "ibarhim shabaan pharmacy",
+        "address": "ibarhim shabaan pharmacy، شارع المستشفى، مدينه منيا القمح، الشرقية",
+        "latitude": 30.5196212,
+        "longitude": 31.3534174
+    },
+    {
+        "osm_id": "node/3395906136",
+        "governorate": "القاهرة",
+        "name": "مركز الطبيب (Al Tabib Centre)",
+        "address": "مركز الطبيب، شارع الخليفه الظاهر، التجمع الخامس، أحياء التجمع الخامس، القاهرة",
+        "latitude": 30.0039967,
+        "longitude": 31.4224834
+    },
+    {
+        "osm_id": "node/3458193051",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى شرق المدينة",
+        "address": "مستشفى شرق المدينة، شارع طلحه، ميامي، الإسكندرية",
+        "latitude": 31.2620088,
+        "longitude": 29.9923347
+    },
+    {
+        "osm_id": "node/3748661346",
+        "governorate": "الشرقية",
+        "name": "مستشفى فرسيس",
+        "address": "مستشفى فرسيس، شارع نادى بلاتينيوم الرياضى، farsis، إكو، الشرقية",
+        "latitude": 30.6726112,
+        "longitude": 31.4675882
+    },
+    {
+        "osm_id": "node/3893917394",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى إبراهيم عبيد التخصصي",
+        "address": "مستشفى إبراهيم عبيد التخصصي، شارع عبد السلام عارف، فلمنج، الإسكندرية",
+        "latitude": 31.2376371,
+        "longitude": 29.9580884
+    },
+    {
+        "osm_id": "node/3949929966",
+        "governorate": "القاهرة",
+        "name": "Nasr el Islam Hosiptal",
+        "address": "Nasr el Islam Hosiptal، شارع الترعه الشرقي، منيه السيرج، الشرابية، القاهرة",
+        "latitude": 30.088695,
+        "longitude": 31.2538297
+    },
+    {
+        "osm_id": "node/3966621290",
+        "governorate": "الجيزة",
+        "name": "مستشفي الواحة",
+        "address": "مستشفي الواحة، شارع دكتور على السيد، ميت عقبة، الجيزة",
+        "latitude": 30.0650864,
+        "longitude": 31.2008468
+    },
+    {
+        "osm_id": "node/3966621667",
+        "governorate": "القاهرة",
+        "name": "مستشفي الهلال الأحمر المصري",
+        "address": "مستشفي الهلال الأحمر المصري، شارع محمد حماد، حلوان، القاهرة",
+        "latitude": 29.8599171,
+        "longitude": 31.3213395
+    },
+    {
+        "osm_id": "node/3966621672",
+        "governorate": "الشرقية",
+        "name": "مستشفي المبرة",
+        "address": "مستشفي المبرة، شارع سعد باشا زغلول، منشاه أباظة، كفر الزند، الشرقية",
+        "latitude": 30.5855544,
+        "longitude": 31.4915372
+    },
+    {
+        "osm_id": "node/3966621673",
+        "governorate": "القاهرة",
+        "name": "مجلس طبي وزارة الطيران المدنى",
+        "address": "مجلس طبي وزارة الطيران المدنى، طريق المطار، القاهرة",
+        "latitude": 30.1183131,
+        "longitude": 31.3887808
+    },
+    {
+        "osm_id": "node/3966622155",
+        "governorate": "الفيوم",
+        "name": "مستشفي التامين الصحي بالفيوم",
+        "address": "مستشفي التامين الصحي بالفيوم، شارع احمد حلمى، اول النجارين، الفيوم",
+        "latitude": 29.3106514,
+        "longitude": 30.859477
+    },
+    {
+        "osm_id": "node/3966622156",
+        "governorate": "الجيزة",
+        "name": "معهد بحوث امراض الرمد",
+        "address": "معهد بحوث امراض الرمد، شارع الاهرام، بين السرايات، الجيزة",
+        "latitude": 30.0154743,
+        "longitude": 31.2163557
+    },
+    {
+        "osm_id": "node/3966622817",
+        "governorate": "القليوبية",
+        "name": "عيادة التامين الصحي بالعبور (القليوبية)",
+        "address": "عيادة التامين الصحي بالعبور (القليوبية)، شارع 86، اسكان الشباب، العبور، القليوبية",
+        "latitude": 30.2561237,
+        "longitude": 31.4744552
+    },
+    {
+        "osm_id": "node/3966622857",
+        "governorate": "الجيزة",
+        "name": "معهد الرمد التذكاري للابحاث",
+        "address": "معهد الرمد التذكاري للابحاث، شارع الفاتح، بين السرايات، الجيزة",
+        "latitude": 30.0154244,
+        "longitude": 31.2154001
+    },
+    {
+        "osm_id": "node/3979548721",
+        "governorate": "البحيرة",
+        "name": "مستشفى هيفاء الطبى",
+        "address": "مستشفى هيفاء الطبى، شارع المدارس، المجد، البحيرة",
+        "latitude": 31.0968978,
+        "longitude": 30.6736142
+    },
+    {
+        "osm_id": "node/4030318934",
+        "governorate": "قنا",
+        "name": "الوحده الصحية",
+        "address": "الوحده الصحية، شارع مسجد الامارات، قرية الصبريات، قنا",
+        "latitude": 26.1181687,
+        "longitude": 32.432933
+    },
+    {
+        "osm_id": "node/4229667089",
+        "governorate": "أسيوط",
+        "name": "Arc Angle Mikhael Hospital",
+        "address": "Arc Angle Mikhael Hospital، شارع صلاح الدين الايوبى، سابع، أسيوط",
+        "latitude": 27.1838228,
+        "longitude": 31.1862351
+    },
+    {
+        "osm_id": "node/4229667090",
+        "governorate": "أسيوط",
+        "name": "El Zerayeen Hospital",
+        "address": "El Zerayeen Hospital، شارع المساحة، أسيوط",
+        "latitude": 27.1858024,
+        "longitude": 31.1866477
+    },
+    {
+        "osm_id": "node/4229667091",
+        "governorate": "أسيوط",
+        "name": "Essam El Shrief El Tkasosy Hospital",
+        "address": "Essam El Shrief El Tkasosy Hospital، شارع الجيش، سادس، أسيوط",
+        "latitude": 27.181769,
+        "longitude": 31.1860765
+    },
+    {
+        "osm_id": "node/4229667092",
+        "governorate": "أسيوط",
+        "name": "Sant Maria Hospital",
+        "address": "Sant Maria Hospital، شارع الحكمدار، سابع، أسيوط",
+        "latitude": 27.191093,
+        "longitude": 31.1854314
+    },
+    {
+        "osm_id": "node/4229667093",
+        "governorate": "أسيوط",
+        "name": "El Akaad Hospital",
+        "address": "El Akaad Hospital، شارع الجلاء، سابع، أسيوط",
+        "latitude": 27.1887258,
+        "longitude": 31.1792153
+    },
+    {
+        "osm_id": "node/4229667094",
+        "governorate": "أسيوط",
+        "name": "Dar El Shefaa Hospital",
+        "address": "Dar El Shefaa Hospital، شارع جوده الاسدي، سابع، أسيوط",
+        "latitude": 27.1885444,
+        "longitude": 31.1805005
+    },
+    {
+        "osm_id": "node/4229667095",
+        "governorate": "أسيوط",
+        "name": "El Reda Hospital",
+        "address": "El Reda Hospital، شارع جوده الاسدي، سابع، أسيوط",
+        "latitude": 27.1888976,
+        "longitude": 31.1812939
+    },
+    {
+        "osm_id": "node/4229667096",
+        "governorate": "أسيوط",
+        "name": "El Zhraa Hospital",
+        "address": "El Zhraa Hospital، شارع جوده الاسدي، سابع، أسيوط",
+        "latitude": 27.1888727,
+        "longitude": 31.1812136
+    },
+    {
+        "osm_id": "node/4229667098",
+        "governorate": "أسيوط",
+        "name": "El Nseem Dr.Trez Mansour Hospital",
+        "address": "El Nseem Dr.Trez Mansour Hospital، شارع الجيش، سادس، أسيوط",
+        "latitude": 27.1807668,
+        "longitude": 31.187412
+    },
+    {
+        "osm_id": "node/4229667099",
+        "governorate": "أسيوط",
+        "name": "مستشفی الحياة",
+        "address": "مستشفی الحياة، شارع مكه المكرمة، سابع، أسيوط",
+        "latitude": 27.1906049,
+        "longitude": 31.1797428
+    },
+    {
+        "osm_id": "node/4229667100",
+        "governorate": "أسيوط",
+        "name": "El Safaa Hospital",
+        "address": "El Safaa Hospital، شارع مكه المكرمة، سابع، أسيوط",
+        "latitude": 27.1907612,
+        "longitude": 31.1802102
+    },
+    {
+        "osm_id": "node/4229667101",
+        "governorate": "أسيوط",
+        "name": "El Aksaa Hospital",
+        "address": "El Aksaa Hospital، شارع الجيش، الشركات، أسيوط",
+        "latitude": 27.1857479,
+        "longitude": 31.1818518
+    },
+    {
+        "osm_id": "node/4229667102",
+        "governorate": "أسيوط",
+        "name": "El Salama Hospital",
+        "address": "El Salama Hospital، شارع 13، أسيوط",
+        "latitude": 27.1968316,
+        "longitude": 31.1786987
+    },
+    {
+        "osm_id": "node/4229667103",
+        "governorate": "أسيوط",
+        "name": "The Police Hospital",
+        "address": "The Police Hospital، طريق اسوان الزراعى الغربى، أسيوط",
+        "latitude": 27.1933698,
+        "longitude": 31.1800197
+    },
+    {
+        "osm_id": "node/4229667104",
+        "governorate": "أسيوط",
+        "name": "مستشفى الصدر (Asyut Chest Hospital)",
+        "address": "مستشفى الصدر، شارع الازهر، أسيوط",
+        "latitude": 27.1954364,
+        "longitude": 31.17658
+    },
+    {
+        "osm_id": "node/4229667105",
+        "governorate": "أسيوط",
+        "name": "مستشفى أسيوط للصحة النفسية وعلاج الإدمان (Asyout Hospital for Mental Health)",
+        "address": "مستشفى أسيوط للصحة النفسية وعلاج الإدمان، شارع سليمان الحكيم 1، أسيوط",
+        "latitude": 27.1953832,
+        "longitude": 31.1749665
+    },
+    {
+        "osm_id": "node/4229667119",
+        "governorate": "أسيوط",
+        "name": "مستشفى المبرة (Al Mabara Hospital)",
+        "address": "مستشفى المبرة، طريق اسوان الزراعى الغربى، سابع، أسيوط",
+        "latitude": 27.1931881,
+        "longitude": 31.1881692
+    },
+    {
+        "osm_id": "node/4229667120",
+        "governorate": "أسيوط",
+        "name": "مستشفی جامعة أسيوط (Asyut University Hospital)",
+        "address": "مستشفی جامعة أسيوط، شارع اللواء حسن كامل، الخامسة، أسيوط",
+        "latitude": 27.1848327,
+        "longitude": 31.166287
+    },
+    {
+        "osm_id": "node/4229667121",
+        "governorate": "أسيوط",
+        "name": "Nekabet El Moalmen Hospital",
+        "address": "Nekabet El Moalmen Hospital، شارع 27، تقسيم المعلمين، سادس، أسيوط",
+        "latitude": 27.1669352,
+        "longitude": 31.1940161
+    },
+    {
+        "osm_id": "node/4229667122",
+        "governorate": "أسيوط",
+        "name": "El Fayrouz Hospital",
+        "address": "El Fayrouz Hospital، شارع مسجد سمير الازرق، أسيوط",
+        "latitude": 27.197229,
+        "longitude": 31.1794283
+    },
+    {
+        "osm_id": "node/4302150189",
+        "governorate": "القاهرة",
+        "name": "مستشفى منشية البكرى العام (Manshiet El Bakry General Hospital)",
+        "address": "مستشفى منشية البكرى العام، شارع جسر السويس، قسم مصر الجديدة، الزيتون، القاهرة",
+        "latitude": 30.0917446,
+        "longitude": 31.3065805
+    },
+    {
+        "osm_id": "node/4328094091",
+        "governorate": "القاهرة",
+        "name": "مستشفي التقوي (Altaqwa hospital)",
+        "address": "مستشفي التقوي، شارع السادات، المجاورة 12، مدينة الخامس عشر من مايو، القاهرة",
+        "latitude": 29.8166988,
+        "longitude": 31.360749
+    },
+    {
+        "osm_id": "node/4338866103",
+        "governorate": "الجيزة",
+        "name": "مستشفى جامكا",
+        "address": "مستشفى جامكا، شارع مصطفى الشريعى، الدقى، الجيزة",
+        "latitude": 30.0464766,
+        "longitude": 31.2126874
+    },
+    {
+        "osm_id": "node/4362086147",
+        "governorate": "القاهرة",
+        "name": "مستشفى العاملين بقطاع البترول (Petroleum Hospital)",
+        "address": "مستشفى العاملين بقطاع البترول، شارع لوساكا، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.0646977,
+        "longitude": 31.3465042
+    },
+    {
+        "osm_id": "node/4362762999",
+        "governorate": "الجيزة",
+        "name": "مستشفى الأمل",
+        "address": "مستشفى الأمل، شارع النقيب فوزي الرماح، ميت عقبة، القاهرة، الجيزة",
+        "latitude": 30.0553338,
+        "longitude": 31.1912737
+    },
+    {
+        "osm_id": "node/4388651689",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى مركز القلب الدولي icc",
+        "address": "مستشفى مركز القلب الدولي icc، شارع محمد بهاء الدين غاتورى، الإسكندرية",
+        "latitude": 31.2168739,
+        "longitude": 29.9422849
+    },
+    {
+        "osm_id": "node/4424820093",
+        "governorate": "السويس",
+        "name": "المركز الطبي للبترول",
+        "address": "المركز الطبي للبترول، طريق السويس، العين السخنه، الاتكه، الأدبية، السويس",
+        "latitude": 29.9566283,
+        "longitude": 32.5064034
+    },
+    {
+        "osm_id": "node/4487345086",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى عامة",
+        "address": "شارع العروبه، سفاجا، البحر الأحمر",
+        "latitude": 26.7555185,
+        "longitude": 33.941632
+    },
+    {
+        "osm_id": "node/4507494489",
+        "governorate": "الشرقية",
+        "name": "مستشفى ابوحماد العام (General hospital in abu hamad)",
+        "address": "مستشفى ابوحماد العام، شارع التحرير، مدينه ابو حماد، أبو حماد المحطة، الشرقية",
+        "latitude": 30.5409402,
+        "longitude": 31.6781779
+    },
+    {
+        "osm_id": "node/4515942291",
+        "governorate": "بنى سويف",
+        "name": "مستشفى الدعوة",
+        "address": "مستشفى الدعوة، شارع عبدالسلام عارف، مساكن الشرطة العسكرية، الغمراوى، بنى سويف",
+        "latitude": 29.0699244,
+        "longitude": 31.0856492
+    },
+    {
+        "osm_id": "node/4515942490",
+        "governorate": "بنى سويف",
+        "name": "مستشفى التأمين الصحى ببنى سويف",
+        "address": "مستشفى التأمين الصحى ببنى سويف، شارع عبدالسلام عارف، مساكن الشرطة العسكرية، المولد النبوى، بنى سويف",
+        "latitude": 29.0741499,
+        "longitude": 31.1150868
+    },
+    {
+        "osm_id": "node/4516041489",
+        "governorate": "الجيزة",
+        "name": "مستشفى الهرم (Al haram hospital)",
+        "address": "مستشفى الهرم، شارع الاهرام، كوم الأخضر، الجيزة",
+        "latitude": 29.9903962,
+        "longitude": 31.1500643
+    },
+    {
+        "osm_id": "node/4518397388",
+        "governorate": "الغربية",
+        "name": "مستشفى المحلة الكبرى العام",
+        "address": "مستشفى المحلة الكبرى العام، شارع 23 يوليو، ناصر، الغربية",
+        "latitude": 30.9766441,
+        "longitude": 31.1759901
+    },
+    {
+        "osm_id": "node/4520377800",
+        "governorate": "الشرقية",
+        "name": "مستشفى عامة",
+        "address": "برج العاصمه (مهندس كمال صالح)، شارع مستشفى الصدر، مدينه ابو حماد، أبو حماد المحطة، الشرقية",
+        "latitude": 30.54618,
+        "longitude": 31.6781111
+    },
+    {
+        "osm_id": "node/4535673596",
+        "governorate": "الجيزة",
+        "name": "رواد تصحيح الإبصار",
+        "address": "رواد تصحيح الإبصار، شارع سوريا، المهندسين، القاهرة، الجيزة",
+        "latitude": 30.052777,
+        "longitude": 31.197121
+    },
+    {
+        "osm_id": "node/4541619494",
+        "governorate": "قنا",
+        "name": "مستشفي قوص المركزى (Qus central hospital)",
+        "address": "مستشفي قوص المركزى، شارع الجمهوريه، مدينه قوص، قنا",
+        "latitude": 25.9217049,
+        "longitude": 32.7515625
+    },
+    {
+        "osm_id": "node/4542663991",
+        "governorate": "المنوفية",
+        "name": "مستشفي السادات العام",
+        "address": "مستشفي السادات العام، شارع سعد بن ابى وقاص، مدينة السادات، المنوفية",
+        "latitude": 30.367109,
+        "longitude": 30.5059541
+    },
+    {
+        "osm_id": "node/4548173996",
+        "governorate": "القاهرة",
+        "name": "مستشفي اطفال مصر- التأمين الصحي (All Egypt Children Hospital)",
+        "address": "مستشفي اطفال مصر- التأمين الصحي، شارع حلوان، العيني، السيدة زينب، القاهرة",
+        "latitude": 30.0292907,
+        "longitude": 31.2349472
+    },
+    {
+        "osm_id": "node/4557847093",
+        "governorate": "القاهرة",
+        "name": "مستشفى شاكر (Shaker Hospital)",
+        "address": "مستشفى شاكر، شارع الإمام على، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.0941921,
+        "longitude": 31.3352883
+    },
+    {
+        "osm_id": "node/4561090493",
+        "governorate": "القاهرة",
+        "name": "مستشفي جمال ابو العزايم",
+        "address": "مستشفي جمال ابو العزايم، شارع ابو عجيلة، المنطقة الأولى، مدينة نصر، القاهرة",
+        "latitude": 30.0559906,
+        "longitude": 31.330529
+    },
+    {
+        "osm_id": "node/4563330892",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الانبا تكلا التخصصى (Sant Takla Speciality Hospitalia)",
+        "address": "مستشفى الانبا تكلا التخصصى، شارع محمد فؤاد جلال، إبراهيمية، الإسكندرية",
+        "latitude": 31.2109273,
+        "longitude": 29.9265176
+    },
+    {
+        "osm_id": "node/4569230990",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى النزهة للقلب والعناية المركزة",
+        "address": "مستشفى النزهة للقلب والعناية المركزة، شارع نبيل الوقاد (الرصافه سابقا)، الشاطبى، الإسكندرية",
+        "latitude": 31.1949882,
+        "longitude": 29.9168071
+    },
+    {
+        "osm_id": "node/4575983739",
+        "governorate": "سوهاج",
+        "name": "د. هناء شهدى",
+        "address": "د. هناء شهدى، الطريق السريع، المراغة، مركز طهطا، سوهاج",
+        "latitude": 26.7001425,
+        "longitude": 31.6016112
+    },
+    {
+        "osm_id": "node/4575984694",
+        "governorate": "سوهاج",
+        "name": "د.عبد الناصر بدوى",
+        "address": "د.عبد الناصر بدوى، طريق بلصفورة، الخولى، سوهاج",
+        "latitude": 26.5461182,
+        "longitude": 31.6978573
+    },
+    {
+        "osm_id": "node/4576043491",
+        "governorate": "سوهاج",
+        "name": "د.نبيل صابر",
+        "address": "د.نبيل صابر، شارع عمر مكرم، مدينه جرجا، سوهاج",
+        "latitude": 26.3324161,
+        "longitude": 31.8911944
+    },
+    {
+        "osm_id": "node/4576058589",
+        "governorate": "سوهاج",
+        "name": "م المراغة العام",
+        "address": "م المراغة العام، الطريق السريع، المراغة، مركز طهطا، سوهاج",
+        "latitude": 26.7007093,
+        "longitude": 31.6016394
+    },
+    {
+        "osm_id": "node/4587257690",
+        "governorate": "القاهرة",
+        "name": "مستشفى المعادى ق.م (Maadi Hosp. A.F)",
+        "address": "مستشفى المعادى ق.م، شارع كورنيش النيل، طره الاسمنت، المعادى، طرة، القاهرة",
+        "latitude": 29.9674551,
+        "longitude": 31.24174
+    },
+    {
+        "osm_id": "node/4615939994",
+        "governorate": "القاهرة",
+        "name": "المركز الطبي ٢",
+        "address": "المركز الطبي ٢، شارع احمد بن حنبل، مجموعة 4، الرحاب، القاهرة",
+        "latitude": 30.0593917,
+        "longitude": 31.491809
+    },
+    {
+        "osm_id": "node/4643156891",
+        "governorate": "القاهرة",
+        "name": "مستشفي الحلمية العسكري (El helmya hospital)",
+        "address": "مستشفي الحلمية العسكري، شارع غرب المعسكر، مصر الجديدة، القاهرة",
+        "latitude": 30.1130399,
+        "longitude": 31.3181568
+    },
+    {
+        "osm_id": "node/4643646691",
+        "governorate": "بورسعيد",
+        "name": "مستشفى بورفواد",
+        "address": "مستشفى بورفواد، شارع الجامعه، أول بورفؤاد، Port Fuad، بورسعيد",
+        "latitude": 31.2440232,
+        "longitude": 32.3202676
+    },
+    {
+        "osm_id": "node/4658648390",
+        "governorate": "الشرقية",
+        "name": "عيادة المبرة الشاملة",
+        "address": "عيادة المبرة الشاملة، شارع الفتح، الاشاره، الزقازيق، الشرقية",
+        "latitude": 30.5872137,
+        "longitude": 31.4909946
+    },
+    {
+        "osm_id": "node/4682221091",
+        "governorate": "الجيزة",
+        "name": "دكتور بدران",
+        "address": "دكتور بدران، شارع الاحرار، العجوزة، الجيزة",
+        "latitude": 30.0486115,
+        "longitude": 31.2079311
+    },
+    {
+        "osm_id": "node/4683208396",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى المدينة للمرأة (Madina Women's Hospital)",
+        "address": "مستشفى المدينة للمرأة، شارع كمال الدين صلاح، كامب شيزار، إبراهيمية، الإسكندرية",
+        "latitude": 31.2103065,
+        "longitude": 29.9385546
+    },
+    {
+        "osm_id": "node/4693001189",
+        "governorate": "الجيزة",
+        "name": "مستشفي الهرم (Al Haram Hospital)",
+        "address": "مستشفي الهرم، شارع الاهرام، كوم الأخضر، الجيزة",
+        "latitude": 29.9907225,
+        "longitude": 31.1506313
+    },
+    {
+        "osm_id": "node/4711604389",
+        "governorate": "شمال سيناء",
+        "name": "الوحدة الصحية",
+        "address": "الوحدة الصحية، شمال سيناء",
+        "latitude": 30.368827,
+        "longitude": 34.3952838
+    },
+    {
+        "osm_id": "node/4733980424",
+        "governorate": "القاهرة",
+        "name": "مركز طبي مساكن شيراتون",
+        "address": "مركز طبي مساكن شيراتون، طريق النصر، القاهرة",
+        "latitude": 30.0930561,
+        "longitude": 31.3826141
+    },
+    {
+        "osm_id": "node/4743134421",
+        "governorate": "سوهاج",
+        "name": "طهطا العام",
+        "address": "طهطا العام، شارع احمد عنبر، مدينه طهطا، مركز طهطا، سوهاج",
+        "latitude": 26.7738527,
+        "longitude": 31.4973678
+    },
+    {
+        "osm_id": "node/4745917821",
+        "governorate": "الإسكندرية",
+        "name": "مركز الصفوة للعيون",
+        "address": "مركز الصفوة للعيون، شارع اللواء محمد فوزي معاذ، كامب شيزار، إبراهيمية، الإسكندرية",
+        "latitude": 31.2123904,
+        "longitude": 29.9406952
+    },
+    {
+        "osm_id": "node/4745917822",
+        "governorate": "الإسكندرية",
+        "name": "الهيئة العامة للتأمين الصحي",
+        "address": "الهيئة العامة للتأمين الصحي، شارع دكتور ابراهيم رفعت، فلمنج، الإسكندرية",
+        "latitude": 31.2337129,
+        "longitude": 29.9520648
+    },
+    {
+        "osm_id": "node/4754465334",
+        "governorate": "الدقهلية",
+        "name": "مستشفى التكامل بميت محسن",
+        "address": "مستشفى التكامل بميت محسن، شارع 1، مدينه ميت غمر، الدقهلية",
+        "latitude": 30.7352406,
+        "longitude": 31.2728416
+    },
+    {
+        "osm_id": "node/4759348722",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى النقراشي (Al-Nukrashi Hospital)",
+        "address": "مستشفى النقراشي، شارع السيد محمد كريم، السيالة شرق، قسم الجمرك، الإسكندرية",
+        "latitude": 31.2083488,
+        "longitude": 29.8815197
+    },
+    {
+        "osm_id": "node/4765039480",
+        "governorate": "الدقهلية",
+        "name": "عيادة أ.د. محمد أبوحجازى لطب المخ والأعصاب Prof.Dr. Mohammad Abu-Hegazy, Neurology Consultant",
+        "address": "عيادة أ.د. محمد أبوحجازى لطب المخ والأعصاب Prof.Dr. Mohammad Abu-Hegazy، Neurology Consultant، شارع الجمهورية، خامس صيام، المنصورة، الدقهلية",
+        "latitude": 31.0474963,
+        "longitude": 31.3844462
+    },
+    {
+        "osm_id": "node/4781406721",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى بدراوى",
+        "address": "مستشفى بدراوى، شارع مصطفى النجار، الإسكندرية",
+        "latitude": 31.2168583,
+        "longitude": 29.941556
+    },
+    {
+        "osm_id": "node/4787216421",
+        "governorate": "المنوفية",
+        "name": "مستشفي موده عيون",
+        "address": "مستشفي موده عيون، شارع المواساه، شبين الكوم، المنوفية",
+        "latitude": 30.5606982,
+        "longitude": 31.0152798
+    },
+    {
+        "osm_id": "node/4812390121",
+        "governorate": "الأقصر",
+        "name": "مست إسنا المركزي",
+        "address": "مست إسنا المركزي، شارع البحر الجديد، إسنا، Isna، الأقصر",
+        "latitude": 25.2916299,
+        "longitude": 32.5583775
+    },
+    {
+        "osm_id": "node/4829303623",
+        "governorate": "الجيزة",
+        "name": "المصل واللقاح (Al massl WA Liqah)",
+        "address": "المصل واللقاح، شارع البطل احمد عبد العزيز، العجوزة، الجيزة",
+        "latitude": 30.0507952,
+        "longitude": 31.2112053
+    },
+    {
+        "osm_id": "node/4838404723",
+        "governorate": "الأقصر",
+        "name": "وحدة صحة الغريرة",
+        "address": "وحدة صحة الغريرة، نجع إبراهيم غريب، Isna، الأقصر",
+        "latitude": 25.5025387,
+        "longitude": 32.4759886
+    },
+    {
+        "osm_id": "node/4853146022",
+        "governorate": "شمال سيناء",
+        "name": "مستشفى عامة",
+        "address": "شمال سيناء",
+        "latitude": 30.3689577,
+        "longitude": 34.395144
+    },
+    {
+        "osm_id": "node/4853146023",
+        "governorate": "شمال سيناء",
+        "name": "الوحدة الصحية بقرية بئر بدا",
+        "address": "الوحدة الصحية بقرية بئر بدا، شمال سيناء",
+        "latitude": 30.3689709,
+        "longitude": 34.3951402
+    },
+    {
+        "osm_id": "node/4913935120",
+        "governorate": "المنيا",
+        "name": "مستشفى العدوة العام",
+        "address": "مستشفى العدوة العام، طريق الزراعه، مدينه العدوه، المنيا",
+        "latitude": 28.6954304,
+        "longitude": 30.7747717
+    },
+    {
+        "osm_id": "node/4914746727",
+        "governorate": "القاهرة",
+        "name": "مستشفي الفتح الخلفاوي (Elfath hospital elkhalafawi)",
+        "address": "مستشفي الفتح الخلفاوي، شارع تقسيم المدارس، منيه السيرج، القاهرة",
+        "latitude": 30.0983691,
+        "longitude": 31.2492731
+    },
+    {
+        "osm_id": "node/4924166623",
+        "governorate": "القاهرة",
+        "name": "مستشفي بتروجاس (Petrogas Hispital)",
+        "address": "مستشفي بتروجاس، شارع محمود ابو النصر، مصر الجديدة، القاهرة",
+        "latitude": 30.1046866,
+        "longitude": 31.3334341
+    },
+    {
+        "osm_id": "node/4927950621",
+        "governorate": "القاهرة",
+        "name": "مستشفي بتروجاس - قطاع البترول (Petrogas Hospital - Petrol Section)",
+        "address": "مستشفي بتروجاس - قطاع البترول، شارع عبد الحميد ابو هيف، مصر الجديدة، القاهرة",
+        "latitude": 30.103598,
+        "longitude": 31.3311765
+    },
+    {
+        "osm_id": "node/4938264720",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى عامة",
+        "address": "شارع الصاغ محمد عبد السلام، الإسكندرية",
+        "latitude": 31.257719,
+        "longitude": 29.9879757
+    },
+    {
+        "osm_id": "node/5032097923",
+        "governorate": "الجيزة",
+        "name": "clean vision laser centre",
+        "address": "clean vision laser centre، شارع الشهيد صالح موسى شرف، المهندسين، القاهرة، الجيزة",
+        "latitude": 30.0545581,
+        "longitude": 31.2040393
+    },
+    {
+        "osm_id": "node/5056209254",
+        "governorate": "الغربية",
+        "name": "مستشفى عامة",
+        "address": "شارع حافظ وهبى، كفر سيجر، طنطا، الغربية",
+        "latitude": 30.7807215,
+        "longitude": 30.9926418
+    },
+    {
+        "osm_id": "node/5059551521",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الشرطه",
+        "address": "مستشفى الشرطه، طريق القاهرة، الاسكندرية الصحراوي، عزبة نادي الصيد، الإسكندرية",
+        "latitude": 31.1743125,
+        "longitude": 29.9300207
+    },
+    {
+        "osm_id": "node/5105686233",
+        "governorate": "القاهرة",
+        "name": "صيدلية دكتور عبد اللطيف (Dr. Abd el lateef farmecy)",
+        "address": "صيدلية دكتور عبد اللطيف، شارع جاد الكريم، المطريه الغربيه، عين شمس، القاهرة",
+        "latitude": 30.1244776,
+        "longitude": 31.2974113
+    },
+    {
+        "osm_id": "node/5108253592",
+        "governorate": "البحيرة",
+        "name": "مستشفي ابوحمص العام",
+        "address": "مستشفي ابوحمص العام، شارع البحر، أبو حمص، البحيرة",
+        "latitude": 31.104539,
+        "longitude": 30.314618
+    },
+    {
+        "osm_id": "node/5122232721",
+        "governorate": "القاهرة",
+        "name": "مستشفى الكبد د يس عبد الغفار الخيرية (Yassin Abdulghaffar Hepatology Center)",
+        "address": "مستشفى الكبد د يس عبد الغفار الخيرية، شارع لوساكا، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.0648509,
+        "longitude": 31.346945
+    },
+    {
+        "osm_id": "node/5134665947",
+        "governorate": "القاهرة",
+        "name": "مركز طبي الحى الثامن",
+        "address": "مركز طبي الحى الثامن، شارع افريقيا، مساكن بنك الاسكان والتعمير، مدينة نصر، القاهرة",
+        "latitude": 30.0561602,
+        "longitude": 31.35774
+    },
+    {
+        "osm_id": "node/5134666024",
+        "governorate": "القاهرة",
+        "name": "ايجيكير",
+        "address": "ايجيكير، شارع الشهيد محمد مصطفى كاريكا، عمارات اطلس، مدينة نصر، القاهرة",
+        "latitude": 30.0597161,
+        "longitude": 31.3603878
+    },
+    {
+        "osm_id": "node/5134666532",
+        "governorate": "القاهرة",
+        "name": "مركز طبي الحى الثامن",
+        "address": "مركز طبي الحى الثامن، شارع دكتور حسن الشريف، مساكن السويسرى أ، مدينة نصر، القاهرة",
+        "latitude": 30.0553351,
+        "longitude": 31.3576391
+    },
+    {
+        "osm_id": "node/5140221524",
+        "governorate": "القاهرة",
+        "name": "مستشفى الريان (alRayan Hospital)",
+        "address": "مستشفى الريان، شارع 77، معادي الخبيري، الفاروقية، القاهرة",
+        "latitude": 29.967548,
+        "longitude": 31.264262
+    },
+    {
+        "osm_id": "node/5147555621",
+        "governorate": "القاهرة",
+        "name": "مستشفى المستقبل التخصصي (Future Specialist Hospital)",
+        "address": "مستشفى المستقبل التخصصي، شارع نخله المطيعي، مصر الجديدة، القاهرة",
+        "latitude": 30.0991342,
+        "longitude": 31.3453964
+    },
+    {
+        "osm_id": "node/5170748421",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى المدينة المنورة",
+        "address": "مستشفى المدينة المنورة، شارع عمرو بن العاص، ميامي، الإسكندرية",
+        "latitude": 31.2630983,
+        "longitude": 29.9951977
+    },
+    {
+        "osm_id": "node/5186532750",
+        "governorate": "القاهرة",
+        "name": "Mahmoud Eye Surgery Centre",
+        "address": "Mahmoud Eye Surgery Centre، شارع ابو الفدا، ابو الفدا، الزمالك، القاهرة",
+        "latitude": 30.0657467,
+        "longitude": 31.2154842
+    },
+    {
+        "osm_id": "node/5200295222",
+        "governorate": "الإسكندرية",
+        "name": "ASM E.2 (الميري مدخل ٢)",
+        "address": "ASM E.2، شارع دكتور محمود صلاح الدين، المسله شرق، الإسكندرية",
+        "latitude": 31.2017726,
+        "longitude": 29.9041544
+    },
+    {
+        "osm_id": "node/5280869323",
+        "governorate": "البحر الأحمر",
+        "name": "وحده الميناء",
+        "address": "وحده الميناء، شارع شدوان، الميناء، مارينا الغردقة، الغردقة، البحر الأحمر",
+        "latitude": 27.2300378,
+        "longitude": 33.8413404
+    },
+    {
+        "osm_id": "node/5314820424",
+        "governorate": "القاهرة",
+        "name": "المشرق للعيون",
+        "address": "المشرق للعيون، شارع السيد الميرغنى، مصر الجديدة، القاهرة",
+        "latitude": 30.0850693,
+        "longitude": 31.3309778
+    },
+    {
+        "osm_id": "node/5314820724",
+        "governorate": "القاهرة",
+        "name": "مركز الدكتور محمد حامد للعيون",
+        "address": "مركز الدكتور محمد حامد للعيون، شارع الحجاز الجانبى، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.1026758,
+        "longitude": 31.3266103
+    },
+    {
+        "osm_id": "node/5315862132",
+        "governorate": "الإسكندرية",
+        "name": "الوحدة الصحية أبيس 7",
+        "address": "الوحدة الصحية أبيس 7، الطريق الساحلى الدولى، الإسكندرية",
+        "latitude": 31.1484562,
+        "longitude": 29.955702
+    },
+    {
+        "osm_id": "node/5350940121",
+        "governorate": "القاهرة",
+        "name": "مستشفى البنك الاهلي",
+        "address": "مستشفى البنك الاهلي، الطريق الدائري، بالم سيتي، تاج سيتي، مدينة نصر، القاهرة",
+        "latitude": 29.9825257,
+        "longitude": 31.345959
+    },
+    {
+        "osm_id": "node/5383244422",
+        "governorate": "القاهرة",
+        "name": "Golf Memorial Hospital",
+        "address": "Golf Memorial Hospital، شارع اسماء فهمى، الجولف، مدينة نصر، القاهرة",
+        "latitude": 30.0790241,
+        "longitude": 31.3372837
+    },
+    {
+        "osm_id": "node/5417944724",
+        "governorate": "القاهرة",
+        "name": "مركز 73 متر",
+        "address": "مركز 73 متر، الطريق الشرقى، مدينة الشروق، الشروق، القاهرة",
+        "latitude": 30.149718,
+        "longitude": 31.6579092
+    },
+    {
+        "osm_id": "node/5420112979",
+        "governorate": "سوهاج",
+        "name": "وحده صحه بندار الشرقيه",
+        "address": "وحده صحه بندار الشرقيه، شارع عبد المنعم رياض، بندار الشرقيه، مدينه جرجا، سوهاج",
+        "latitude": 26.3669943,
+        "longitude": 31.846848
+    },
+    {
+        "osm_id": "node/5475557322",
+        "governorate": "القاهرة",
+        "name": "مغربي للعيون (Magrabi Eye Hospital)",
+        "address": "مغربي للعيون، شارع الاشراف، درب غزيه، عين الصيرة، القاهرة",
+        "latitude": 30.0232965,
+        "longitude": 31.2513977
+    },
+    {
+        "osm_id": "node/5503724260",
+        "governorate": "الجيزة",
+        "name": "GERMAN VETERINARY HOSPITAL EGYPT",
+        "address": "GERMAN VETERINARY HOSPITAL EGYPT، شارع 56، الحى 1، الشيخ زايد، الجيزة",
+        "latitude": 30.0335965,
+        "longitude": 31.011445
+    },
+    {
+        "osm_id": "node/5551667834",
+        "governorate": "دمياط",
+        "name": "Ras El Bar Hospital",
+        "address": "Ras El Bar Hospital، شارع المديريه، رأس البر، دمياط",
+        "latitude": 31.5159327,
+        "longitude": 31.8357253
+    },
+    {
+        "osm_id": "node/5551680466",
+        "governorate": "دمياط",
+        "name": "مستشفي الدلتا (Delta Hosbital)",
+        "address": "مستشفي الدلتا، شارع 99، رأس البر، دمياط",
+        "latitude": 31.5007282,
+        "longitude": 31.8265419
+    },
+    {
+        "osm_id": "node/5572455024",
+        "governorate": "الشرقية",
+        "name": "مستشفى الغندور بلبيس (Ghandour hospital Belbis)",
+        "address": "مستشفى الغندور بلبيس، شارع 8، مدينة بلبيس، بلبيس، الشرقية",
+        "latitude": 30.4221577,
+        "longitude": 31.5719934
+    },
+    {
+        "osm_id": "node/5587465366",
+        "governorate": "الدقهلية",
+        "name": "Tabarak Hospital",
+        "address": "Tabarak Hospital، شارع مأمون الشناوي، سابع البحر الصغير، المنصورة، الدقهلية",
+        "latitude": 31.0457302,
+        "longitude": 31.39453
+    },
+    {
+        "osm_id": "node/5628663421",
+        "governorate": "القاهرة",
+        "name": "برج الأطباء",
+        "address": "برج الأطباء، شارع المقريزي، قسم مصر الجديدة، كوبري القبة، القاهرة",
+        "latitude": 30.0905778,
+        "longitude": 31.3079294
+    },
+    {
+        "osm_id": "node/5734327542",
+        "governorate": "دمياط",
+        "name": "مركز كيوان للعلاج الطبيعي والتخسيس",
+        "address": "مركز كيوان للعلاج الطبيعي والتخسيس، طريق السيالة الجديد، دمياط",
+        "latitude": 31.4071405,
+        "longitude": 31.822604
+    },
+    {
+        "osm_id": "node/5762503853",
+        "governorate": "البحر الأحمر",
+        "name": "Royal Hospital",
+        "address": "Royal Hospital، شارع النصر، الحرية 5، Sakkala، المنطقة الصناعيه، البحر الأحمر",
+        "latitude": 27.2239526,
+        "longitude": 33.8263382
+    },
+    {
+        "osm_id": "node/5769888882",
+        "governorate": "الجيزة",
+        "name": "Seniors Dental Clinic",
+        "address": "Seniors Dental Clinic، Downtown، Left building، 2nd Floor، شارع دكتور عاطف صدقي، ليجيندا، الجيزة",
+        "latitude": 30.0302505,
+        "longitude": 31.0008777
+    },
+    {
+        "osm_id": "node/5776366012",
+        "governorate": "الغربية",
+        "name": "مستشفي مسجد وصبف",
+        "address": "مستشفي مسجد وصبف، شارع جسر النيل، قريه سندبسط، الغربية",
+        "latitude": 30.6414801,
+        "longitude": 31.2668872
+    },
+    {
+        "osm_id": "node/5817986010",
+        "governorate": "القاهرة",
+        "name": "مستشفى (Hospital)",
+        "address": "مستشفى، شارع سليمان بن حرب، التجمع الخامس، حى الشويفات، القاهرة",
+        "latitude": 30.0147462,
+        "longitude": 31.4181409
+    },
+    {
+        "osm_id": "node/5867328034",
+        "governorate": "الإسكندرية",
+        "name": "الجمعية الشرعية",
+        "address": "الجمعية الشرعية، شارع جبريل شماع، الإسكندرية",
+        "latitude": 31.2397069,
+        "longitude": 29.9933271
+    },
+    {
+        "osm_id": "node/5900240797",
+        "governorate": "الدقهلية",
+        "name": "التأمين الصحي",
+        "address": "التأمين الصحي، شارع العباسي، ثالث ريحان، المنصورة، الدقهلية",
+        "latitude": 31.0427801,
+        "longitude": 31.3783093
+    },
+    {
+        "osm_id": "node/5948124620",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الفتح",
+        "address": "مستشفى الفتح، شارع متفرع من شارع الفتح، فلمنج، الزاهرية، الإسكندرية",
+        "latitude": 31.2343075,
+        "longitude": 29.9639451
+    },
+    {
+        "osm_id": "node/5948127094",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى البترول بالإسكندرية (Petroleum Hospital in Alexandria)",
+        "address": "مستشفى البترول بالإسكندرية، شارع الفتح، فلمنج، الزاهرية، الإسكندرية",
+        "latitude": 31.2345278,
+        "longitude": 29.9626566
+    },
+    {
+        "osm_id": "node/5984828885",
+        "governorate": "دمياط",
+        "name": "المستشفى العسكرى دمياط الجديده",
+        "address": "المستشفى العسكرى دمياط الجديده، شارع جمال عبد الناصر الجانبى، مدينة دمياط الجديدة، دمياط الجديدة، دمياط",
+        "latitude": 31.440234,
+        "longitude": 31.6920654
+    },
+    {
+        "osm_id": "node/6080046486",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الملاح - مستشفى البدراوي ٢ (Al Mallah Hospital)",
+        "address": "مستشفى الملاح - مستشفى البدراوي ٢، شارع محمد نجيب، الإسكندرية",
+        "latitude": 31.2553539,
+        "longitude": 29.9850196
+    },
+    {
+        "osm_id": "node/6092176485",
+        "governorate": "القاهرة",
+        "name": "مستشفى جراحات اليوم الواحد بالمعادي الجديدة (one day surgries hospital)",
+        "address": "مستشفى جراحات اليوم الواحد بالمعادي الجديدة، شارع 500، المعادي الجديدة، المعادى، القاهرة",
+        "latitude": 29.9876238,
+        "longitude": 31.2772995
+    },
+    {
+        "osm_id": "node/6093260385",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى فكتوريا (Victoria Hospital)",
+        "address": "مستشفى فكتوريا، شارع فليب جلاد، الإسكندرية",
+        "latitude": 31.2439359,
+        "longitude": 29.9821849
+    },
+    {
+        "osm_id": "node/6093262085",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى لواء الإسلام",
+        "address": "مستشفى لواء الإسلام، شارع اولياء الرحمن، الإسكندرية",
+        "latitude": 31.2442273,
+        "longitude": 29.9867739
+    },
+    {
+        "osm_id": "node/6110860686",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى طلبة جامعة الإسكندرية",
+        "address": "مستشفى طلبة جامعة الإسكندرية، شارع خلف النجده، الشاطبى، الإسكندرية",
+        "latitude": 31.2028128,
+        "longitude": 29.9199829
+    },
+    {
+        "osm_id": "node/6115961588",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى سيدي جابر التخصصي",
+        "address": "مستشفى سيدي جابر التخصصي، شارع جمال عبد الناصر، الرياضه، إبراهيمية، الإسكندرية",
+        "latitude": 31.219401,
+        "longitude": 29.9414862
+    },
+    {
+        "osm_id": "node/6149871174",
+        "governorate": "الإسكندرية",
+        "name": "Ahmed Maher Hospital",
+        "address": "Ahmed Maher Hospital، شارع الوراق، المرغني، الإسكندرية",
+        "latitude": 31.1911004,
+        "longitude": 29.9029881
+    },
+    {
+        "osm_id": "node/6176570230",
+        "governorate": "القاهرة",
+        "name": "المستشفى الأمريكى",
+        "address": "المستشفى الأمريكى، شارع محمد سليم، شيراتون، القاهرة",
+        "latitude": 30.1033833,
+        "longitude": 31.3779264
+    },
+    {
+        "osm_id": "node/6263853464",
+        "governorate": "الدقهلية",
+        "name": "الوحدة الصحية بجمصة",
+        "address": "الوحدة الصحية بجمصة، الطريق الساحلى الدولى، جمصة، الدقهلية",
+        "latitude": 31.4355738,
+        "longitude": 31.5589591
+    },
+    {
+        "osm_id": "node/6371119888",
+        "governorate": "الإسكندرية",
+        "name": "الهلال الأحمر المصري - فرع الإسكندرية - باكوس",
+        "address": "الهلال الأحمر المصري - فرع الإسكندرية - باكوس، شارع عبد الرحمن الرافعى، باكوس، الزاهرية، الإسكندرية",
+        "latitude": 31.2320812,
+        "longitude": 29.9703691
+    },
+    {
+        "osm_id": "node/6371769385",
+        "governorate": "المنيا",
+        "name": "مستشفي بالمنيا (Almenia.hospitalss)",
+        "address": "مستشفي بالمنيا، شارع الحسين، سيد جلال، المنيا",
+        "latitude": 28.1011077,
+        "longitude": 30.7545085
+    },
+    {
+        "osm_id": "node/6372854086",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى لوران (Louran Hospital)",
+        "address": "مستشفى لوران، شارع شعراوى، القصعى بحرى، الإسكندرية",
+        "latitude": 31.2478922,
+        "longitude": 29.9736309
+    },
+    {
+        "osm_id": "node/6373641081",
+        "governorate": "الشرقية",
+        "name": "الوحدة الصحية",
+        "address": "الوحدة الصحية، شارع اخر البلد، البساينة، أبو كبير، الشرقية",
+        "latitude": 30.781246,
+        "longitude": 31.6875548
+    },
+    {
+        "osm_id": "node/6411889485",
+        "governorate": "الأقصر",
+        "name": "مستشفى إسنا (Esna hospital)",
+        "address": "مستشفى إسنا، شارع البحر الجديد، إسنا، Isna، الأقصر",
+        "latitude": 25.3024614,
+        "longitude": 32.5540586
+    },
+    {
+        "osm_id": "node/6443281834",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى سموحة الدولي",
+        "address": "مستشفى سموحة الدولي، شارع ذكى رجب، الحضره قبلى، إبراهيمية، الإسكندرية",
+        "latitude": 31.2083152,
+        "longitude": 29.9348175
+    },
+    {
+        "osm_id": "node/6500318660",
+        "governorate": "القاهرة",
+        "name": "One Day Surgeries Hospital",
+        "address": "One Day Surgeries Hospital، شارع بورسعيد، مساكن الزاويه الحمراء، الأميرية، القاهرة",
+        "latitude": 30.0874718,
+        "longitude": 31.2731182
+    },
+    {
+        "osm_id": "node/6509448487",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الإقبال",
+        "address": "مستشفى الإقبال، شارع حسن امين، الإسكندرية",
+        "latitude": 31.251513,
+        "longitude": 29.9753775
+    },
+    {
+        "osm_id": "node/6572089485",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى زمزم",
+        "address": "مستشفى زمزم، شارع حسين عامر، الباب الجديد غرب و منشا، الشاطبى، الإسكندرية",
+        "latitude": 31.1952169,
+        "longitude": 29.9125867
+    },
+    {
+        "osm_id": "node/6582032777",
+        "governorate": "القاهرة",
+        "name": "مستشفى عامة",
+        "address": "شارع 17، الشرق للتأمين، الخليفة، القاهرة",
+        "latitude": 30.0160045,
+        "longitude": 31.2917528
+    },
+    {
+        "osm_id": "node/6586989894",
+        "governorate": "القاهرة",
+        "name": "مستشفى البتول (El Batol Hospital)",
+        "address": "مستشفى البتول، شارع الشيخ نصر الهوريني، شريف، الشرابية، القاهرة",
+        "latitude": 30.0947545,
+        "longitude": 31.2490967
+    },
+    {
+        "osm_id": "node/6595817693",
+        "governorate": "القاهرة",
+        "name": "El Nakhel Hospital",
+        "address": "El Nakhel Hospital، شارع سيد عنبر، المعادي الجديدة، حلوان، القاهرة",
+        "latitude": 29.9734067,
+        "longitude": 31.2817941
+    },
+    {
+        "osm_id": "node/6644423452",
+        "governorate": "الشرقية",
+        "name": "Sekem Medical Centre",
+        "address": "Sekem Medical Centre، طريق مستشفى سيكم، العاشر من رمضان، الشرقية",
+        "latitude": 30.417604,
+        "longitude": 31.6355301
+    },
+    {
+        "osm_id": "node/6743975794",
+        "governorate": "القاهرة",
+        "name": "Elsalam Hospital مستشفى السلام",
+        "address": "Elsalam Hospital مستشفى السلام، شارع احمد عصمت، عين شمس، القاهرة",
+        "latitude": 30.127331,
+        "longitude": 31.3274532
+    },
+    {
+        "osm_id": "node/6784633286",
+        "governorate": "مطروح",
+        "name": "مستشفى عرابي التخصصي (Orabi Specialist Hospital)",
+        "address": "مستشفى عرابي التخصصي، شارع عبد الله عيسي، محدرة، مرسى مطروح، مطروح",
+        "latitude": 31.3512468,
+        "longitude": 27.2430948
+    },
+    {
+        "osm_id": "node/6795952385",
+        "governorate": "القاهرة",
+        "name": "مستشفى الرحمة التخصصي (Al Rahma specialized Hospital)",
+        "address": "مستشفى الرحمة التخصصي، شارع الإسكندرية، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.0983618,
+        "longitude": 31.3312422
+    },
+    {
+        "osm_id": "node/6796349005",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى سهلا الجديدة",
+        "address": "مستشفى سهلا الجديدة، حارة قاسم، الباب الجديد غرب و منشا، الشاطبى، الإسكندرية",
+        "latitude": 31.1910639,
+        "longitude": 29.9085547
+    },
+    {
+        "osm_id": "node/6948109927",
+        "governorate": "الإسكندرية",
+        "name": "دكتور ممدوح حسين لطب الاطفال",
+        "address": "دكتور ممدوح حسين لطب الاطفال، شارع الروضة 1، مساكن تعاونيات سموحه، الإسكندرية",
+        "latitude": 31.2072614,
+        "longitude": 29.9531454
+    },
+    {
+        "osm_id": "node/6948853990",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي اسكندرية الدولي",
+        "address": "مستشفي اسكندرية الدولي، شارع محمد بهاء الدين غاتورى، الإسكندرية",
+        "latitude": 31.2158369,
+        "longitude": 29.941974
+    },
+    {
+        "osm_id": "node/6970489318",
+        "governorate": "القاهرة",
+        "name": "Bright dental center",
+        "address": "Bright dental center، شارع احمد عصمت، عين شمس، القاهرة",
+        "latitude": 30.1292933,
+        "longitude": 31.3207353
+    },
+    {
+        "osm_id": "node/6982945486",
+        "governorate": "الإسكندرية",
+        "name": "النصر الشاملة (El Shamla hospital)",
+        "address": "النصر الشاملة، شارع المكس، القباري، الإسكندرية",
+        "latitude": 31.1698343,
+        "longitude": 29.8708821
+    },
+    {
+        "osm_id": "node/7022378617",
+        "governorate": "بورسعيد",
+        "name": "Alglaa Pharmacy portsaid - صيدلية الجلاء بورسعيد",
+        "address": "Alglaa Pharmacy portsaid - صيدلية الجلاء بورسعيد، شارع ابى هريره، الزهور، مساكن ٥٠٠٠، بورسعيد",
+        "latitude": 31.2675342,
+        "longitude": 32.2703428
+    },
+    {
+        "osm_id": "node/7146563486",
+        "governorate": "البحر الأحمر",
+        "name": "El Kawser Private Hospital",
+        "address": "El Kawser Private Hospital، شارع الفندق، مساكن مبارك 2، Mubarak 2، الهضبة، البحر الأحمر",
+        "latitude": 27.198284,
+        "longitude": 33.8267656
+    },
+    {
+        "osm_id": "node/7288659118",
+        "governorate": "سوهاج",
+        "name": "Family clinic عيادات الاسرة",
+        "address": "Family clinic عيادات الاسرة، Girga، شارع الشيخ عبد الجواد المناقيشي، مدينه جرجا، سوهاج",
+        "latitude": 26.3470237,
+        "longitude": 31.8873904
+    },
+    {
+        "osm_id": "node/7464934905",
+        "governorate": "المنوفية",
+        "name": "مستوصف السيدة العذراء",
+        "address": "مستوصف السيدة العذراء، درب سعفان، شبين الكوم، المنوفية",
+        "latitude": 30.5525503,
+        "longitude": 31.0068038
+    },
+    {
+        "osm_id": "node/7467342543",
+        "governorate": "كفر الشيخ",
+        "name": "bakr dental clinic",
+        "address": "bakr dental clinic، 6R، شارع فريد ندا، كفر الشيخ",
+        "latitude": 31.1154724,
+        "longitude": 30.9341442
+    },
+    {
+        "osm_id": "node/7635900880",
+        "governorate": "القاهرة",
+        "name": "Pharmancy",
+        "address": "Pharmancy، شارع الاسراء، المعادي الجديدة، حلوان، القاهرة",
+        "latitude": 29.9811655,
+        "longitude": 31.315031
+    },
+    {
+        "osm_id": "node/7968247693",
+        "governorate": "الجيزة",
+        "name": "الوحدة الصحية بطناش",
+        "address": "الوحدة الصحية بطناش، شارع عبد الفتاح الشعراوى، طناش، الجيزة",
+        "latitude": 30.1241237,
+        "longitude": 31.1922102
+    },
+    {
+        "osm_id": "node/8343379230",
+        "governorate": "القاهرة",
+        "name": "مستشفى هيئة النقل العام",
+        "address": "مستشفى هيئة النقل العام، شارع عبد الخالق ثروت، معروف، باب الشعرية، القاهرة",
+        "latitude": 30.051386,
+        "longitude": 31.2383746
+    },
+    {
+        "osm_id": "node/8378236702",
+        "governorate": "البحيرة",
+        "name": "مركز الثقافة العمالية بكفر الدوار",
+        "address": "مركز الثقافة العمالية بكفر الدوار، شارع احمد عرابى، شركه مصر للغزل والنسيج، كفر الدوار، البحيرة",
+        "latitude": 31.1388502,
+        "longitude": 30.1223348
+    },
+    {
+        "osm_id": "node/8405405096",
+        "governorate": "الجيزة",
+        "name": "Rofayda Maternity Hospital",
+        "address": "Rofayda Maternity Hospital، شارع الزهور، الشيخ زايد، الجيزة",
+        "latitude": 30.0218222,
+        "longitude": 31.0067546
+    },
+    {
+        "osm_id": "node/8411329877",
+        "governorate": "القاهرة",
+        "name": "مستشفى الحياة التخصصى",
+        "address": "مستشفى الحياة التخصصى، شارع الخبير، كوبري القبة، القاهرة",
+        "latitude": 30.0883955,
+        "longitude": 31.2990484
+    },
+    {
+        "osm_id": "node/8496848667",
+        "governorate": "القاهرة",
+        "name": "مستشفى دكتور عادل صادق لعلاج الامراض النفسية و الإدمان (Doctor Adel Sadek Hospital for the treatment of mental illnesses and addictions)",
+        "address": "مستشفى دكتور عادل صادق لعلاج الامراض النفسية و الإدمان، شارع احمد عبد النبى، القاهرة",
+        "latitude": 30.1218731,
+        "longitude": 31.3664536
+    },
+    {
+        "osm_id": "node/8676620117",
+        "governorate": "الجيزة",
+        "name": "المركز الطبى",
+        "address": "المركز الطبى، شارع البنفسج، الإسكان الإجتماعي، السادس من أكتوبر، الجيزة",
+        "latitude": 29.8875138,
+        "longitude": 31.0663286
+    },
+    {
+        "osm_id": "node/8679556020",
+        "governorate": "الإسكندرية",
+        "name": "المستشفى الألماني  مركز القلب الألماني (German Hospital and Cardiac Center)",
+        "address": "المستشفى الألماني  مركز القلب الألماني، شارع عبد السلام عارف، فلمنج، الإسكندرية",
+        "latitude": 31.2370413,
+        "longitude": 29.9576749
+    },
+    {
+        "osm_id": "node/8764103655",
+        "governorate": "الدقهلية",
+        "name": "برنامج متابعة وليدك (2) - العيادات التخصصية",
+        "address": "برنامج متابعة وليدك (2) - العيادات التخصصية، شارع جيهان السادات، اول ميت طلخا، طلخا، الدقهلية",
+        "latitude": 31.0442384,
+        "longitude": 31.3655781
+    },
+    {
+        "osm_id": "node/8819019261",
+        "governorate": "المنوفية",
+        "name": "الوحدة الصحية بقرية المقاطع",
+        "address": "الوحدة الصحية بقرية المقاطع، طريق المقاطع، مناوهله، شبين الكوم، المنوفية",
+        "latitude": 30.4702651,
+        "longitude": 31.0724737
+    },
+    {
+        "osm_id": "node/8968577939",
+        "governorate": "مطروح",
+        "name": "مستشفي برج العرب العام",
+        "address": "مستشفي برج العرب العام، شارع 59أ، الحى 1، New Borg el-Arab، مطروح",
+        "latitude": 30.8831696,
+        "longitude": 29.5737539
+    },
+    {
+        "osm_id": "node/9006511017",
+        "governorate": "الإسكندرية",
+        "name": "المسشتفى التخصصي لامراض الجهاز الهضمي والكبد",
+        "address": "المسشتفى التخصصي لامراض الجهاز الهضمي والكبد، شارع جمال عبد الناصر، فلمنج، الزاهرية، الإسكندرية",
+        "latitude": 31.2392452,
+        "longitude": 29.96397
+    },
+    {
+        "osm_id": "node/9080144789",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى عامة",
+        "address": "بور غالب، البحر الأحمر",
+        "latitude": 25.5409083,
+        "longitude": 34.6167438
+    },
+    {
+        "osm_id": "node/9349213302",
+        "governorate": "الإسكندرية",
+        "name": "Alsalama Hospital",
+        "address": "Alsalama Hospital، شارع الشهيد صلاح مصطفى، المسله شرق، الشاطبى، الإسكندرية",
+        "latitude": 31.2018205,
+        "longitude": 29.9101858
+    },
+    {
+        "osm_id": "node/9385788533",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى عيادة سيناء (Sinai Clinic Hospital)",
+        "address": "مستشفى عيادة سيناء، شارع البنوك، هضبه ام السيد، شرم القديمة، شرم الشيخ، رأس أم سد، جنوب سيناء",
+        "latitude": 27.8609939,
+        "longitude": 34.3044144
+    },
+    {
+        "osm_id": "node/9509648007",
+        "governorate": "القاهرة",
+        "name": "دار السلام للأورام (هرمل)",
+        "address": "دار السلام للأورام (هرمل)، شارع كورنيش النيل، الكفور وساعي البحر، مصر القديمة، أثر النبي، القاهرة",
+        "latitude": 30.0125466,
+        "longitude": 31.2289619
+    },
+    {
+        "osm_id": "node/9568706448",
+        "governorate": "الجيزة",
+        "name": "مستشفى الجابري",
+        "address": "مستشفى الجابري، شارع الملك فيصل، كوم الأخضر، الجيزة",
+        "latitude": 29.9956129,
+        "longitude": 31.1514353
+    },
+    {
+        "osm_id": "node/9568725004",
+        "governorate": "الجيزة",
+        "name": "مستشفى شبرامنت المركزي",
+        "address": "مستشفى شبرامنت المركزي، طريق سقاره السياحى، شبرمنت، الجيزة",
+        "latitude": 29.9455923,
+        "longitude": 31.188481
+    },
+    {
+        "osm_id": "node/9612404216",
+        "governorate": "القاهرة",
+        "name": "مستشفى عامة",
+        "address": "Al Khalifa Al Rashideen Specialized Hospital، شارع السباق، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.1017279,
+        "longitude": 31.3237646
+    },
+    {
+        "osm_id": "node/9648152027",
+        "governorate": "الإسكندرية",
+        "name": "Department for Internal Medicine",
+        "address": "Department for Internal Medicine، شارع الاسكندر الاكبر، المسله شرق، الشاطبى، الإسكندرية",
+        "latitude": 31.2025983,
+        "longitude": 29.9059535
+    },
+    {
+        "osm_id": "node/9651950237",
+        "governorate": "الجيزة",
+        "name": "مستشفى الحبيب التخصصي",
+        "address": "مستشفى الحبيب التخصصي، شارع الملك فيصل، كوم الأخضر، الجيزة",
+        "latitude": 29.9967716,
+        "longitude": 31.1545246
+    },
+    {
+        "osm_id": "node/9670857598",
+        "governorate": "الغربية",
+        "name": "مستشفى صدر المحلة (Chest Hospital)",
+        "address": "مستشفى صدر المحلة، شارع خلف سور المستعمره، امام الحسينى، الغربية",
+        "latitude": 30.9532282,
+        "longitude": 31.1498471
+    },
+    {
+        "osm_id": "node/9697106717",
+        "governorate": "القاهرة",
+        "name": "مستشفى الصفوة (Alsafwa Hospital)",
+        "address": "مستشفى الصفوة، شارع منيه السيرج، شريف، الشرابية، القاهرة",
+        "latitude": 30.0926606,
+        "longitude": 31.2459649
+    },
+    {
+        "osm_id": "node/9750285595",
+        "governorate": "القاهرة",
+        "name": "Dr. Hani Allawy Clinic",
+        "address": "Dr. Hani Allawy Clinic، شارع اللواء طارق صلاح، مدينة المستقبل، الشروق، القاهرة",
+        "latitude": 30.1636403,
+        "longitude": 31.5533044
+    },
+    {
+        "osm_id": "node/9762746673",
+        "governorate": "الجيزة",
+        "name": "مستشفى الرحاب التخصصي",
+        "address": "مستشفى الرحاب التخصصي، شارع رشاد زكي حسان، كوم الأخضر، الجيزة",
+        "latitude": 29.9926236,
+        "longitude": 31.163256
+    },
+    {
+        "osm_id": "node/9764636806",
+        "governorate": "القاهرة",
+        "name": "مستشفي جمال الدين الافغاني (Jamal Al Din Afghani Hospital)",
+        "address": "مستشفي جمال الدين الافغاني، ميدان الجامع، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.0965609,
+        "longitude": 31.3284172
+    },
+    {
+        "osm_id": "node/9787616082",
+        "governorate": "المنيا",
+        "name": "مستشفي العروة الوثقي",
+        "address": "مستشفي العروة الوثقي، شارع التحرير، مدينه الفكريه، المنيا",
+        "latitude": 27.9324626,
+        "longitude": 30.8216168
+    },
+    {
+        "osm_id": "node/9787616090",
+        "governorate": "المنيا",
+        "name": "مستشفي الفكرية العام",
+        "address": "مستشفي الفكرية العام، شارع ابى بكر الصديق، مدينه الفكريه، المنيا",
+        "latitude": 27.9372015,
+        "longitude": 30.8232068
+    },
+    {
+        "osm_id": "node/9809753775",
+        "governorate": "الجيزة",
+        "name": "مستشفى بهيه لعلاج سرطان الثدي",
+        "address": "مستشفى بهيه لعلاج سرطان الثدي، شارع علوبه، الجيزة",
+        "latitude": 30.0047923,
+        "longitude": 31.1866866
+    },
+    {
+        "osm_id": "node/9850700146",
+        "governorate": "القاهرة",
+        "name": "مستشفي سانت ريتا (Sant Rita Hospital)",
+        "address": "مستشفي سانت ريتا، شارع عثمان بن عفان، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.093916,
+        "longitude": 31.3269916
+    },
+    {
+        "osm_id": "node/9974960728",
+        "governorate": "المنوفية",
+        "name": "home",
+        "address": "home، شارع حسنى مبارك، شبين الكوم، المنوفية",
+        "latitude": 30.5499895,
+        "longitude": 31.0217183
+    },
+    {
+        "osm_id": "node/9974961422",
+        "governorate": "القاهرة",
+        "name": "مستشفى الحلميه العسكرى",
+        "address": "مستشفى الحلميه العسكرى، شارع سليم الاول، مصر الجديدة، القاهرة",
+        "latitude": 30.1139213,
+        "longitude": 31.3182019
+    },
+    {
+        "osm_id": "node/10033391519",
+        "governorate": "القاهرة",
+        "name": "المركز الطبى العالمى (International Medical Center)",
+        "address": "المركز الطبى العالمى، 42 km، طريق القاهرة، الاسماعيليه الصحراوي، مدينة الشروق، القاهرة",
+        "latitude": 30.1932457,
+        "longitude": 31.6582147
+    },
+    {
+        "osm_id": "node/10090674554",
+        "governorate": "الشرقية",
+        "name": "مستشفى عامة",
+        "address": "شارع النصر، مدينه فاقوس، الشرقية",
+        "latitude": 30.7307718,
+        "longitude": 31.7928647
+    },
+    {
+        "osm_id": "node/10207020117",
+        "governorate": "القليوبية",
+        "name": "مستشفى فريد حبيب",
+        "address": "مستشفى فريد حبيب، شارع حامد جوهر، بلوك 16077، العبور، القليوبية",
+        "latitude": 30.2221383,
+        "longitude": 31.4826926
+    },
+    {
+        "osm_id": "node/10222968799",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى عامة",
+        "address": "شارع المأمون ابو شوشة، الشاطبى، الإسكندرية",
+        "latitude": 31.2033913,
+        "longitude": 29.9097886
+    },
+    {
+        "osm_id": "node/10280525304",
+        "governorate": "القاهرة",
+        "name": "مركز الدرة التخصصي للعيون (Durrah Eye Center)",
+        "address": "مركز الدرة التخصصي للعيون، شارع نبيل الوقاد، الجولف، مدينة نصر، القاهرة",
+        "latitude": 30.0807161,
+        "longitude": 31.332632
+    },
+    {
+        "osm_id": "node/10310788409",
+        "governorate": "القاهرة",
+        "name": "مستشفي بدر الجامعي - جامعة حلوان",
+        "address": "مستشفي بدر الجامعي - جامعة حلوان، شارع المشير احمد بدوى الجانبى، المنطقة الترفيهية، بدر، القاهرة",
+        "latitude": 30.1451471,
+        "longitude": 31.7233948
+    },
+    {
+        "osm_id": "node/10570500010",
+        "governorate": "جنوب سيناء",
+        "name": "Mountain View hospital",
+        "address": "Mountain View hospital، شارع المطافى، مساكن مبارك، عصلة، دهب، جنوب سيناء",
+        "latitude": 28.5138493,
+        "longitude": 34.5103373
+    },
+    {
+        "osm_id": "node/10651046978",
+        "governorate": "الدقهلية",
+        "name": "الوحدة الصحية بالعصافرة (Al-Asafra Health Center)",
+        "address": "الوحدة الصحية بالعصافرة، شارع سعد زغلول، العصافرة، الدقهلية",
+        "latitude": 31.1715054,
+        "longitude": 32.017292
+    },
+    {
+        "osm_id": "node/10676089794",
+        "governorate": "الفيوم",
+        "name": "Dr. Ahmed Zidan Center",
+        "address": "Dr. Ahmed Zidan Center، شارع الورشة، قسم رابع، الفيوم",
+        "latitude": 29.3073584,
+        "longitude": 30.8499091
+    },
+    {
+        "osm_id": "node/10737990659",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى عامة",
+        "address": "شارع المستشفى، Ras Sudr، جنوب سيناء",
+        "latitude": 29.5880547,
+        "longitude": 32.7120495
+    },
+    {
+        "osm_id": "node/10749393305",
+        "governorate": "المنوفية",
+        "name": "Shintina Alhajar Tropical",
+        "address": "Shintina Alhajar Tropical، شارع تلا، المنوفية",
+        "latitude": 30.6481232,
+        "longitude": 31.0534087
+    },
+    {
+        "osm_id": "node/10784198106",
+        "governorate": "الجيزة",
+        "name": "مستشفى أكتوبر كلينيك",
+        "address": "مستشفى أكتوبر كلينيك، شارع عبد المنعم رياض، القرية السياحية 5، قرية جاردينيا بارك، السادس من أكتوبر، الجيزة",
+        "latitude": 29.9837245,
+        "longitude": 30.9843773
+    },
+    {
+        "osm_id": "node/10925249053",
+        "governorate": "المنيا",
+        "name": "الراعي الصالح",
+        "address": "الراعي الصالح، شارع الجمهوريه، مدينه سمالوط، المنيا",
+        "latitude": 28.3191358,
+        "longitude": 30.7071597
+    },
+    {
+        "osm_id": "node/11027293553",
+        "governorate": "القاهرة",
+        "name": "مستشفى عين الحياة",
+        "address": "مستشفى عين الحياة، شارع النصر، القاهرة",
+        "latitude": 30.1223025,
+        "longitude": 31.3724291
+    },
+    {
+        "osm_id": "node/11050738962",
+        "governorate": "الدقهلية",
+        "name": "الوحدة الصحية بقرية دروة",
+        "address": "الوحدة الصحية بقرية دروة، شارع فتحي ابو والي، الدقهلية",
+        "latitude": 30.8663667,
+        "longitude": 31.3623926
+    },
+    {
+        "osm_id": "node/11210315591",
+        "governorate": "الشرقية",
+        "name": "مستشفي الجامعة",
+        "address": "مستشفي الجامعة، شارع ابو بكر الصديق، مركز المال والأعمال، العاشر من رمضان، الشرقية",
+        "latitude": 30.3238623,
+        "longitude": 31.7320924
+    },
+    {
+        "osm_id": "node/11257108018",
+        "governorate": "القاهرة",
+        "name": "مستشفى حسام شلبي للولادة",
+        "address": "مستشفى حسام شلبي للولادة، شارع بورسعيد، معادي الخبيري، الفاروقية، القاهرة",
+        "latitude": 29.9611824,
+        "longitude": 31.2631753
+    },
+    {
+        "osm_id": "node/11278273768",
+        "governorate": "القاهرة",
+        "name": "عيادات شارع 9",
+        "address": "عيادات شارع 9، شارع جامع القدس، الشرق للتأمين، القاهرة",
+        "latitude": 30.0116999,
+        "longitude": 31.3031698
+    },
+    {
+        "osm_id": "node/11366207025",
+        "governorate": "القاهرة",
+        "name": "Pearl Hospitals",
+        "address": "Pearl Hospitals، شارع الحرمين، المعادي الجديدة، حلوان، القاهرة",
+        "latitude": 29.9740094,
+        "longitude": 31.3334192
+    },
+    {
+        "osm_id": "node/11385674029",
+        "governorate": "أسوان",
+        "name": "Abu Simbel International Hospital",
+        "address": "Abu Simbel International Hospital، شارع المعبد، قريه الفراعنة، مدينة أبو سمبل، أسوان",
+        "latitude": 22.3489148,
+        "longitude": 31.619052
+    },
+    {
+        "osm_id": "node/11428395042",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي الإمام (Al Imam Hospital)",
+        "address": "مستشفي الإمام، شارع الإمام الاكبر عبد الحليم محمود، المندرة، الإسكندرية",
+        "latitude": 31.2749094,
+        "longitude": 30.0062183
+    },
+    {
+        "osm_id": "node/11498990369",
+        "governorate": "القاهرة",
+        "name": "صيدليه ضحي",
+        "address": "صيدليه ضحي، شارع 39، وادي حوف، حلوان، القاهرة",
+        "latitude": 29.8817535,
+        "longitude": 31.3081906
+    },
+    {
+        "osm_id": "node/11589018926",
+        "governorate": "الجيزة",
+        "name": "مستشفى عامة",
+        "address": "شارع طراد النيل، نزلة الجبرية، الجيزة",
+        "latitude": 29.829117,
+        "longitude": 31.2922157
+    },
+    {
+        "osm_id": "node/11687442021",
+        "governorate": "الجيزة",
+        "name": "الوحده الصحيه بأبو صير",
+        "address": "الوحده الصحيه بأبو صير، طريق أبو صير، أبو صير، الجيزة",
+        "latitude": 29.8925338,
+        "longitude": 31.2204031
+    },
+    {
+        "osm_id": "node/11717365888",
+        "governorate": "الأقصر",
+        "name": "مستشفى عامة",
+        "address": "طريق الكباش، الكرنك القديم، الأقصر",
+        "latitude": 25.7082575,
+        "longitude": 32.6489707
+    },
+    {
+        "osm_id": "node/11828714323",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى عامة",
+        "address": "شارع الفندق، القرى السياحية، Mubarak 2، الغردقة، البحر الأحمر",
+        "latitude": 27.1970938,
+        "longitude": 33.8268886
+    },
+    {
+        "osm_id": "node/11936598969",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى عامة",
+        "address": "больница для туристов по страховке، طريق السلام، خليج نعمه، خليج نعامة، شرم الشيخ، رأس أم سد، جنوب سيناء",
+        "latitude": 27.9060362,
+        "longitude": 34.3147939
+    },
+    {
+        "osm_id": "node/11959610699",
+        "governorate": "الجيزة",
+        "name": "مستشفى الجابري",
+        "address": "مستشفى الجابري، شارع الرومالى، الجيزة",
+        "latitude": 30.0104051,
+        "longitude": 31.1917095
+    },
+    {
+        "osm_id": "node/11959624386",
+        "governorate": "الجيزة",
+        "name": "مستشفى الجزيرة",
+        "address": "مستشفى الجزيرة، شارع اسماعيل الشال، الجيزة",
+        "latitude": 30.0101478,
+        "longitude": 31.1923522
+    },
+    {
+        "osm_id": "node/12086908690",
+        "governorate": "البحر الأحمر",
+        "name": "Phisical Therapy Center",
+        "address": "Phisical Therapy Center، شارع حسن علام، الهلال، Al Dahar، الغردقة، البحر الأحمر",
+        "latitude": 27.2581771,
+        "longitude": 33.8066829
+    },
+    {
+        "osm_id": "node/12205946881",
+        "governorate": "القاهرة",
+        "name": "Kaissar Clinic",
+        "address": "Kaissar Clinic، طريق السادات الجانبى، مدينة الشروق، الشروق، القاهرة",
+        "latitude": 30.1517332,
+        "longitude": 31.6267694
+    },
+    {
+        "osm_id": "node/12205946883",
+        "governorate": "القاهرة",
+        "name": "معمل ألفا (Alfa Labs)",
+        "address": "معمل ألفا، طريق السادات الجانبى، مدينة الشروق، الشروق، القاهرة",
+        "latitude": 30.1515997,
+        "longitude": 31.6267945
+    },
+    {
+        "osm_id": "node/12278326902",
+        "governorate": "البحيرة",
+        "name": "مستشفى رشيد العام (Rashid General Hospital)",
+        "address": "مستشفى رشيد العام، شارع احمد فؤاد نور، عزبة بهنسي، رشيد، البحيرة",
+        "latitude": 31.4069122,
+        "longitude": 30.4193311
+    },
+    {
+        "osm_id": "node/12289900501",
+        "governorate": "الإسكندرية",
+        "name": "Main University Hospital",
+        "address": "Main University Hospital، شارع دكتور عبد الواحد الوكيل، المسله شرق، الإسكندرية",
+        "latitude": 31.200857,
+        "longitude": 29.9054701
+    },
+    {
+        "osm_id": "node/12402732939",
+        "governorate": "السويس",
+        "name": "Project Land",
+        "address": "Project Land، طريق جنيفا، السويس",
+        "latitude": 30.0294752,
+        "longitude": 32.5426569
+    },
+    {
+        "osm_id": "node/12880601276",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى دهب المركزي",
+        "address": "مستشفى دهب المركزي، شارع على بن ابى طالب، مدينه دهب، Medina، دهب، جنوب سيناء",
+        "latitude": 28.4845118,
+        "longitude": 34.4945155
+    },
+    {
+        "osm_id": "node/12887250139",
+        "governorate": "القاهرة",
+        "name": "مركز طبي النزهة الجديدة",
+        "address": "مركز طبي النزهة الجديدة، شارع جوزيف تيتو، القاهرة",
+        "latitude": 30.1219136,
+        "longitude": 31.3721061
+    },
+    {
+        "osm_id": "node/12895489801",
+        "governorate": "القاهرة",
+        "name": "مستشفى عبدالقادر فهمي (Abd Al-Kader Fahmy hospital)",
+        "address": "مستشفى عبدالقادر فهمي، شارع حسن افلاطون، مساكن المهندسين، مدينة نصر، القاهرة",
+        "latitude": 30.0784848,
+        "longitude": 31.3444783
+    },
+    {
+        "osm_id": "node/12952190988",
+        "governorate": "القاهرة",
+        "name": "عيادة الذكورة",
+        "address": "عيادة الذكورة، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0316047,
+        "longitude": 31.2284755
+    },
+    {
+        "osm_id": "node/12952190989",
+        "governorate": "القاهرة",
+        "name": "عيادة العلاج الطبيغى",
+        "address": "عيادة العلاج الطبيغى، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0317477,
+        "longitude": 31.228866
+    },
+    {
+        "osm_id": "node/12952190990",
+        "governorate": "القاهرة",
+        "name": "عيادة الجلدية",
+        "address": "عيادة الجلدية، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0317811,
+        "longitude": 31.2285843
+    },
+    {
+        "osm_id": "node/12952190991",
+        "governorate": "القاهرة",
+        "name": "عيادة السكر و عيادة الغدد و عيادة السمنة و التغذية",
+        "address": "عيادة السكر و عيادة الغدد و عيادة السمنة و التغذية، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0320338,
+        "longitude": 31.2290907
+    },
+    {
+        "osm_id": "node/12952190992",
+        "governorate": "القاهرة",
+        "name": "عيادة الرمد",
+        "address": "عيادة الرمد، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0319818,
+        "longitude": 31.2286432
+    },
+    {
+        "osm_id": "node/12952212926",
+        "governorate": "القاهرة",
+        "name": "مسجد كلية الطب",
+        "address": "مسجد كلية الطب، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0311244,
+        "longitude": 31.2291704
+    },
+    {
+        "osm_id": "node/12952212932",
+        "governorate": "القاهرة",
+        "name": "عيادة الجراحة",
+        "address": "عيادة الجراحة، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0318111,
+        "longitude": 31.2284692
+    },
+    {
+        "osm_id": "node/12952212933",
+        "governorate": "القاهرة",
+        "name": "عيادة الجراحة",
+        "address": "عيادة الجراحة، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0318742,
+        "longitude": 31.2282933
+    },
+    {
+        "osm_id": "node/12952212934",
+        "governorate": "القاهرة",
+        "name": "عيادة الباطنة و عيادة جراحة مخ و اعصاب",
+        "address": "عيادة الباطنة و عيادة جراحة مخ و اعصاب، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0319308,
+        "longitude": 31.2281655
+    },
+    {
+        "osm_id": "node/12952409489",
+        "governorate": "القاهرة",
+        "name": "عيادة العظام",
+        "address": "عيادة العظام، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0320253,
+        "longitude": 31.227904
+    },
+    {
+        "osm_id": "node/12952409490",
+        "governorate": "القاهرة",
+        "name": "عيادة الباطنة و القلب و المتوطنة",
+        "address": "عيادة الباطنة و القلب و المتوطنة، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0317355,
+        "longitude": 31.2280885
+    },
+    {
+        "osm_id": "node/12952409491",
+        "governorate": "القاهرة",
+        "name": "عيادة الروماتزم",
+        "address": "عيادة الروماتزم، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0318302,
+        "longitude": 31.2277924
+    },
+    {
+        "osm_id": "node/12952409492",
+        "governorate": "القاهرة",
+        "name": "عيادة مخ وأعصاب والصدر",
+        "address": "عيادة مخ وأعصاب والصدر، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0321163,
+        "longitude": 31.2283203
+    },
+    {
+        "osm_id": "node/12952409493",
+        "governorate": "القاهرة",
+        "name": "عيادة العلاج الطبيعى",
+        "address": "عيادة العلاج الطبيعى، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0322389,
+        "longitude": 31.2280005
+    },
+    {
+        "osm_id": "node/12952409494",
+        "governorate": "القاهرة",
+        "name": "عيادة السمعيات",
+        "address": "عيادة السمعيات، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0316704,
+        "longitude": 31.2282452
+    },
+    {
+        "osm_id": "node/12952409495",
+        "governorate": "القاهرة",
+        "name": "عيادة أمراض الدم",
+        "address": "عيادة أمراض الدم، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0323652,
+        "longitude": 31.2284404
+    },
+    {
+        "osm_id": "node/12952409496",
+        "governorate": "القاهرة",
+        "name": "ليزر الجلدية",
+        "address": "ليزر الجلدية، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.032434,
+        "longitude": 31.2282301
+    },
+    {
+        "osm_id": "node/12952435106",
+        "governorate": "القاهرة",
+        "name": "ليزر الرمد",
+        "address": "ليزر الرمد، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0315237,
+        "longitude": 31.2286979
+    },
+    {
+        "osm_id": "node/12952440615",
+        "governorate": "القاهرة",
+        "name": "مبنى بنك الدم و عيادة طب الأسرة",
+        "address": "مبنى بنك الدم و عيادة طب الأسرة، شارع السرايا، المنيل الغربي، المنيل، القاهرة",
+        "latitude": 30.0314661,
+        "longitude": 31.2291979
+    },
+    {
+        "osm_id": "node/12959320901",
+        "governorate": "الجيزة",
+        "name": "Dar El Oyun Hospitals",
+        "address": "Dar El Oyun Hospitals، شارع الغزالى، بين السرايات، الجيزة",
+        "latitude": 30.0385996,
+        "longitude": 31.2050636
+    },
+    {
+        "osm_id": "node/13031156201",
+        "governorate": "قنا",
+        "name": "مستشفي النيل نقادة",
+        "address": "مستشفي النيل نقادة، شارع 23 يوليو، نقادة، قنا",
+        "latitude": 25.8984282,
+        "longitude": 32.7219566
+    },
+    {
+        "osm_id": "node/13083912855",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى الحياة (Al Haya Hospital)",
+        "address": "مستشفى الحياة، شارع النصر، القرى السياحية، Sakkala، الغردقة، البحر الأحمر",
+        "latitude": 27.1546089,
+        "longitude": 33.8216081
+    },
+    {
+        "osm_id": "node/13110393001",
+        "governorate": "الأقصر",
+        "name": "مستشفي كليوباترا",
+        "address": "مستشفي كليوباترا، شارع كليوباترا، Souk de Louxor، مدينه الاقصر، الأقصر",
+        "latitude": 25.7000072,
+        "longitude": 32.6424326
+    },
+    {
+        "osm_id": "node/13135892861",
+        "governorate": "القاهرة",
+        "name": "مستشفى أمان",
+        "address": "مستشفى أمان، شارع رياض باشا، حلوان البحريه، حلوان، القاهرة",
+        "latitude": 29.8511443,
+        "longitude": 31.3365605
+    },
+    {
+        "osm_id": "node/13167384000",
+        "governorate": "الجيزة",
+        "name": "مستشفى كابيتال كير (Capital Care Hospital)",
+        "address": "مستشفى كابيتال كير، شارع محمد فريد، القرية السياحية 5، قرية جاردينيا بارك، السادس من أكتوبر، الجيزة",
+        "latitude": 29.983664,
+        "longitude": 30.9831511
+    },
+    {
+        "osm_id": "node/13167398939",
+        "governorate": "الجيزة",
+        "name": "مستشفى نيوراسبتاليا (Neuro Espetalia Hospital)",
+        "address": "مستشفى نيوراسبتاليا، شارع عبد العزيز فهمي باشا، القرية السياحية 5، قرية جاردينيا بارك، السادس من أكتوبر، الجيزة",
+        "latitude": 29.9840365,
+        "longitude": 30.9835779
+    },
+    {
+        "osm_id": "node/13169325310",
+        "governorate": "الجيزة",
+        "name": "مستشفى فوقية",
+        "address": "مستشفى فوقية، شارع عبد العزيز فهمي باشا، القرية السياحية 5، قرية جاردينيا بارك، السادس من أكتوبر، الجيزة",
+        "latitude": 29.984212,
+        "longitude": 30.9840008
+    },
+    {
+        "osm_id": "node/13169518887",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى إليت (Elite Hospital)",
+        "address": "مستشفى إليت، الطريق الدائري، عزبة نادي الصيد، الإسكندرية",
+        "latitude": 31.1717453,
+        "longitude": 29.943345
+    },
+    {
+        "osm_id": "node/13177651405",
+        "governorate": "الجيزة",
+        "name": "مستشفى عامة",
+        "address": "شارع احمد كامل، الجيزة",
+        "latitude": 30.0091224,
+        "longitude": 31.1984587
+    },
+    {
+        "osm_id": "node/13322682624",
+        "governorate": "أسيوط",
+        "name": "Al Rowad",
+        "address": "Al Rowad، شارع التحرير، الشركات، سادس، أسيوط",
+        "latitude": 27.1810638,
+        "longitude": 31.1801785
+    },
+    {
+        "osm_id": "node/13327722417",
+        "governorate": "القاهرة",
+        "name": "مستشفى الجارم",
+        "address": "مستشفى الجارم، شارع 101، معادي الخبيري، الفاروقية، القاهرة",
+        "latitude": 29.95673,
+        "longitude": 31.2531683
+    },
+    {
+        "osm_id": "node/13333741524",
+        "governorate": "الجيزة",
+        "name": "مستشفى المحور (Mehwar Hospital)",
+        "address": "مستشفى المحور، طريق المدينة التعليمية، كمبوند ريحانة، الشيخ زايد، الجيزة",
+        "latitude": 30.0092376,
+        "longitude": 30.9963025
+    },
+    {
+        "osm_id": "node/13334724503",
+        "governorate": "الجيزة",
+        "name": "Alnesr Medical Hospital",
+        "address": "Alnesr Medical Hospital، طريق أبو صير، أبو صير، الجيزة",
+        "latitude": 29.8930557,
+        "longitude": 31.2226023
+    },
+    {
+        "osm_id": "node/13337095902",
+        "governorate": "الجيزة",
+        "name": "Shorouk Hospital",
+        "address": "Shorouk Hospital، شارع الاميره فاديه، كوم الأخضر، الجيزة",
+        "latitude": 29.9785986,
+        "longitude": 31.147942
+    },
+    {
+        "osm_id": "node/13419397901",
+        "governorate": "المنوفية",
+        "name": "مستشفى السادات التخصصي (Sadat Specialized Hospital)",
+        "address": "مستشفى السادات التخصصي، شارع عمر بن عبد العزيز، بيت الوطن أ، مدينة السادات، المنوفية",
+        "latitude": 30.3692667,
+        "longitude": 30.5057936
+    },
+    {
+        "osm_id": "node/13450242701",
+        "governorate": "أسوان",
+        "name": "awc hospital - aseel medical care",
+        "address": "awc hospital - aseel medical care، شارع الفنادق، نجع المحطة، أسوان",
+        "latitude": 24.0721021,
+        "longitude": 32.8827854
+    },
+    {
+        "osm_id": "node/13463043998",
+        "governorate": "القليوبية",
+        "name": "د. حنان نعيم",
+        "address": "د. حنان نعيم، شارع سعيد نوفل، الخصوص، القليوبية",
+        "latitude": 30.1628074,
+        "longitude": 31.3157684
+    },
+    {
+        "osm_id": "node/13566406801",
+        "governorate": "المنوفية",
+        "name": "مستشفى السادات التخصصي (Sadat Specialized Hospital)",
+        "address": "مستشفى السادات التخصصي، شارع عمر بن عبد العزيز، بيت الوطن أ، مدينة السادات، المنوفية",
+        "latitude": 30.369251,
+        "longitude": 30.5057935
+    },
+    {
+        "osm_id": "node/13593146701",
+        "governorate": "بورسعيد",
+        "name": "مستشفى النصر",
+        "address": "مستشفى النصر، شارع محمد الالفى، المناخ، مساكن ٥٠٠٠، بورسعيد",
+        "latitude": 31.2678964,
+        "longitude": 32.2776803
+    },
+    {
+        "osm_id": "node/13593159801",
+        "governorate": "بورسعيد",
+        "name": "ال سليمان",
+        "address": "ال سليمان، شارع سعد زغلول، المناخ، سيريا، بورسعيد",
+        "latitude": 31.269511,
+        "longitude": 32.292383
+    },
+    {
+        "osm_id": "node/13620461601",
+        "governorate": "كفر الشيخ",
+        "name": "مستشفى كفر الشيخ العام",
+        "address": "مستشفى كفر الشيخ العام، شارع حافظ بدوى، كفر الشيخ",
+        "latitude": 31.1163182,
+        "longitude": 30.9430251
+    },
+    {
+        "osm_id": "node/13622619975",
+        "governorate": "أسوان",
+        "name": "وحدة طب أسرة حاجر أبو خليفة",
+        "address": "وحدة طب أسرة حاجر أبو خليفة، شارع الشيخ المدنى، مدينه ادفو، أسوان",
+        "latitude": 24.9785122,
+        "longitude": 32.8394991
+    },
+    {
+        "osm_id": "node/13651155552",
+        "governorate": "القليوبية",
+        "name": "مستشفي الشاملة الجديدة",
+        "address": "مستشفي الشاملة الجديدة، طريق طوخ، شبين القناطر، القليوبية",
+        "latitude": 30.3151472,
+        "longitude": 31.3131299
+    },
+    {
+        "osm_id": "node/13673218385",
+        "governorate": "الجيزة",
+        "name": "مركز مصر للقلب والقسطرة و الرعاية المركزة (Egypt Health Center)",
+        "address": "مركز مصر للقلب والقسطرة و الرعاية المركزة، شارع احمد الشاطورى، الدقى، الجيزة",
+        "latitude": 30.0337191,
+        "longitude": 31.2117988
+    },
+    {
+        "osm_id": "node/13725155156",
+        "governorate": "الإسكندرية",
+        "name": "Saudi German Hospital SGH",
+        "address": "Saudi German Hospital SGH، شارع خلف مسجد البشير، الإسكندرية",
+        "latitude": 31.0593791,
+        "longitude": 29.7182788
+    },
+    {
+        "osm_id": "node/13732205305",
+        "governorate": "القاهرة",
+        "name": "مركز بدر الطبي",
+        "address": "مركز بدر الطبي، شارع عثمان بن عفان، منطقة ب، بدر، القاهرة",
+        "latitude": 30.1501218,
+        "longitude": 31.7009632
+    },
+    {
+        "osm_id": "node/13743657401",
+        "governorate": "المنيا",
+        "name": "مستشفى جامعة المنيا (Al-Minya University hospital)",
+        "address": "مستشفى جامعة المنيا، طريق القاهرة، اسيوط الزراعى، عزبة صادق قليني، شاكر سيحه، المنيا",
+        "latitude": 28.1283449,
+        "longitude": 30.7393152
+    },
+    {
+        "osm_id": "node/13901950594",
+        "governorate": "القاهرة",
+        "name": "مستشفى المشفى (Al Mashfa Hospital)",
+        "address": "مستشفى المشفى، طريق القاهرة، الاسماعيليه الصحراوي، القاهرة",
+        "latitude": 30.1982578,
+        "longitude": 31.6553532
+    },
+    {
+        "osm_id": "node/13907229826",
+        "governorate": "القليوبية",
+        "name": "مستشفى الخانكة للصحة النفسية وعلاج الإدمان (Al-khanka Hospital for Mental Health)",
+        "address": "مستشفى الخانكة للصحة النفسية وعلاج الإدمان، شارع جامعه الدراسات الاسلامية، مساكن التأمين الصحى، السلام، العبور، القليوبية",
+        "latitude": 30.2238415,
+        "longitude": 31.3685
+    },
+    {
+        "osm_id": "node/13907321984",
+        "governorate": "القاهرة",
+        "name": "مستشفى مصر الجديدة للصحة النفسية وعلاج الإدمان (Misr-Elgadeda Hospital for Mental Health)",
+        "address": "مستشفى مصر الجديدة للصحة النفسية وعلاج الإدمان، طريق المطار، القاهرة",
+        "latitude": 30.1216524,
+        "longitude": 31.3959786
+    },
+    {
+        "osm_id": "node/13907396658",
+        "governorate": "بورسعيد",
+        "name": "مستشفى بورسعيد للصحة النفسية وعلاج الإدمان (Portsaid Hospital for Mental Health)",
+        "address": "مستشفى بورسعيد للصحة النفسية وعلاج الإدمان، شارع 23 ديسمبر، الزهور، مساكن ٥٠٠٠، بورسعيد",
+        "latitude": 31.2513116,
+        "longitude": 32.2619335
+    },
+    {
+        "osm_id": "node/13907606661",
+        "governorate": "القليوبية",
+        "name": "مستشفى بنها للصحة النفسية وعلاج الإدمان (Benha Hospital for Mental Health)",
+        "address": "مستشفى بنها للصحة النفسية وعلاج الإدمان، شارع الاهرام، بنها، القليوبية",
+        "latitude": 30.4653806,
+        "longitude": 31.1869958
+    },
+    {
+        "osm_id": "node/13911388944",
+        "governorate": "الشرقية",
+        "name": "مستشفى العزازى للصحة النفسية وعلاج الإدمان (Al-Azazy Hospital for Mental Health)",
+        "address": "مستشفى العزازى للصحة النفسية وعلاج الإدمان، طريق العزازية، مدينه القرين، فاقوس، الشرقية",
+        "latitude": 30.5855264,
+        "longitude": 31.7200975
+    },
+    {
+        "osm_id": "node/13911411002",
+        "governorate": "المنوفية",
+        "name": "مستشفى شبين الكوم للصحة النفسية وعلاج الإدمان (Shebeen- Elkom Mental Health Hospital)",
+        "address": "مستشفى شبين الكوم للصحة النفسية وعلاج الإدمان، شارع حسنى مبارك، شبين الكوم، المنوفية",
+        "latitude": 30.5447953,
+        "longitude": 31.0479924
+    },
+    {
+        "osm_id": "node/13914231401",
+        "governorate": "الغربية",
+        "name": "مستشفى طنطا للصحة النفسية وعلاج الإدمان (Tanta Hospital for Mental Health)",
+        "address": "مستشفى طنطا للصحة النفسية وعلاج الإدمان، شارع الجيش، طه الحكيم، ام المؤمنين، الغربية",
+        "latitude": 30.8004467,
+        "longitude": 30.9957852
+    },
+    {
+        "osm_id": "node/13914650873",
+        "governorate": "بنى سويف",
+        "name": "مستشفى بنى سويف للصحة النفسية وعلاج الإدمان (Bani-Suif Hospital for Mental Health)",
+        "address": "مستشفى بنى سويف للصحة النفسية وعلاج الإدمان، شارع صفوت، بنى عطية، بنى سويف",
+        "latitude": 29.0650409,
+        "longitude": 31.1033106
+    },
+    {
+        "osm_id": "node/13914651256",
+        "governorate": "المنيا",
+        "name": "مستشفى بنى سويف للصحة النفسية وعلاج الإدمان (Al-Minya Hospital for Mental Health)",
+        "address": "مستشفى بنى سويف للصحة النفسية وعلاج الإدمان، شارع 1، المنطقة السياحية 2، المنيا الجديدة، المنيا",
+        "latitude": 28.0793904,
+        "longitude": 30.8070199
+    },
+    {
+        "osm_id": "node/13914672017",
+        "governorate": "الدقهلية",
+        "name": "مستشفى دميرة للصحة النفسية وعلاج الإدمان (Demira Hospital for Mental Health)",
+        "address": "مستشفى دميرة للصحة النفسية وعلاج الإدمان، طريق المنصوره، بلقاس، مدينه بلقاس، الدقهلية",
+        "latitude": 31.1347354,
+        "longitude": 31.379427
+    },
+    {
+        "osm_id": "node/13914690138",
+        "governorate": "سوهاج",
+        "name": "مستشفى سوهاج للصحة النفسية وعلاج الإدمان (Sohag Hospital for Mental Health)",
+        "address": "مستشفى سوهاج للصحة النفسية وعلاج الإدمان، شارع انس بن مالك، الكبش، سوهاج",
+        "latitude": 26.5610934,
+        "longitude": 31.6925676
+    },
+    {
+        "osm_id": "node/13914699982",
+        "governorate": "أسوان",
+        "name": "مستشفى أسوان للصحة النفسية وعلاج الإدمان (Aswan Hospital for Mental Health)",
+        "address": "مستشفى أسوان للصحة النفسية وعلاج الإدمان، طريق السد العالى، اسوان، أسوان",
+        "latitude": 23.9784018,
+        "longitude": 32.9002444
+    },
+    {
+        "osm_id": "node/13952524688",
+        "governorate": "القاهرة",
+        "name": "المركز الطبى حدائق العاصمة",
+        "address": "المركز الطبى حدائق العاصمة، شارع احمد زويل، بدر، القاهرة",
+        "latitude": 30.154861,
+        "longitude": 31.811162
+    },
+    {
+        "osm_id": "node/13967918401",
+        "governorate": "القاهرة",
+        "name": "مستشفى تبارك للاطفال فرع المقطم",
+        "address": "مستشفى تبارك للاطفال فرع المقطم، شارع النافوره، الخليفة، القاهرة",
+        "latitude": 30.0152428,
+        "longitude": 31.2816345
+    },
+    {
+        "osm_id": "way/28661710",
+        "governorate": "القاهرة",
+        "name": "مستشفى هليوبولس (Heliopolis hospital)",
+        "address": "شارع مستشفى هليوبوليس، الحلمية، القاهرة",
+        "latitude": 30.106237468421053,
+        "longitude": 31.337312615789475
+    },
+    {
+        "osm_id": "way/28826260",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الشاطبي الجامعي (Al-Shatby University Hospital)",
+        "address": "5`، طريق الجيش، الإسكندرية",
+        "latitude": 31.20934504117647,
+        "longitude": 29.911074747058823
+    },
+    {
+        "osm_id": "way/28827053",
+        "governorate": "القاهرة",
+        "name": "مستشفي ابو الريش الجامعي للاطفال بالمنيرة (Abu Al-Rish University Hospital for Children)",
+        "address": "شارع حلوان، العيني، السيدة زينب، القاهرة",
+        "latitude": 30.029358639999998,
+        "longitude": 31.234828719999996
+    },
+    {
+        "osm_id": "way/28828990",
+        "governorate": "القاهرة",
+        "name": "مستشفى العباسية للصحة النفسية (Abbasseya Mental Health Hospital)",
+        "address": "مستشفى العباسية للصحة النفسية، شارع جمال عبد الناصر، امتداد رمسيس 1، ثان مدينة نصر، القاهرة",
+        "latitude": 30.06850067692308,
+        "longitude": 31.29508025769231
+    },
+    {
+        "osm_id": "way/28829672",
+        "governorate": "القاهرة",
+        "name": "مستشفى القوات المسلحة (Hospital of the Armed Forces)",
+        "address": "مستشفى القوات المسلحة، شارع 163، الخبيرى الغربيه، معادي الخبيري، حلوان، القاهرة",
+        "latitude": 29.967157805555555,
+        "longitude": 31.244138572222223
+    },
+    {
+        "osm_id": "way/28829872",
+        "governorate": "القاهرة",
+        "name": "مستشفى الانجلو امريكان (Anglo-American Hospital)",
+        "address": "مستشفى الانجلو امريكان، شارع البرج، الجزيرة، القاهرة",
+        "latitude": 30.0459639,
+        "longitude": 31.221668036363635
+    },
+    {
+        "osm_id": "way/28848108",
+        "governorate": "القاهرة",
+        "name": "مستشفي غمرة العسكري ( الاسرائيلي سابقا) بالشرابية (Ghamra Military Hospital)",
+        "address": "مستشفي غمرة العسكري ( الاسرائيلي سابقا) بالشرابية، شارع خلف المستشفي، الشرابيه، السكاكيني، القاهرة",
+        "latitude": 30.069049116666665,
+        "longitude": 31.26252098333333
+    },
+    {
+        "osm_id": "way/28865204",
+        "governorate": "القاهرة",
+        "name": "مؤسسة مستشفى سرطان الأطفال (Children's Cancer Hospital Foundation)",
+        "address": "شارع حسن الانور، زينهم، السيدة زينب، القاهرة",
+        "latitude": 30.02309251304348,
+        "longitude": 31.237878297826086
+    },
+    {
+        "osm_id": "way/29222662",
+        "governorate": "القاهرة",
+        "name": "مستشفى حلوان العام (Helwan General Hospital)",
+        "address": "شارع محمد مصطفى المراغي، حلوان، القاهرة",
+        "latitude": 29.847957020000003,
+        "longitude": 31.34251192
+    },
+    {
+        "osm_id": "way/29222704",
+        "governorate": "القاهرة",
+        "name": "مستشفى حلوان للصحة النفسية وعلاج الإدمان (Helwan Psychiatric Hospital)",
+        "address": "مستشفى حلوان للصحة النفسية وعلاج الإدمان، شارع 18، حلوان، القاهرة",
+        "latitude": 29.83653272,
+        "longitude": 31.33836548
+    },
+    {
+        "osm_id": "way/29419802",
+        "governorate": "القاهرة",
+        "name": "مستشفى شبرة العام (Shobra General Hospital)",
+        "address": "مستشفى شبرة العام، شارع يوسف حموده، الترعه البولاقيه، الظاهر، القاهرة",
+        "latitude": 30.07322738,
+        "longitude": 31.252199519999998
+    },
+    {
+        "osm_id": "way/29850585",
+        "governorate": "القاهرة",
+        "name": "مركز طبى منشأة ناصر (Manshiet Naser Medical Centre)",
+        "address": "مركز طبى منشأة ناصر، شارع الظاهره، منشية ناصر، القاهرة",
+        "latitude": 30.042706000000003,
+        "longitude": 31.283333542857143
+    },
+    {
+        "osm_id": "way/29990917",
+        "governorate": "القاهرة",
+        "name": "المستشفى اليوناني (The Greek Hospital)",
+        "address": "DFC مركز القدم السكري، شارع احمد فؤاد عبد العزيز، العباسية، الدمرداش، القاهرة",
+        "latitude": 30.066264257142855,
+        "longitude": 31.280788785714286
+    },
+    {
+        "osm_id": "way/29990924",
+        "governorate": "القاهرة",
+        "name": "المستشفى الإيطالي (Italian Hospital)",
+        "address": "المستشفى الإيطالي، شارع مخازن الصحه، العباسية، الدمرداش، القاهرة",
+        "latitude": 30.066192949999998,
+        "longitude": 31.28252331
+    },
+    {
+        "osm_id": "way/29991131",
+        "governorate": "القاهرة",
+        "name": "المستشفى التخصصى (Specialized Hospital)",
+        "address": "المستشفى التخصصى، شارع منظمه الوحده الافريقيه، حدائق القبة، الدمرداش، القاهرة",
+        "latitude": 30.076775329411767,
+        "longitude": 31.289630329411768
+    },
+    {
+        "osm_id": "way/29991193",
+        "governorate": "القاهرة",
+        "name": "مستشفى الدمرداش (Al Demerdash Hospital)",
+        "address": "مستشفى الدمرداش، شارع رمسيس، العباسيه الغربيه، العباسية، الدمرداش، القاهرة",
+        "latitude": 30.07317367333333,
+        "longitude": 31.27724213466667
+    },
+    {
+        "osm_id": "way/30065029",
+        "governorate": "الجيزة",
+        "name": "مستشفى الحميات (Mustashfa Al-Hummiyat)",
+        "address": "مستشفى الحميات، شارع ممدوح سالم، إمبابة، وراق الحضر، الجيزة",
+        "latitude": 30.084372966666667,
+        "longitude": 31.225249916666666
+    },
+    {
+        "osm_id": "way/31820663",
+        "governorate": "القاهرة",
+        "name": "مستشفى تبارك للولادة والأطفال (Tabarak for Children)",
+        "address": "مستشفى تبارك للولادة والأطفال، شارع الدكتور انور المفتي، المنطقة الأولى، مدينة نصر، القاهرة",
+        "latitude": 30.06675002,
+        "longitude": 31.33405972
+    },
+    {
+        "osm_id": "way/32694180",
+        "governorate": "القاهرة",
+        "name": "مستشفى العاملين بقطاع البترول (Petrolium Hospital)",
+        "address": "مستشفى العاملين بقطاع البترول، شارع لوساكا، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.064656059999997,
+        "longitude": 31.346473659999997
+    },
+    {
+        "osm_id": "way/32694193",
+        "governorate": "القاهرة",
+        "name": "مركز د. ياسين عبد الغفار (Dr. Yassin Abdel Ghafar for kidney)",
+        "address": "مركز د. ياسين عبد الغفار، شارع لوساكا، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.064493814285715,
+        "longitude": 31.34669932857143
+    },
+    {
+        "osm_id": "way/37789099",
+        "governorate": "القاهرة",
+        "name": "حسبو الدولي (Hasabo International)",
+        "address": "شارع احمد فخري، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.06814495,
+        "longitude": 31.34910856666667
+    },
+    {
+        "osm_id": "way/38071251",
+        "governorate": "القاهرة",
+        "name": "مستشفى مدينة نصر التخصصى (Nasr City Specialized Hospital)",
+        "address": "شارع الدكتور انور المفتي، المنطقة الأولى، مدينة نصر، القاهرة",
+        "latitude": 30.0664817,
+        "longitude": 31.326120032
+    },
+    {
+        "osm_id": "way/43157366",
+        "governorate": "أسوان",
+        "name": "مستشفي مبارك العسكري (Mubarak Military Hospital)",
+        "address": "مستشفي مبارك العسكري، شارع شرق البندر، نجع المحطة، أسوان",
+        "latitude": 24.075476735294117,
+        "longitude": 32.888160135294115
+    },
+    {
+        "osm_id": "way/43157497",
+        "governorate": "أسوان",
+        "name": "مستشفى امراض الصدر (Chest Diseases Hospital)",
+        "address": "مستشفى امراض الصدر، شارع اللواء جمعه مهدى، بدر الدين، أسوان",
+        "latitude": 24.094358059999998,
+        "longitude": 32.90824796
+    },
+    {
+        "osm_id": "way/44349347",
+        "governorate": "الجيزة",
+        "name": "مستشفى الشيخ زايد المركزي العام (El-Sheikh Zayed General Hospital)",
+        "address": "مستشفى الشيخ زايد المركزي العام، شارع 30، الحى 1، تارا ريزيدنس، الجيزة",
+        "latitude": 30.03991439,
+        "longitude": 31.00898555
+    },
+    {
+        "osm_id": "way/47975460",
+        "governorate": "القاهرة",
+        "name": "مستشفى أحمد جلال العسكرى (Ahmed Gala Military Hospital)",
+        "address": "مستشفى أحمد جلال العسكرى، شارع جوزيف تيتو، القاهرة",
+        "latitude": 30.1364455125,
+        "longitude": 31.4237198125
+    },
+    {
+        "osm_id": "way/48980479",
+        "governorate": "الجيزة",
+        "name": "مستشفى العجوزة (Mustashfa Al-Aguza)",
+        "address": "مستشفى العجوزة، شارع كورنيش النيل، العجوزة، الجيزة",
+        "latitude": 30.05439283902439,
+        "longitude": 31.215374814634142
+    },
+    {
+        "osm_id": "way/51218980",
+        "governorate": "القاهرة",
+        "name": "مستشفى عامة",
+        "address": "مستشفي النصر، شارع عمر بن عبد العزيز، حلوان، القاهرة",
+        "latitude": 29.840145380000003,
+        "longitude": 31.322987480000002
+    },
+    {
+        "osm_id": "way/51799433",
+        "governorate": "القاهرة",
+        "name": "الزهراء (El-Zahraa)",
+        "address": "الزهراء، شارع اسماعيل القباني، المنطقة الأولى، مدينة نصر، القاهرة",
+        "latitude": 30.06035622,
+        "longitude": 31.33165626
+    },
+    {
+        "osm_id": "way/52294846",
+        "governorate": "القاهرة",
+        "name": "أبو الريش للأطفال - الياباني (Abu A-Reesh Japanese Children Hospital)",
+        "address": "أبو الريش للأطفال - الياباني، شارع على باشا ابراهيم، العيني، السيدة زينب، القاهرة",
+        "latitude": 30.028612700000004,
+        "longitude": 31.23324218
+    },
+    {
+        "osm_id": "way/53329696",
+        "governorate": "القاهرة",
+        "name": "مستشفى يسرى جوهر (Yusry Gohar Hospital)",
+        "address": "23B، شارع عبد العزيز آل سعود، مصر القديمة، أثر النبي، القاهرة",
+        "latitude": 30.01251966,
+        "longitude": 31.2227693
+    },
+    {
+        "osm_id": "way/53330987",
+        "governorate": "القاهرة",
+        "name": "مستشفى الزهيرى (Al-Zohairy Hospital)",
+        "address": "مستشفى الزهيرى، شارع الاخشيد، الروضه والمقياس، مصر القديمة، أثر النبي، القاهرة",
+        "latitude": 30.01364,
+        "longitude": 31.22346882
+    },
+    {
+        "osm_id": "way/59622137",
+        "governorate": "القاهرة",
+        "name": "مستشفي دار الحكمة (Dar Al-Hekma Hospital)",
+        "address": "مستشفي دار الحكمة، شارع محمد حسين هيكل، المنطقة السادسة، مدينة نصر، القاهرة",
+        "latitude": 30.065824757142856,
+        "longitude": 31.338004957142857
+    },
+    {
+        "osm_id": "way/81564324",
+        "governorate": "القاهرة",
+        "name": "مستشفى صفوة الجولف (Safwat Al-Golf Hospital)",
+        "address": "شارع على الليثى، الجولف، مدينة نصر، القاهرة",
+        "latitude": 30.083727220000004,
+        "longitude": 31.33592574
+    },
+    {
+        "osm_id": "way/81564563",
+        "governorate": "القاهرة",
+        "name": "ام النور (Um Al-Nour)",
+        "address": "شارع شمس الدين الذهبي، الجولف، مدينة نصر، القاهرة",
+        "latitude": 30.082276020000002,
+        "longitude": 31.333855140000004
+    },
+    {
+        "osm_id": "way/88798740",
+        "governorate": "البحر الأحمر",
+        "name": "Cleopatra Hurghada Hospital",
+        "address": "Cleopatra Hurghada Hospital، طريق النصر، السقاله، البلدة القديمة، الغردقة، البحر الأحمر",
+        "latitude": 27.236626978571426,
+        "longitude": 33.833427071428574
+    },
+    {
+        "osm_id": "way/92967919",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى عامة",
+        "address": "شارع المستشفى الدولي، شرم الشيخ، رأس أم سد، جنوب سيناء",
+        "latitude": 27.88192582,
+        "longitude": 34.2987719
+    },
+    {
+        "osm_id": "way/94125740",
+        "governorate": "القليوبية",
+        "name": "مستشفي جامعة بنها (Banha University Hospital)",
+        "address": "مستشفي جامعة بنها، شارع الاشراف، مساكن غرب الاستاد، بنها، القليوبية",
+        "latitude": 30.469645054545456,
+        "longitude": 31.17872520909091
+    },
+    {
+        "osm_id": "way/94168667",
+        "governorate": "أسيوط",
+        "name": "مستشفى عامة",
+        "address": "مستشفی جامعة أسيوط، شارع اللواء حسن كامل، الخامسة، أسيوط",
+        "latitude": 27.1850640875,
+        "longitude": 31.1664689625
+    },
+    {
+        "osm_id": "way/94168695",
+        "governorate": "أسيوط",
+        "name": "مستشفى عامة",
+        "address": "شارع عبد السلام عارف، أسيوط",
+        "latitude": 27.20014814,
+        "longitude": 31.17103758
+    },
+    {
+        "osm_id": "way/94172969",
+        "governorate": "المنوفية",
+        "name": "مستشفى عامة",
+        "address": "شارع جمال عبد الناصر، شبين الكوم، المنوفية",
+        "latitude": 30.5745716625,
+        "longitude": 31.011728425
+    },
+    {
+        "osm_id": "way/94175187",
+        "governorate": "سوهاج",
+        "name": "مستشفى عامة",
+        "address": "شارع مستشفى الجامعه، ناصر، سوهاج",
+        "latitude": 26.566388506666666,
+        "longitude": 31.70827562
+    },
+    {
+        "osm_id": "way/94184971",
+        "governorate": "الفيوم",
+        "name": "مستشفى الفيوم العام (Fayoum General Hospital)",
+        "address": "مستشفى الفيوم العام، شارع غرباوى، اول النجارين، الفيوم",
+        "latitude": 29.3161553875,
+        "longitude": 30.8497820125
+    },
+    {
+        "osm_id": "way/94234559",
+        "governorate": "الأقصر",
+        "name": "مستشفى عامة",
+        "address": "طريق اسوان الزراعى الغربى، أرمنت الوابورات، Armant، الأقصر",
+        "latitude": 25.61145014,
+        "longitude": 32.50417082
+    },
+    {
+        "osm_id": "way/94507198",
+        "governorate": "القاهرة",
+        "name": "Egyptair Hospital",
+        "address": "Egyptair Hospital، شارع العروبه، القاهرة",
+        "latitude": 30.127348542105263,
+        "longitude": 31.404681805263156
+    },
+    {
+        "osm_id": "way/94592273",
+        "governorate": "الجيزة",
+        "name": "مستشفى دار الفؤاد (Dar Al-Fourad hospital)",
+        "address": "سيلانترو، محور 26 يوليو الجانبى، بلوك 3، الحي السابع، السادس من أكتوبر، الجيزة",
+        "latitude": 29.997227554545454,
+        "longitude": 30.967371645454545
+    },
+    {
+        "osm_id": "way/95830900",
+        "governorate": "الغربية",
+        "name": "مستشفى عامة",
+        "address": "طريق المحله، طنطا، امام الحسينى، الغربية",
+        "latitude": 30.95048628,
+        "longitude": 31.1492435
+    },
+    {
+        "osm_id": "way/95830904",
+        "governorate": "الغربية",
+        "name": "مستشفى عامة",
+        "address": "مستشفى صدر المحلة، شارع خلف سور المستعمره، امام الحسينى، الغربية",
+        "latitude": 30.95312525,
+        "longitude": 31.14965593333333
+    },
+    {
+        "osm_id": "way/95926225",
+        "governorate": "الغربية",
+        "name": "مستشفى عامة",
+        "address": "شارع الشهيد عبد الخالق محمد عبد الخالق، مدينه كفر الزيات، الغربية",
+        "latitude": 30.8203948,
+        "longitude": 30.8197925
+    },
+    {
+        "osm_id": "way/96922027",
+        "governorate": "السويس",
+        "name": "مستشفى عامة",
+        "address": "شارع الشيخ هاشم، القلزم، السويس",
+        "latitude": 29.96811981818182,
+        "longitude": 32.54657459090909
+    },
+    {
+        "osm_id": "way/97145192",
+        "governorate": "القاهرة",
+        "name": "مستشفى الجلاء التعليمى (Al Galaa Teaching Hospital)",
+        "address": "مستشفى الجلاء التعليمى، شارع 26 يوليو، القلايه، بولاق، القاهرة",
+        "latitude": 30.0545995,
+        "longitude": 31.237643202127657
+    },
+    {
+        "osm_id": "way/97199911",
+        "governorate": "القاهرة",
+        "name": "الهلال الاحمر المصرى (The Red Crescent Hospital)",
+        "address": "شارع رمسيس، الجياره، الظاهر، القاهرة",
+        "latitude": 30.05912998,
+        "longitude": 31.243900619999998
+    },
+    {
+        "osm_id": "way/97199915",
+        "governorate": "القاهرة",
+        "name": "مستشفى هيئة سكك حديد (Egyptian Railways Authority Hospital)",
+        "address": "شارع الجلاء، عرابى التوفقية، الأزبكية، القاهرة",
+        "latitude": 30.0586018,
+        "longitude": 31.241900199999996
+    },
+    {
+        "osm_id": "way/97234524",
+        "governorate": "الإسماعيلية",
+        "name": "مستشفى الاسماعيلية العام (Ismailia General Hospital)",
+        "address": "مستشفى الاسماعيلية العام، شارع المعصرة، مساكن المرحله 7، الإسماعيلية",
+        "latitude": 30.6204979375,
+        "longitude": 32.2874225
+    },
+    {
+        "osm_id": "way/97252486",
+        "governorate": "القاهرة",
+        "name": "المركز الطبى العالمى (International Medical Centre)",
+        "address": "المركز الطبى العالمى، 42 km، طريق القاهرة، الاسماعيليه الصحراوي، القاهرة",
+        "latitude": 30.192958115,
+        "longitude": 31.656654229999997
+    },
+    {
+        "osm_id": "way/97352998",
+        "governorate": "بني سويف",
+        "name": "مستشفي بني سويف العام (Bani Sewif General Hospital)",
+        "address": "مستشفي بني سويف العام، الطريق الدائري، بنى عطية، بنى سويف",
+        "latitude": 29.06422704090909,
+        "longitude": 31.10344372878788
+    },
+    {
+        "osm_id": "way/97716314",
+        "governorate": "القاهرة",
+        "name": "مُستشفى وادي النيل",
+        "address": "مُستشفى وادي النيل، شارع 21، مساكن رئاسة الجمهوريه، الزيتون، القاهرة",
+        "latitude": 30.099232733333334,
+        "longitude": 31.29457185
+    },
+    {
+        "osm_id": "way/97937701",
+        "governorate": "القاهرة",
+        "name": "مستشفي بولاق ابو العلا (Boulaq Abu Al-Elaa Hospital)",
+        "address": "مستشفي بولاق ابو العلا، شارع سليمان باشا الخادم، سنان باشا، السبتية، القاهرة",
+        "latitude": 30.06311137142857,
+        "longitude": 31.228933085714285
+    },
+    {
+        "osm_id": "way/97941694",
+        "governorate": "القاهرة",
+        "name": "مستشفى المعلمين (Al-Moallemeen Hospital)",
+        "address": "مستشفى المعلمين، شارع صالح سليم، الجزيرة، القاهرة",
+        "latitude": 30.044634690909092,
+        "longitude": 31.224796281818183
+    },
+    {
+        "osm_id": "way/98888467",
+        "governorate": "الوادي الجديد",
+        "name": "Kharga Hospital",
+        "address": "Kharga Hospital، شارع النبوى المهندس، مدينه الخارجه، الوادي الجديد",
+        "latitude": 25.442492930769234,
+        "longitude": 30.549931592307694
+    },
+    {
+        "osm_id": "way/98920532",
+        "governorate": "الوادي الجديد",
+        "name": "مستشفى الفرافرة (Al-Farafra Hospital)",
+        "address": "مستشفى الفرافرة، طريق الواحات البحرية، الفرافرة، واحة الفرافرة، الوادي الجديد",
+        "latitude": 27.067513480000002,
+        "longitude": 27.9734394
+    },
+    {
+        "osm_id": "way/99835001",
+        "governorate": "مطروح",
+        "name": "مستشفى عامة",
+        "address": "شارع مبارك، الضبعة، مطروح",
+        "latitude": 31.030687625,
+        "longitude": 28.44555885833333
+    },
+    {
+        "osm_id": "way/99872522",
+        "governorate": "البحر الأحمر",
+        "name": "Naval Hyerbaric and Emergency Medical Center (Naval Hyperbaric & Emergency Medical Center)",
+        "address": "Naval Hyerbaric and Emergency Medical Center، شارع البحر، السقاله، Arabia، الغردقة، البحر الأحمر",
+        "latitude": 27.23691358,
+        "longitude": 33.84514446
+    },
+    {
+        "osm_id": "way/100028353",
+        "governorate": "المنيا",
+        "name": "Al-Minya University hospital",
+        "address": "Al-Minya University hospital، شارع المستشفى الجامعي، خاطر على، المنيا",
+        "latitude": 28.089775091666667,
+        "longitude": 30.764791058333333
+    },
+    {
+        "osm_id": "way/108126059",
+        "governorate": "القاهرة",
+        "name": "مستشفى جامعة الأزهر التخصصى (Al-Azhar University Specialized Hospital)",
+        "address": "طريق النصر، امتداد رمسيس 3، ثان مدينة نصر، القاهرة",
+        "latitude": 30.054261675510205,
+        "longitude": 31.314230975510206
+    },
+    {
+        "osm_id": "way/136435260",
+        "governorate": "القاهرة",
+        "name": "مبرة المعادي (Al-Maadi Hospital)",
+        "address": "مبرة المعادي، شارع 6، معادي الخبيري، الفاروقية، القاهرة",
+        "latitude": 29.9536564,
+        "longitude": 31.260763078571426
+    },
+    {
+        "osm_id": "way/143901025",
+        "governorate": "الدقهلية",
+        "name": "مستشفى منشأة الاخوة الخيرى (Mansheyat Al-Ikhwa Charity Hospital)",
+        "address": "مستشفى منشأة الاخوة الخيرى، طريق اجا، السنبلاوين، شبراهور، الدقهلية",
+        "latitude": 30.930242120000003,
+        "longitude": 31.36180746
+    },
+    {
+        "osm_id": "way/167093924",
+        "governorate": "جنوب سيناء",
+        "name": "Doctors Room",
+        "address": "مسجد المستشفى، شارع المستشفى، Ras Sudr، جنوب سيناء",
+        "latitude": 29.588836370000003,
+        "longitude": 32.71158782
+    },
+    {
+        "osm_id": "way/167093931",
+        "governorate": "جنوب سيناء",
+        "name": "مستشفى عامة",
+        "address": "Ras Sudr Hospital، شارع المستشفى، Ras Sudr، جنوب سيناء",
+        "latitude": 29.589388505555558,
+        "longitude": 32.71126293888889
+    },
+    {
+        "osm_id": "way/167427173",
+        "governorate": "القاهرة",
+        "name": "Royal",
+        "address": "Royal، شارع الاسراء، المعادي الجديدة، حلوان، القاهرة",
+        "latitude": 29.980637216666665,
+        "longitude": 31.314463283333335
+    },
+    {
+        "osm_id": "way/169324338",
+        "governorate": "القليوبية",
+        "name": "مستشفى قليوب الجديدة (Qalyub New Hospital)",
+        "address": "مستشفى قليوب الجديدة، طريق ميت نما، قليوب، قليوب، القليوبية",
+        "latitude": 30.178343740000003,
+        "longitude": 31.2230149
+    },
+    {
+        "osm_id": "way/169325232",
+        "governorate": "القليوبية",
+        "name": "النيل (Al-Nil Hospital)",
+        "address": "النيل، شارع الجبانه، مدينه شبرا الخيمه، شبرا الخيمة، القليوبية",
+        "latitude": 30.120747478571428,
+        "longitude": 31.24487317142857
+    },
+    {
+        "osm_id": "way/169326443",
+        "governorate": "القاهرة",
+        "name": "معهد ناصر (Nasser Institute)",
+        "address": "مستشفى ناصر، شارع محبوب، الساحل، الشرابية، القاهرة",
+        "latitude": 30.09606026666667,
+        "longitude": 31.240089366666666
+    },
+    {
+        "osm_id": "way/169992070",
+        "governorate": "الجيزة",
+        "name": "مستشفى 6 أكتوبر العام (6th October general Hospital)",
+        "address": "مستشفى 6 أكتوبر العام، ميدان فودافون، المحور المركزي السكني، الحى الخامس، السادس من أكتوبر، الجيزة",
+        "latitude": 29.949353639999998,
+        "longitude": 30.91247112
+    },
+    {
+        "osm_id": "way/169999191",
+        "governorate": "القاهرة",
+        "name": "المنيرة العام (Monira Public Hospital)",
+        "address": "المنيرة العام، شارع منصور، الانشا والمنيره، باب اللوق، القاهرة",
+        "latitude": 30.03500282,
+        "longitude": 31.23823848
+    },
+    {
+        "osm_id": "way/171485813",
+        "governorate": "البحر الأحمر",
+        "name": "Salam Hospital",
+        "address": "Salam Hospital، شارع البحر، السقاله، Arabia، الغردقة، البحر الأحمر",
+        "latitude": 27.242627777777777,
+        "longitude": 33.84373772222222
+    },
+    {
+        "osm_id": "way/171487925",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفي الغردقه العام (Hurghada General Hospital)",
+        "address": "مستشفي الغردقه العام، شارع أم ابوش، الدهار، Al Dahar، الغردقة، البحر الأحمر",
+        "latitude": 27.26032246153846,
+        "longitude": 33.81854590769231
+    },
+    {
+        "osm_id": "way/171488622",
+        "governorate": "البحر الأحمر",
+        "name": "Military Hospital",
+        "address": "Military Hospital، شارع البحر، الهلال، Al Dahar، الغردقة، البحر الأحمر",
+        "latitude": 27.261235041666666,
+        "longitude": 33.80713016666667
+    },
+    {
+        "osm_id": "way/171492234",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى عامة",
+        "address": "طريق الحجاز، الهلال، المنطقة الصناعيه، البحر الأحمر",
+        "latitude": 27.22015298,
+        "longitude": 33.81875418
+    },
+    {
+        "osm_id": "way/171746916",
+        "governorate": "البحر الأحمر",
+        "name": "The Egyptian Hospital",
+        "address": "The Egyptian Hospital، شارع محمد سعيد، القرى السياحية، El Kawther، الغردقة، البحر الأحمر",
+        "latitude": 27.194148690000002,
+        "longitude": 33.82941899
+    },
+    {
+        "osm_id": "way/171756639",
+        "governorate": "البحر الأحمر",
+        "name": "Red Sea Hospital",
+        "address": "Red Sea Hospital، طريق النصر، السقاله، البلدة القديمة، الغردقة، البحر الأحمر",
+        "latitude": 27.2358862,
+        "longitude": 33.83384671428571
+    },
+    {
+        "osm_id": "way/178895588",
+        "governorate": "المنيا",
+        "name": "مستشفى المنيا العام (Al-Minya General Hospital)",
+        "address": "مستشفي بالمنيا، شارع الحسين، سيد جلال، المنيا",
+        "latitude": 28.10122096,
+        "longitude": 30.754455
+    },
+    {
+        "osm_id": "way/180498431",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي الرمد العام (General ophthalmology Hospital)",
+        "address": "مستشفي الرمد العام، نفق قناة السويس، الشاطبى، الإسكندرية",
+        "latitude": 31.197723251351352,
+        "longitude": 29.916097956756758
+    },
+    {
+        "osm_id": "way/187767598",
+        "governorate": "جنوب سيناء",
+        "name": "Raouf Hospital",
+        "address": "Raouf Hospital، طريق السلام، النبق، خليج نبق، جنوب سيناء",
+        "latitude": 28.052454714285712,
+        "longitude": 34.43079915714286
+    },
+    {
+        "osm_id": "way/188172618",
+        "governorate": "القاهرة",
+        "name": "مستشفى جامعة حلوان (Helwan University Hospital)",
+        "address": "مستشفى جامعة حلوان، شارع فيضي باشا، حلوان، القاهرة",
+        "latitude": 29.851701833333333,
+        "longitude": 31.341891566666664
+    },
+    {
+        "osm_id": "way/188792166",
+        "governorate": "جنوب سيناء",
+        "name": "Ras Sudr Hospital",
+        "address": "Ras Sudr Hospital، شارع المستشفى، Ras Sudr، جنوب سيناء",
+        "latitude": 29.58950764242424,
+        "longitude": 32.71086786969697
+    },
+    {
+        "osm_id": "way/190559035",
+        "governorate": "البحر الأحمر",
+        "name": "Nile Hospital",
+        "address": "Nile Hospital، شارع النصر، الحرية 5، Sakkala، المنطقة الصناعيه، البحر الأحمر",
+        "latitude": 27.217214096000003,
+        "longitude": 33.817780616
+    },
+    {
+        "osm_id": "way/200440153",
+        "governorate": "الجيزة",
+        "name": "مستشفى أم المصريين العام (Om El Masryeen Hospital)",
+        "address": "شارع مستشفي ام المصريين، الجيزة",
+        "latitude": 30.005426930952382,
+        "longitude": 31.210132676190476
+    },
+    {
+        "osm_id": "way/207309094",
+        "governorate": "الأقصر",
+        "name": "مستشفى الكرنك الدولي (El Karnak International Hospital)",
+        "address": "مستشفى الكرنك الدولي، شارع متحف الاقصر، مدينه الاقصر، الأقصر",
+        "latitude": 25.708505113333334,
+        "longitude": 32.64517943333333
+    },
+    {
+        "osm_id": "way/209081755",
+        "governorate": "المنوفية",
+        "name": "مستشفى عامة",
+        "address": "طريق القاهرة، الاسكندرية الصحراوي الجانبي، مدينة السادات، المنوفية",
+        "latitude": 30.337435934285715,
+        "longitude": 30.495095588571427
+    },
+    {
+        "osm_id": "way/210145471",
+        "governorate": "المنوفية",
+        "name": "مستشفى الحميات",
+        "address": "مستشفى الحميات، شارع توفيق الحكيم، الشريط المميز، ابني بيتك، مدينة السادات، المنوفية",
+        "latitude": 30.374166566666666,
+        "longitude": 30.519069314285712
+    },
+    {
+        "osm_id": "way/210628595",
+        "governorate": "المنوفية",
+        "name": "مستشفى السادات العام",
+        "address": "مستشفي السادات العام، شارع سعد بن ابى وقاص، مدينة السادات، المنوفية",
+        "latitude": 30.36701274,
+        "longitude": 30.505978040000002
+    },
+    {
+        "osm_id": "way/210630116",
+        "governorate": "المنوفية",
+        "name": "الإدارة الصحية بمدينة السادات",
+        "address": "الإدارة الصحية بمدينة السادات، شارع يوسف وهبى، مدينة السادات، المنوفية",
+        "latitude": 30.3744019625,
+        "longitude": 30.4971816
+    },
+    {
+        "osm_id": "way/210681535",
+        "governorate": "المنوفية",
+        "name": "مستشفى الروضة",
+        "address": "مستشفى الروضة، شارع صدقي سليمان، المنطقة السكنية الثانية، ابني بيتك، مدينة السادات، المنوفية",
+        "latitude": 30.357631778571427,
+        "longitude": 30.512960435714287
+    },
+    {
+        "osm_id": "way/210966223",
+        "governorate": "المنوفية",
+        "name": "مستشفى التأمين الصحي",
+        "address": "مستشفى التأمين الصحي، شارع سعد بن ابى وقاص، ابني بيتك، مدينة السادات، المنوفية",
+        "latitude": 30.36242581666667,
+        "longitude": 30.511401033333332
+    },
+    {
+        "osm_id": "way/211057955",
+        "governorate": "المنوفية",
+        "name": "مستشفى دار الشفاء",
+        "address": "مستشفى دار الشفاء، شارع سعد بن ابى وقاص، ابني بيتك، مدينة السادات، المنوفية",
+        "latitude": 30.363915580000004,
+        "longitude": 30.51072142
+    },
+    {
+        "osm_id": "way/211571017",
+        "governorate": "المنوفية",
+        "name": "الإدارة الطبية بجامعة مدينة السادات",
+        "address": "الإدارة الطبية بجامعة مدينة السادات، شارع أحمد إسماعيل على، ابني بيتك، مدينة السادات، المنوفية",
+        "latitude": 30.36592022857143,
+        "longitude": 30.52737332857143
+    },
+    {
+        "osm_id": "way/220692265",
+        "governorate": "شمال سيناء",
+        "name": "مستشفى رفح (Rafah Hospital)",
+        "address": "مستشفى رفح، el Bahr، شمال سيناء",
+        "latitude": 31.256115093939393,
+        "longitude": 34.227310927272725
+    },
+    {
+        "osm_id": "way/228958673",
+        "governorate": "كفر الشيخ",
+        "name": "نقطة إسعاف الشريف (Ambulance)",
+        "address": "نقطة إسعاف الشريف، ميدان احمد زويل، شياخة عبده زعلوك (عزب)، دسوق، كفر الشيخ",
+        "latitude": 31.137198239999996,
+        "longitude": 30.652360599999998
+    },
+    {
+        "osm_id": "way/230770945",
+        "governorate": "القاهرة",
+        "name": "مستشفى الشرطة (Police Hospital)",
+        "address": "الحى 6، مدينة نصر، القاهرة",
+        "latitude": 30.038052349999997,
+        "longitude": 31.33050731
+    },
+    {
+        "osm_id": "way/240709776",
+        "governorate": "القاهرة",
+        "name": "مستشفى مصر الجديدة العسكرى (Masr El Gedida Military Hospital)",
+        "address": "مستشفى مصر الجديدة العسكرى، شارع الدكتور حلمي بدوي، حلميه النعام، حدائق الزيتون، القاهرة",
+        "latitude": 30.114757939999997,
+        "longitude": 31.33335814
+    },
+    {
+        "osm_id": "way/244349665",
+        "governorate": "الجيزة",
+        "name": "مستشفى جامعة مصر (MUST hospital)",
+        "address": "مستشفى جامعة مصر، محور 26 يوليو، بلوك 1، الحى الأول، السادس من أكتوبر، الجيزة",
+        "latitude": 29.997314916666667,
+        "longitude": 30.965852883333337
+    },
+    {
+        "osm_id": "way/247887765",
+        "governorate": "الجيزة",
+        "name": "مستشفى الشرطة (Police Hospital)",
+        "address": "مستشفى الشرطة، المحور المركزى الجانبى، المحور المركزي السكني، الحى الخامس، السادس من أكتوبر، الجيزة",
+        "latitude": 29.95703078888889,
+        "longitude": 30.9187878
+    },
+    {
+        "osm_id": "way/247887880",
+        "governorate": "الجيزة",
+        "name": "مركز القاهرة الطبى (Cairo Medical Center)",
+        "address": "مركز القاهرة الطبى، المحور المركزى الجانبى، المحور المركزي السكني، الحى الخامس، السادس من أكتوبر، الجيزة",
+        "latitude": 29.955773897222223,
+        "longitude": 30.9178345
+    },
+    {
+        "osm_id": "way/248141728",
+        "governorate": "الجيزة",
+        "name": "مركز د.عصام بليغ للقلب والأوعية (Dr.Essam Baligh for Cardiovascular and Ultrasound Center)",
+        "address": "محور الكفراوى، المحور المركزي السكني، الحى الثالث، السادس من أكتوبر، الجيزة",
+        "latitude": 29.966049700000003,
+        "longitude": 30.93297344
+    },
+    {
+        "osm_id": "way/248170353",
+        "governorate": "الجيزة",
+        "name": "مستشفى الوادى (Al Wadi hospital)",
+        "address": "مستشفى الوادى، طريق التحرير، الحى 1، الحى الخامس، السادس من أكتوبر، الجيزة",
+        "latitude": 29.968057599999998,
+        "longitude": 30.949300360000002
+    },
+    {
+        "osm_id": "way/248171292",
+        "governorate": "الجيزة",
+        "name": "مستشفى الصفوة (Al Safwa hospital)",
+        "address": "مستشفى الصفوة، شارع ريتش بيك، منطقة خدمات، الحى الأول، السادس من أكتوبر، الجيزة",
+        "latitude": 29.966254099999997,
+        "longitude": 30.95116863
+    },
+    {
+        "osm_id": "way/264473072",
+        "governorate": "جنوب سيناء",
+        "name": "المستشفى",
+        "address": "المستشفى، طريق منطقه الشاميه، القديسة كاترين، جنوب سيناء",
+        "latitude": 28.566699540000002,
+        "longitude": 33.9524776
+    },
+    {
+        "osm_id": "way/269472090",
+        "governorate": "الجيزة",
+        "name": "مستشفى دمشق التخصصي (Damascus Specialist Hospital)",
+        "address": "شارع دمشق، ميت عقبة، الجيزة",
+        "latitude": 30.05506822,
+        "longitude": 31.19255124
+    },
+    {
+        "osm_id": "way/288784635",
+        "governorate": "الإسكندرية",
+        "name": "مستوصف الغفران",
+        "address": "مستوصف الغفران، شارع مكتب الاتصال، العجمى، العجمي، الإسكندرية",
+        "latitude": 31.125321080000003,
+        "longitude": 29.781819559999995
+    },
+    {
+        "osm_id": "way/304453497",
+        "governorate": "دمياط",
+        "name": "Damietta Cancer Institute",
+        "address": "Damietta Cancer Institute، شارع الهدى و النور، رابع، دمياط",
+        "latitude": 31.43778568,
+        "longitude": 31.80222476
+    },
+    {
+        "osm_id": "way/309088055",
+        "governorate": "القاهرة",
+        "name": "El Ahly Bank Hospital",
+        "address": "مستشفى البنك الاهلي، الطريق الدائري، بالم سيتي، تاج سيتي، مدينة نصر، القاهرة",
+        "latitude": 29.98223712,
+        "longitude": 31.345811759999997
+    },
+    {
+        "osm_id": "way/315327020",
+        "governorate": "الجيزة",
+        "name": "مستشفي فيني وحدة الغسيل الكلوي (Finey Hospital)",
+        "address": "فيني، شارع عبد الرحيم صبري، الدقى، الجيزة",
+        "latitude": 30.04145454,
+        "longitude": 31.214278460000003
+    },
+    {
+        "osm_id": "way/318263026",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفى عامة",
+        "address": "جنوب موفنبيك، مدينه القصير، البحر الأحمر",
+        "latitude": 26.14971836666667,
+        "longitude": 34.24854167777778
+    },
+    {
+        "osm_id": "way/322265376",
+        "governorate": "الشرقية",
+        "name": "minia el kamh hospital",
+        "address": "minia el kamh hospital، شارع مشهور، مدينه منيا القمح، الشرقية",
+        "latitude": 30.52129136,
+        "longitude": 31.352206619999997
+    },
+    {
+        "osm_id": "way/348068662",
+        "governorate": "الإسماعيلية",
+        "name": "مستشفى الهيئة",
+        "address": "مستشفى الهيئة، شارع عبد المنعم رياض، الإسماعيلية",
+        "latitude": 30.59711173125,
+        "longitude": 32.3100832125
+    },
+    {
+        "osm_id": "way/355428539",
+        "governorate": "القاهرة",
+        "name": "المنتجع الصحى للطب النفسى أ.د أحمد عكاشة (Psychological Health Resort of Prof Dr Ahmed Okasha)",
+        "address": "المنتجع الصحى للطب النفسى أ.د أحمد عكاشة، شارع دكتور احمد عكاشه، أحياء البنفسج، القاهرة",
+        "latitude": 30.03985682,
+        "longitude": 31.4677593
+    },
+    {
+        "osm_id": "way/360884543",
+        "governorate": "الدقهلية",
+        "name": "Main Hospital",
+        "address": "Main Hospital، شارع دكرنس، شربين، مدينه دكرنس، العزازنة، الدقهلية",
+        "latitude": 31.14718882222222,
+        "longitude": 31.54398858888889
+    },
+    {
+        "osm_id": "way/376827235",
+        "governorate": "القاهرة",
+        "name": "Capital Hospital",
+        "address": "Capital Hospital، شارع شبين، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.095755280952382,
+        "longitude": 31.330970347619047
+    },
+    {
+        "osm_id": "way/395078776",
+        "governorate": "البحيرة",
+        "name": "الوحدة الصحية بالمجد",
+        "address": "الوحدة الصحية بالمجد، طريق شبراخيت، الرحمانية، المجد، البحيرة",
+        "latitude": 31.092177279999998,
+        "longitude": 30.67239
+    },
+    {
+        "osm_id": "way/397057595",
+        "governorate": "القاهرة",
+        "name": "برج معمل الفا لاب الطبى",
+        "address": "شارع احمد الزمر، مدينة نصر، القاهرة",
+        "latitude": 30.049277340000003,
+        "longitude": 31.37835898
+    },
+    {
+        "osm_id": "way/398516791",
+        "governorate": "الإسكندرية",
+        "name": "المستشفى البحري العام",
+        "address": "المستشفى البحري العام، شارع ميدان ابراهيم الاول، قسم الجمرك، الإسكندرية",
+        "latitude": 31.2014182,
+        "longitude": 29.873353639999998
+    },
+    {
+        "osm_id": "way/403546691",
+        "governorate": "الإسكندرية",
+        "name": "المستشفى الأميري الجديدة",
+        "address": "المستشفى الأميري الجديدة، شارع البرت الاول، كامب شيزار، الإسكندرية",
+        "latitude": 31.206722019999997,
+        "longitude": 29.946616106666667
+    },
+    {
+        "osm_id": "way/411466462",
+        "governorate": "القاهرة",
+        "name": "مستشفى الزاوية الحمراء",
+        "address": "مستشفى الزاوية الحمراء، شارع المستشفي، مساكن الزاويه الحمراء، الأميرية، القاهرة",
+        "latitude": 30.101759414285713,
+        "longitude": 31.266437914285714
+    },
+    {
+        "osm_id": "way/414001473",
+        "governorate": "الجيزة",
+        "name": "مستشفى الشرطة",
+        "address": "مستشفى الشرطة، شارع كورنيش النيل، العجوزة، الجيزة",
+        "latitude": 30.053224117391302,
+        "longitude": 31.215716969565218
+    },
+    {
+        "osm_id": "way/414971251",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى مصطفى كامل العسكري",
+        "address": "مستشفي مصطفي كامل، شارع المشير احمد اسماعيل، الإسكندرية",
+        "latitude": 31.225919315789472,
+        "longitude": 29.940854794736843
+    },
+    {
+        "osm_id": "way/454976417",
+        "governorate": "البحر الأحمر",
+        "name": "Port Ghalib Hospital",
+        "address": "Port Ghalib Hospital، بور غالب، البحر الأحمر",
+        "latitude": 25.53938295,
+        "longitude": 34.6165227
+    },
+    {
+        "osm_id": "way/455452669",
+        "governorate": "القاهرة",
+        "name": "مستشفى دار الفؤاد (Dar Al Fouad Hospital)",
+        "address": "شارع يوسف عباس، ثان مدينة نصر، القاهرة",
+        "latitude": 30.06583730625,
+        "longitude": 31.319784615625
+    },
+    {
+        "osm_id": "way/476930391",
+        "governorate": "الأقصر",
+        "name": "Luxor International Hospital",
+        "address": "Luxor International Hospital، شارع محو الاميه، مدينه الاقصر، الأقصر",
+        "latitude": 25.68739128888889,
+        "longitude": 32.63953817777778
+    },
+    {
+        "osm_id": "way/476938609",
+        "governorate": "الأقصر",
+        "name": "مركز الاقصر الطبى (Luxor Medical Center)",
+        "address": "مركز الاقصر الطبى، شارع المهدى، مدينه الاقصر، نجع الخطبة، الأقصر",
+        "latitude": 25.68873808,
+        "longitude": 32.63348778
+    },
+    {
+        "osm_id": "way/492286321",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى عامة",
+        "address": "مستشفى الشرطه، طريق القاهرة، الاسكندرية الصحراوي، عزبة نادي الصيد، الإسكندرية",
+        "latitude": 31.174561040000004,
+        "longitude": 29.93012958
+    },
+    {
+        "osm_id": "way/497855286",
+        "governorate": "القاهرة",
+        "name": "مستشفى درة القاهرة (Durrat Al Qahira Hospital)",
+        "address": "مستشفى درة القاهرة، Durrat Al Qahira، القاهرة",
+        "latitude": 30.049556810000002,
+        "longitude": 31.49638749
+    },
+    {
+        "osm_id": "way/541483731",
+        "governorate": "القليوبية",
+        "name": "kafr shokr hospital",
+        "address": "kafr shokr hospital، طريق كفر شكر، المعصرة، مدينه كفر شكر، القليوبية",
+        "latitude": 30.553650783333335,
+        "longitude": 31.252940516666666
+    },
+    {
+        "osm_id": "way/563331509",
+        "governorate": "كفر الشيخ",
+        "name": "مستشفى عامة",
+        "address": "شارع مستشفى فيصل، حي شمال، دسوق، كفر الشيخ",
+        "latitude": 31.13712964,
+        "longitude": 30.65490744
+    },
+    {
+        "osm_id": "way/563331515",
+        "governorate": "كفر الشيخ",
+        "name": "مستشفى الحميات",
+        "address": "مستشفى الحميات، شارع المستشفى، شياخة عبده زعلوك (عزب)، دسوق، كفر الشيخ",
+        "latitude": 31.138837211111113,
+        "longitude": 30.64368314444444
+    },
+    {
+        "osm_id": "way/563331516",
+        "governorate": "كفر الشيخ",
+        "name": "مستشفى دسوق العام (Desouk General Hospital)",
+        "address": "مستشفى دسوق العام، شارع المستشفى، شياخة عبده زعلوك (عزب)، دسوق، كفر الشيخ",
+        "latitude": 31.138079484615385,
+        "longitude": 30.64438370769231
+    },
+    {
+        "osm_id": "way/579435682",
+        "governorate": "الدقهلية",
+        "name": "مستشفي المنصورة العسكري",
+        "address": "مستشفي المنصورة العسكري، كوبرى سندوب، سندوب وكفر المناصرة، المنصورة، الدقهلية",
+        "latitude": 31.020111000000004,
+        "longitude": 31.395840757142857
+    },
+    {
+        "osm_id": "way/579736387",
+        "governorate": "دمياط",
+        "name": "مستشفي جراحات اليوم الواحد (One day surgery hospital)",
+        "address": "مستشفي جراحات اليوم الواحد، شارع 101، رأس البر، دمياط",
+        "latitude": 31.5006629,
+        "longitude": 31.8215141
+    },
+    {
+        "osm_id": "way/587301910",
+        "governorate": "الدقهلية",
+        "name": "المستشفى الدولي (International Hospital)",
+        "address": "المستشفى الدولي، شارع محمود حمدى، سندوب وكفر المناصرة، المنصورة، الدقهلية",
+        "latitude": 31.0319148,
+        "longitude": 31.39069363333333
+    },
+    {
+        "osm_id": "way/589912462",
+        "governorate": "الإسماعيلية",
+        "name": "التامين الصحي",
+        "address": "التامين الصحي، شارع محمد صبرى مبدي، عمارات المرحله 5، الإسماعيلية",
+        "latitude": 30.620850077777774,
+        "longitude": 32.29094016666667
+    },
+    {
+        "osm_id": "way/620531300",
+        "governorate": "القاهرة",
+        "name": "مستشفى التأمين الصحى",
+        "address": "مستشفى التأمين الصحى، شارع الطيران، منطقه السينما، مدينة نصر، القاهرة",
+        "latitude": 30.05971231111111,
+        "longitude": 31.324840777777776
+    },
+    {
+        "osm_id": "way/626274508",
+        "governorate": "كفر الشيخ",
+        "name": "مستشفى العبور",
+        "address": "مستشفى العبور، شارع عبد السلام عارف، كفر الشيخ",
+        "latitude": 31.108295,
+        "longitude": 30.9451286875
+    },
+    {
+        "osm_id": "way/641522742",
+        "governorate": "مطروح",
+        "name": "مستشفى عامة",
+        "address": "شارع الفرع المالي ل القوات المسلحه، مساكن محدودي الدخل، محدرة، مرسى مطروح، مطروح",
+        "latitude": 31.344766170000003,
+        "longitude": 27.221134990000003
+    },
+    {
+        "osm_id": "way/651711795",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى عامة",
+        "address": "ماضى الطلخاوى، الإسكندرية",
+        "latitude": 31.008487539999997,
+        "longitude": 29.735255059999997
+    },
+    {
+        "osm_id": "way/655412427",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى القبارى",
+        "address": "مستشفى القبارى، شارع الامير لؤلؤ، الورديان، الإسكندرية",
+        "latitude": 31.170704041666667,
+        "longitude": 29.880971125000002
+    },
+    {
+        "osm_id": "way/679277036",
+        "governorate": "القاهرة",
+        "name": "مستشفى الخليفة العام",
+        "address": "مستشفى الخليفة العام، عطفه الغساله، الحلميه، الحلمية القديمة، القاهرة",
+        "latitude": 30.03409952,
+        "longitude": 31.253731019999996
+    },
+    {
+        "osm_id": "way/692459632",
+        "governorate": "القاهرة",
+        "name": "One Day Surgeries Hospital",
+        "address": "One Day Surgeries Hospital، شارع بورسعيد، مساكن الزاويه الحمراء، الأميرية، القاهرة",
+        "latitude": 30.08749858,
+        "longitude": 31.273048340000003
+    },
+    {
+        "osm_id": "way/699081142",
+        "governorate": "القاهرة",
+        "name": "القديسة مريم (Saint Mary Shrine Al-Zeitoun)",
+        "address": "القديسة مريم، شارع طومان باى، الزيتون البحريه، الزيتون، القاهرة",
+        "latitude": 30.104426319999998,
+        "longitude": 31.315312139999996
+    },
+    {
+        "osm_id": "way/768007963",
+        "governorate": "الجيزة",
+        "name": "العيون الدولي (International Eye Hospital)",
+        "address": "العيون الدولي، شارع عادل حسين رستم، الدقى، الجيزة",
+        "latitude": 30.043454666666666,
+        "longitude": 31.216794766666666
+    },
+    {
+        "osm_id": "way/769927141",
+        "governorate": "الجيزة",
+        "name": "مستشفى الشروق (El Shorouk Hospital)",
+        "address": "شارع عطبره، ميت عقبة، الجيزة",
+        "latitude": 30.0685449,
+        "longitude": 31.199158139999998
+    },
+    {
+        "osm_id": "way/769928693",
+        "governorate": "الجيزة",
+        "name": "مستشفى السلام (Al Salam Hospital)",
+        "address": "شارع سوريا، المهندسين، الجيزة",
+        "latitude": 30.05336301111111,
+        "longitude": 31.20053244444445
+    },
+    {
+        "osm_id": "way/769939477",
+        "governorate": "القاهرة",
+        "name": "المركز الطبى المقاولون العرب (The Arab Contractors Medical Center)",
+        "address": "المركز الطبى المقاولون العرب، طريق النصر، امتداد رمسيس 3، ثان مدينة نصر، القاهرة",
+        "latitude": 30.054197646875,
+        "longitude": 31.296557828125
+    },
+    {
+        "osm_id": "way/769942974",
+        "governorate": "القاهرة",
+        "name": "مستشفى السلام الدولى (As-Salam International Hospital)",
+        "address": "شارع الخليفه الظاهر، التجمع الخامس، أحياء التجمع الخامس، القاهرة",
+        "latitude": 30.0074687125,
+        "longitude": 31.4281128
+    },
+    {
+        "osm_id": "way/769964776",
+        "governorate": "القاهرة",
+        "name": "مستشفى السلام الدولى (As-Salam International Hospital)",
+        "address": "مستشفى السلام الدولى، شارع المشتل، معادي الخبيري، أثر النبي، القاهرة",
+        "latitude": 29.984834266666667,
+        "longitude": 31.23057905
+    },
+    {
+        "osm_id": "way/769964777",
+        "governorate": "القاهرة",
+        "name": "مستشفى النيل بدراوى (Nile Badrawi Hospital)",
+        "address": "مستشفى النيل بدراوى، شارع المشتل، معادي الخبيري، أثر النبي، القاهرة",
+        "latitude": 29.982601320000004,
+        "longitude": 31.23117319
+    },
+    {
+        "osm_id": "way/769970922",
+        "governorate": "القاهرة",
+        "name": "مستشفى كيلوباترا (Cleopatra Hospital)",
+        "address": "39;41، شارع كيلوباترا، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.093180807142858,
+        "longitude": 31.329615764285712
+    },
+    {
+        "osm_id": "way/769986409",
+        "governorate": "الجيزة",
+        "name": "مستشفى الصفا (El Safa Hospital)",
+        "address": "40`، شارع العراق، المهندسين، الجيزة",
+        "latitude": 30.0515987,
+        "longitude": 31.19742645
+    },
+    {
+        "osm_id": "way/769990230",
+        "governorate": "الجيزة",
+        "name": "مستشفي مصر الدولي (Misr International Hospital)",
+        "address": "مستشفي مصر الدولي، شارع عادل حسين رستم، الدقى، الجيزة",
+        "latitude": 30.04329722,
+        "longitude": 31.216279880000002
+    },
+    {
+        "osm_id": "way/769992225",
+        "governorate": "القاهرة",
+        "name": "المستشفى السعودي الألماني (Saudi German Hospital)",
+        "address": "شارع ايديال، قباء، القاهرة",
+        "latitude": 30.132920181818182,
+        "longitude": 31.38427152272727
+    },
+    {
+        "osm_id": "way/770229565",
+        "governorate": "أسيوط",
+        "name": "مستشفى السلام (El Salam Hospital)",
+        "address": "مستشفى السلام، شارع 26 يوليو، الشركات، سادس، أسيوط",
+        "latitude": 27.181913639999998,
+        "longitude": 31.1841718
+    },
+    {
+        "osm_id": "way/771243782",
+        "governorate": "الجيزة",
+        "name": "مستشفى الشيخ زايد التخصصي (Sheikh Zayed Specialized Hospital)",
+        "address": "شارع دكتور علي لطفي، المجاورة 1، ليجيندا، الجيزة",
+        "latitude": 30.032256385106383,
+        "longitude": 31.003508904255316
+    },
+    {
+        "osm_id": "way/771779533",
+        "governorate": "الشرقية",
+        "name": "مستشفى الزقازيق العام (General Zagazi Hospital)",
+        "address": "مستشفى الزقازيق العام، شارع منير، الحكماء، الزقازيق، الشرقية",
+        "latitude": 30.59280656,
+        "longitude": 31.50942542
+    },
+    {
+        "osm_id": "way/772332951",
+        "governorate": "الشرقية",
+        "name": "مستشفى الغندور",
+        "address": "مستشفى الغندور، شارع الإمام الشافعى، المجاورة 26، العاشر من رمضان، الشرقية",
+        "latitude": 30.301176885714288,
+        "longitude": 31.758507214285714
+    },
+    {
+        "osm_id": "way/772340572",
+        "governorate": "الإسكندرية",
+        "name": "مستشفى الثغر التخصصي (El Thagher Hospital)",
+        "address": "شارع الجلاء، الإسكندرية",
+        "latitude": 31.246461844444443,
+        "longitude": 29.979979055555557
+    },
+    {
+        "osm_id": "way/772341435",
+        "governorate": "الجيزة",
+        "name": "مستشفى دريم (Dream Hospital)",
+        "address": "مستشفى دريم، شارع أنور السادات، حي الفردوس، الشيخ زايد، الجيزة",
+        "latitude": 29.97258279189189,
+        "longitude": 31.038869986486485
+    },
+    {
+        "osm_id": "way/772347551",
+        "governorate": "الدقهلية",
+        "name": "مستشفي الصدر",
+        "address": "مستشفي الصدر، شارع الدمناوي، ثالث ريحان، المنصورة، الدقهلية",
+        "latitude": 31.032606011111113,
+        "longitude": 31.372879516666664
+    },
+    {
+        "osm_id": "way/772368672",
+        "governorate": "القاهرة",
+        "name": "المستشفي الوطني للعيون (Al Watany Eye Hospital)",
+        "address": "المستشفي الوطني للعيون، طريق القاهرة، السويس، عمارات الامل، القاهرة",
+        "latitude": 30.07929298,
+        "longitude": 31.37474032
+    },
+    {
+        "osm_id": "way/772374854",
+        "governorate": "بنى سويف",
+        "name": "مستشفى الزهراء",
+        "address": "مستشفى الزهراء، شارع إسلام، المولد النبوى، بنى سويف",
+        "latitude": 29.07175682,
+        "longitude": 31.09764824
+    },
+    {
+        "osm_id": "way/772537746",
+        "governorate": "القاهرة",
+        "name": "مستشفى عامة",
+        "address": "حارة الزهار، الريحانى قنطرة الدكة، الأزبكية، القاهرة",
+        "latitude": 30.054193283333333,
+        "longitude": 31.247351600000002
+    },
+    {
+        "osm_id": "way/773024488",
+        "governorate": "القاهرة",
+        "name": "المستشفى الجوى التخصصى (Air Force Specialised Hospital)",
+        "address": "شارع التسعين الجنوبي، حى الشويفات، القاهرة",
+        "latitude": 30.017631223809524,
+        "longitude": 31.434478693650792
+    },
+    {
+        "osm_id": "way/773041859",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي جمال عبد الناصر (Gamal Abd El Nasser Hospital)",
+        "address": "مستشفي جمال عبد الناصر، شارع مسجد المواساه، إبراهيمية، الإسكندرية",
+        "latitude": 31.20445911395349,
+        "longitude": 29.926259593023254
+    },
+    {
+        "osm_id": "way/773724802",
+        "governorate": "القاهرة",
+        "name": "مستشفى فلسطين (Palestine Hospital)",
+        "address": "شارع الثوره، قسم مصر الجديدة، مصر الجديدة، القاهرة",
+        "latitude": 30.08483716153846,
+        "longitude": 31.3393369
+    },
+    {
+        "osm_id": "way/774515756",
+        "governorate": "القاهرة",
+        "name": "الانتاج الحربي (Al-Entag Al-Harby)",
+        "address": "الانتاج الحربي، شارع اسماعيل كامل، حلوان، القاهرة",
+        "latitude": 29.852502977777778,
+        "longitude": 31.339775066666668
+    },
+    {
+        "osm_id": "way/774871347",
+        "governorate": "القاهرة",
+        "name": "المستشفى القبطي (Coptic Hospital)",
+        "address": "المستشفى القبطي، شارع يوسف باشا وهبى، الفجاله، باب الشعرية، القاهرة",
+        "latitude": 30.063036,
+        "longitude": 31.252786483333335
+    },
+    {
+        "osm_id": "way/775160247",
+        "governorate": "القاهرة",
+        "name": "مستشفى الندى (Al-Nada Hospital)",
+        "address": "شارع المنيل، المنيل الغربي، مصر القديمة، أثر النبي، القاهرة",
+        "latitude": 30.018458816666666,
+        "longitude": 31.224836316666668
+    },
+    {
+        "osm_id": "way/775858333",
+        "governorate": "بنى سويف",
+        "name": "مستشفى الجامعة",
+        "address": "كلية الطب البشري، شارع اسماعيل، مقبل، بنى سويف",
+        "latitude": 29.0802997875,
+        "longitude": 31.105054925
+    },
+    {
+        "osm_id": "way/776123200",
+        "governorate": "القاهرة",
+        "name": "مستشفى النزهة الدولي (Al Nozha International)",
+        "address": "شارع الرشيدى، مصر الجديدة للاسكان و التعمير، القاهرة",
+        "latitude": 30.10031154,
+        "longitude": 31.37256654
+    },
+    {
+        "osm_id": "way/776123270",
+        "governorate": "قنا",
+        "name": "مستشفي قنا العام (Qena General Hospital)",
+        "address": "مستشفي قنا العام، شارع كوبرى دندرة، قنا",
+        "latitude": 26.15929436111111,
+        "longitude": 32.707113066666665
+    },
+    {
+        "osm_id": "way/805590631",
+        "governorate": "الدقهلية",
+        "name": "مستشفى الكردي",
+        "address": "مستشفى الكردي، شارع ابن تيميه، أحمد فودة محمدين، كفر الكردي، الدقهلية",
+        "latitude": 31.1649214,
+        "longitude": 31.765611228571426
+    },
+    {
+        "osm_id": "way/822946023",
+        "governorate": "المنيا",
+        "name": "مستشفى عامة",
+        "address": "إبشاق الغزال، المنيا",
+        "latitude": 28.479449080000002,
+        "longitude": 30.727580160000002
+    },
+    {
+        "osm_id": "way/881717870",
+        "governorate": "كفر الشيخ",
+        "name": "مستشفى قلين المركزي",
+        "address": "مستشفى قلين المركزي، شارع الشيخ على يوسف، قلين، كفر الشيخ",
+        "latitude": 31.049250647058823,
+        "longitude": 30.848870388235294
+    },
+    {
+        "osm_id": "way/881717871",
+        "governorate": "كفر الشيخ",
+        "name": "الوحدة",
+        "address": "الوحدة، شارع الخرطوم، قلين، كفر الشيخ",
+        "latitude": 31.04933294,
+        "longitude": 30.849635160000002
+    },
+    {
+        "osm_id": "way/900302929",
+        "governorate": "القاهرة",
+        "name": "مستشفى بهمان (The Behman Hospital)",
+        "address": "شارع المرصد، مدينة الخامس عشر من مايو، القاهرة",
+        "latitude": 29.8548792025641,
+        "longitude": 31.339156605128203
+    },
+    {
+        "osm_id": "way/922977537",
+        "governorate": "القاهرة",
+        "name": "مستشفى الاقباط",
+        "address": "شارع الشهيد احمد المنسى، الزيتون البحريه، الزيتون، القاهرة",
+        "latitude": 30.10471632,
+        "longitude": 31.31214394
+    },
+    {
+        "osm_id": "way/923552420",
+        "governorate": "القاهرة",
+        "name": "برج مينا الطبى",
+        "address": "برج مينا الطبى، شارع الادريسي، قسم مصر الجديدة، الزيتون، القاهرة",
+        "latitude": 30.087481939999996,
+        "longitude": 31.313696299999997
+    },
+    {
+        "osm_id": "way/938864729",
+        "governorate": "أسيوط",
+        "name": "البدارى المركزى (Al Badari Central)",
+        "address": "البدارى المركزى، شارع محمد عزت جلال، البدارى، أسيوط",
+        "latitude": 26.98930651818182,
+        "longitude": 31.412063049999997
+    },
+    {
+        "osm_id": "way/952583040",
+        "governorate": "البحيرة",
+        "name": "مستشفي أبو المطامير المركزى (Abo Al Matameer Central Hospital)",
+        "address": "مستشفي أبو المطامير المركزى، طريق عبد ربه، ابو المطامير، أبو المطامير، البحيرة",
+        "latitude": 30.9159312,
+        "longitude": 30.176282379999996
+    },
+    {
+        "osm_id": "way/952587292",
+        "governorate": "أسيوط",
+        "name": "مستشفي أبو تيج المركزي (Abo Teeg Central Hospital)",
+        "address": "مستشفي أبو تيج المركزي، شارع الجلاء، أبو تيج، أسيوط",
+        "latitude": 27.053302459999998,
+        "longitude": 31.31514956
+    },
+    {
+        "osm_id": "way/952589452",
+        "governorate": "قنا",
+        "name": "مستشفي أبو تشت المركزي (Abo Tesht Central Hospital)",
+        "address": "مستشفي أبو تشت المركزي، شارع بورسعيد، ابوتشت، قنا",
+        "latitude": 26.125640857142855,
+        "longitude": 32.1014717
+    },
+    {
+        "osm_id": "way/952590977",
+        "governorate": "الإسكندرية",
+        "name": "مستشفي أبو قير المركزي (Abo Qeer Central Hospital)",
+        "address": "مستشفي أبو قير المركزي، شارع خلف مستشفى ابو قير، أبو قير، الإسكندرية",
+        "latitude": 31.31347214,
+        "longitude": 30.067100099999998
+    },
+    {
+        "osm_id": "way/952595678",
+        "governorate": "شمال سيناء",
+        "name": "مستشفي العريش العام (Al 'Areesh General Hospital)",
+        "address": "مستشفي العريش العام، Arish، شمال سيناء",
+        "latitude": 31.13628795714286,
+        "longitude": 33.80928334285714
+    },
+    {
+        "osm_id": "way/952607175",
+        "governorate": "الدقهلية",
+        "name": "مستشفى السنبلاوين العام (Al Senblawain General Hospital)",
+        "address": "مستشفى السنبلاوين العام، شارع المستشفى العام، مدينه السنبلاوين، طماي الزهايرة، الدقهلية",
+        "latitude": 30.8903393,
+        "longitude": 31.460209055555556
+    },
+    {
+        "osm_id": "way/952620012",
+        "governorate": "المنوفية",
+        "name": "مستشفي الشهداء المركزي (Al Shohada'a Central Hospital)",
+        "address": "مستشفي الشهداء المركزي، شارع المشروع، الشهداء، المنوفية",
+        "latitude": 30.597560458333334,
+        "longitude": 30.905273508333334
+    },
+    {
+        "osm_id": "way/952621971",
+        "governorate": "الغربية",
+        "name": "مستشفي السنطة المركزي (Al Santah Central Hospital)",
+        "address": "مستشفي السنطة المركزي، شارع حموده الخطيب، مدينه السنطه، الغربية",
+        "latitude": 30.732066777777774,
+        "longitude": 31.1266963
+    },
+    {
+        "osm_id": "way/952622771",
+        "governorate": "الجيزة",
+        "name": "مستشفي الصف المركزي (Al Saff Central Hospital)",
+        "address": "مستشفي الصف المركزي، شارع سلامه خليل، الصف، الجيزة",
+        "latitude": 29.583329839999998,
+        "longitude": 31.28425594
+    },
+    {
+        "osm_id": "way/952640649",
+        "governorate": "الجيزة",
+        "name": "مستشفي أوسيم المركزي (Osim Central Hospital)",
+        "address": "مستشفي أوسيم المركزي، شارع سعد زغلول، الجيزة",
+        "latitude": 30.122367630000003,
+        "longitude": 31.140953380000003
+    },
+    {
+        "osm_id": "way/952642438",
+        "governorate": "القاهرة",
+        "name": "مستشفي دار الشفا (Dar El Shefa Hospital)",
+        "address": "مستشفي دار الشفا، شارع كمال، العباسيه الغربيه، العباسية، الدمرداش، القاهرة",
+        "latitude": 30.0714983875,
+        "longitude": 31.2787472125
+    },
+    {
+        "osm_id": "way/952653162",
+        "governorate": "القاهرة",
+        "name": "مستشفي اطفال مصر (Egypt Children Hospital)",
+        "address": "مستشفي اطفال مصر، شارع مستشفي الطلبه، العيني، السيدة زينب، القاهرة",
+        "latitude": 30.028096749999996,
+        "longitude": 31.235910790000002
+    },
+    {
+        "osm_id": "way/982219316",
+        "governorate": "الدقهلية",
+        "name": "مستشفي التكامل الصحي",
+        "address": "مستشفي التكامل الصحي، طريق المنصوره، ميت غمر، ميت غمر، الدقهلية",
+        "latitude": 30.80839074,
+        "longitude": 31.27370234
+    },
+    {
+        "osm_id": "way/984675352",
+        "governorate": "الجيزة",
+        "name": "مركز صحه زنين الحضري (Zenien urban Health center)",
+        "address": "مركز صحه زنين الحضري، شارع الاتحاد، بولاق الدكرور، نزلة بهجت، الجيزة",
+        "latitude": 30.031254339999997,
+        "longitude": 31.18695568
+    },
+    {
+        "osm_id": "way/984675353",
+        "governorate": "الجيزة",
+        "name": "مركز صحه زنين الحضري (Zenien urban Health center)",
+        "address": "مركز صحه زنين الحضري، شارع المشتل، بولاق الدكرور، نزلة بهجت، الجيزة",
+        "latitude": 30.031152579999997,
+        "longitude": 31.18705696
+    },
+    {
+        "osm_id": "way/984675354",
+        "governorate": "الجيزة",
+        "name": "مركز صحه زنين الحضري (Zenien urban Health center)",
+        "address": "مركز صحه زنين الحضري، شارع الاتحاد، بولاق الدكرور، نزلة بهجت، الجيزة",
+        "latitude": 30.031094059999997,
+        "longitude": 31.18682204
+    },
+    {
+        "osm_id": "way/984855104",
+        "governorate": "القاهرة",
+        "name": "شركة تطبيق حكيمة لخدمات التمريض المنزلي",
+        "address": "شركة تطبيق حكيمة لخدمات التمريض المنزلي، شارع تحسين فرغلي، المنطقة الأولى، مدينة نصر، القاهرة",
+        "latitude": 30.06411442,
+        "longitude": 31.3317544
+    },
+    {
+        "osm_id": "way/986694825",
+        "governorate": "الجيزة",
+        "name": "مستشفى بولاق الدكرور العام",
+        "address": "مستشفى بولاق الدكرور العام، شارع الدكتور على مصطفى مشرفه، بين السرايات، الجيزة",
+        "latitude": 30.027857346666668,
+        "longitude": 31.19914416
+    },
+    {
+        "osm_id": "way/998283949",
+        "governorate": "الأقصر",
+        "name": "rehabilitation center",
+        "address": "rehabilitation center، طريق قنا، اسوان الشرقى، طيبة الجديدة، Tiba، الأقصر",
+        "latitude": 25.761921039999997,
+        "longitude": 32.7877853
+    },
+    {
+        "osm_id": "way/1000726106",
+        "governorate": "القاهرة",
+        "name": "مستشفى أحمد ماهر التعليمى (Ahmed Maher Teaching Hospital)",
+        "address": "مستشفى أحمد ماهر التعليمى، شارع حسام المصري، عابدين، القاهرة",
+        "latitude": 30.0397707,
+        "longitude": 31.25143945
+    },
+    {
+        "osm_id": "way/1003961952",
+        "governorate": "الجيزة",
+        "name": "مستشفى عامة",
+        "address": "شارع كورنيش النيل، العجوزة، الجيزة",
+        "latitude": 30.054516814285712,
+        "longitude": 31.21526757142857
+    },
+    {
+        "osm_id": "way/1004010472",
+        "governorate": "الشرقية",
+        "name": "الهلال الاخضر",
+        "address": "الهلال الاخضر، شارع عمر بن عبد العزيز، المجاورة 3، العاشر من رمضان، الشرقية",
+        "latitude": 30.2868581,
+        "longitude": 31.7357227
+    },
+    {
+        "osm_id": "way/1005507334",
+        "governorate": "المنيا",
+        "name": "مستشفى التأمين الصحى (Health Insurance Hospital)",
+        "address": "مستشفى التأمين الصحى، شارع مصطفى كامل، سيد جلال، المنيا",
+        "latitude": 28.11161834,
+        "longitude": 30.748018899999998
+    },
+    {
+        "osm_id": "way/1005528418",
+        "governorate": "المنيا",
+        "name": "مستشفى عامة",
+        "address": "شارع مرسى، عمار حسين، المنيا",
+        "latitude": 28.08411802,
+        "longitude": 30.76223046
+    },
+    {
+        "osm_id": "way/1009600318",
+        "governorate": "البحر الأحمر",
+        "name": "مستشفي برنيس العسكري (Berenice Military Hospital)",
+        "address": "مستشفي برنيس العسكري، طريق حلايب وشلاتين، Hamata، الشلاتين، البحر الأحمر",
+        "latitude": 23.991602641666663,
+        "longitude": 35.40817369166667
+    },
+    {
+        "osm_id": "way/1039006171",
+        "governorate": "القاهرة",
+        "name": "مستشفى الياسمين العسكري (Al Yasmeen Military Hospital)",
+        "address": "مستشفى الياسمين العسكري، طريق القطامية، العين السخنه، العاصمة الإدارية الجديدة، القاهرة",
+        "latitude": 29.931240733333333,
+        "longitude": 31.614290226666665
+    },
+    {
+        "osm_id": "way/1057701989",
+        "governorate": "أسوان",
+        "name": "مستشفى حورس العام (Edfu General Hospital)",
+        "address": "مستشفى حورس العام، شارع 31، مدينه ادفو، أسوان",
+        "latitude": 24.980373266666664,
+        "longitude": 32.88140611666667
+    },
+    {
+        "osm_id": "way/1057797224",
+        "governorate": "السويس",
+        "name": "مستشفى التأمين الصحى الشامل",
+        "address": "مستشفى التأمين الصحى الشامل، شارع نور الاسلام، السويس",
+        "latitude": 29.969271415151514,
+        "longitude": 32.5175774030303
+    },
+    {
+        "osm_id": "way/1076112442",
+        "governorate": "القليوبية",
+        "name": "مستشفى الحميات",
+        "address": "مستشفى الحميات، شارع هاني كامل، بنها، القليوبية",
+        "latitude": 30.473215866666667,
+        "longitude": 31.180821322222226
+    },
+    {
+        "osm_id": "way/1102478857",
+        "governorate": "الجيزة",
+        "name": "جريفولز ايجيبت ( المشروع القومي لمشتقات البلازما ) (Grifols Egypt)",
+        "address": "شارع المعهد، الحى 1، الحى الأول، السادس من أكتوبر، الجيزة",
+        "latitude": 29.971505760000003,
+        "longitude": 30.946518960000002
+    },
+    {
+        "osm_id": "way/1112561001",
+        "governorate": "أسوان",
+        "name": "Aswan Health Insurance Hospital",
+        "address": "Aswan Health Insurance Hospital، شارع التأمين الصحى، نجع المحطة، أسوان",
+        "latitude": 24.062625311111113,
+        "longitude": 32.88470392222222
+    },
+    {
+        "osm_id": "way/1121913268",
+        "governorate": "الجيزة",
+        "name": "الشبراويشى (El Shabrawishy)",
+        "address": "الشبراويشى، شارع اسماعيل أبو فتوح، الدقى، الجيزة",
+        "latitude": 30.041425966666665,
+        "longitude": 31.21607416666667
+    },
+    {
+        "osm_id": "way/1124108687",
+        "governorate": "الإسكندرية",
+        "name": "مركز الكلى والمسالك البولية - مستشفى اليسر (Kidney and Urology Center - AlYosr Hospital)",
+        "address": "مركز الكلى والمسالك البولية - مستشفى اليسر، شارع بورسعيد، الابراهيميه بحرى، إبراهيمية، الإسكندرية",
+        "latitude": 31.220974785714287,
+        "longitude": 29.93386272857143
+    },
+    {
+        "osm_id": "way/1134882634",
+        "governorate": "القاهرة",
+        "name": "المعهد القومي للأورام",
+        "address": "المعهد القومي للأورام، شارع القصر العيني، فم الخليج ودير النحاس، المنيل، القاهرة",
+        "latitude": 30.024076127272725,
+        "longitude": 31.23088741818182
+    },
+    {
+        "osm_id": "way/1140719128",
+        "governorate": "الغربية",
+        "name": "مستشفي",
+        "address": "مستشفي، شارع المستشفى، ديا الكوم، الغربية",
+        "latitude": 30.63544521875,
+        "longitude": 31.0902660375
+    },
+    {
+        "osm_id": "way/1140719305",
+        "governorate": "الغربية",
+        "name": "الرعاية الصحية",
+        "address": "الرعاية الصحية، شارع المستشفى، ديا الكوم، الغربية",
+        "latitude": 30.635711150000002,
+        "longitude": 31.091009200000002
+    },
+    {
+        "osm_id": "way/1176542035",
+        "governorate": "المنيا",
+        "name": "الوحدة الصحية بالشرفا",
+        "address": "الوحدة الصحية بالشرفا، طريق المنيا، القاهرة الصحراوى، المنيا",
+        "latitude": 28.116190519999996,
+        "longitude": 30.77438086
+    },
+    {
+        "osm_id": "way/1176542041",
+        "governorate": "المنيا",
+        "name": "دار ابو السعود الطبى بالشرفا",
+        "address": "دار ابو السعود الطبى بالشرفا، الشرفا - نزلة حسين، المنيا",
+        "latitude": 28.1165658,
+        "longitude": 30.76907972
+    },
+    {
+        "osm_id": "way/1176566775",
+        "governorate": "المنيا",
+        "name": "الوحده الصحيه لقرية الحوارته",
+        "address": "الوحده الصحيه لقرية الحوارته، الشرفا - نزلة حسين، المنيا",
+        "latitude": 28.160500419999998,
+        "longitude": 30.760720300000003
+    },
+    {
+        "osm_id": "way/1176572868",
+        "governorate": "المنيا",
+        "name": "مدرسة الازهر الشريف",
+        "address": "مدرسة الازهر الشريف، الشرفا - نزلة حسين، المنيا",
+        "latitude": 28.15987548,
+        "longitude": 30.760722599999998
+    },
+    {
+        "osm_id": "way/1176633894",
+        "governorate": "المنيا",
+        "name": "AL DOODIA HEALTH OFFICE",
+        "address": "AL DOODIA HEALTH OFFICE، شارع المطحن، الاخصاص، المنيا",
+        "latitude": 28.12591505714286,
+        "longitude": 30.74659972857143
+    },
+    {
+        "osm_id": "way/1176845313",
+        "governorate": "أسيوط",
+        "name": "University Dental Hospital",
+        "address": "University Dental Hospital، cafe_way، المنطقة الاقليميه، أسيوط الجديدة، أسيوط",
+        "latitude": 27.269595879999997,
+        "longitude": 31.26833868
+    },
+    {
+        "osm_id": "way/1217194799",
+        "governorate": "القاهرة",
+        "name": "عيادات شارع 9",
+        "address": "عيادات شارع 9، شارع جامع القدس، الشرق للتأمين، القاهرة",
+        "latitude": 30.01170378333333,
+        "longitude": 31.303253733333335
+    },
+    {
+        "osm_id": "way/1219436815",
+        "governorate": "شمال سيناء",
+        "name": "Arish Military Hospital",
+        "address": "Arish Military Hospital، Arish، شمال سيناء",
+        "latitude": 31.14393292,
+        "longitude": 33.82823469666667
+    },
+    {
+        "osm_id": "way/1220178404",
+        "governorate": "شمال سيناء",
+        "name": "Nekhel Central Hospital",
+        "address": "Nekhel Central Hospital، نخل، شمال سيناء",
+        "latitude": 29.91147154,
+        "longitude": 33.73954918
+    },
+    {
+        "osm_id": "way/1220390466",
+        "governorate": "شمال سيناء",
+        "name": "مستشفى عامة",
+        "address": "المغارة، شمال سيناء",
+        "latitude": 30.658845300000003,
+        "longitude": 33.71295856
+    },
+    {
+        "osm_id": "way/1220673906",
+        "governorate": "جنوب سيناء",
+        "name": "Taba Central Hospital",
+        "address": "Taba Central Hospital، طريق نويبع، طابا، مدينه طابا، طابا، جنوب سيناء",
+        "latitude": 29.49410606,
+        "longitude": 34.89546882
+    },
+    {
+        "osm_id": "way/1222266172",
+        "governorate": "الجيزة",
+        "name": "مستشفى الطلبة (Student Hospital)",
+        "address": "مستشفى الطلبة، كوبري الملك فيصل، بين السرايات، الجيزة",
+        "latitude": 30.015067155555553,
+        "longitude": 31.209026466666664
+    },
+    {
+        "osm_id": "way/1225193484",
+        "governorate": "الجيزة",
+        "name": "مستشفى جامعة ٦ أكتوبر (October 6 University Hospital)",
+        "address": "مستشفى جامعة ٦ أكتوبر، المحور المركزى، الحي السابع، السادس من أكتوبر، الجيزة",
+        "latitude": 29.97844352222222,
+        "longitude": 30.949760297777775
+    },
+    {
+        "osm_id": "way/1225911996",
+        "governorate": "القاهرة",
+        "name": "مستشفى الأمراض الباطنة (Internal Medicine Hospital)",
+        "address": "مستشفى الأمراض الباطنة، شارع القصر العيني، العيني، المنيل، القاهرة",
+        "latitude": 30.029672133333335,
+        "longitude": 31.23209973333333
+    },
+    {
+        "osm_id": "way/1230107731",
+        "governorate": "القاهرة",
+        "name": "مستشفى القاهرة الجديدة (New Cairo Hospital)",
+        "address": "محور جمال عبد الناصر الجانبى، التجمع الثالث، القاهرة",
+        "latitude": 29.979100414457832,
+        "longitude": 31.43607521927711
+    },
+    {
+        "osm_id": "way/1232441080",
+        "governorate": "الجيزة",
+        "name": "مدرسة",
+        "address": "مدرسة، طريق الواحات الجانبي، حي جنة ج الأحياء، مساكن أبناء الجيزة، السادس من أكتوبر، الجيزة",
+        "latitude": 29.913760200000002,
+        "longitude": 30.93215238
+    },
+    {
+        "osm_id": "way/1241602675",
+        "governorate": "مطروح",
+        "name": "مستشفى عامة",
+        "address": "طريق محمد حسنى مبارك، مجاورة 5، New Borg el-Arab، مطروح",
+        "latitude": 30.84392238,
+        "longitude": 29.518564220000002
+    },
+    {
+        "osm_id": "way/1244830060",
+        "governorate": "الدقهلية",
+        "name": "مستشفى الرمد (Hospital of Ophthalmology)",
+        "address": "مستشفى الرمد، شارع جيهان السادات، اول ميت طلخا، طلخا، الدقهلية",
+        "latitude": 31.044103906896552,
+        "longitude": 31.36500345172414
+    },
+    {
+        "osm_id": "way/1249254621",
+        "governorate": "قنا",
+        "name": "مستشفى 175 سرير",
+        "address": "مستشفى 175 سرير، New Qena، قنا الجديدة، قنا",
+        "latitude": 26.25150551666667,
+        "longitude": 32.742235916666665
+    },
+    {
+        "osm_id": "way/1259208525",
+        "governorate": "البحر الأحمر",
+        "name": "ss",
+        "address": "ss، شارع اللواء محمد ثناء، سفاجا، البحر الأحمر",
+        "latitude": 26.768680900000003,
+        "longitude": 33.934117216666664
+    },
+    {
+        "osm_id": "way/1284235463",
+        "governorate": "المنوفية",
+        "name": "مستشفى عامة",
+        "address": "شارع حماد، المنوفية",
+        "latitude": 30.399595060000003,
+        "longitude": 30.83432308
+    },
+    {
+        "osm_id": "way/1340172943",
+        "governorate": "الإسماعيلية",
+        "name": "مستشفى فايد العسكري (Fayed Military Hospital)",
+        "address": "مستشفى فايد العسكري، طريق السويس، الاسماعيلية الصحراوى، مدينه فايد، فايد، الإسماعيلية",
+        "latitude": 30.319351540000003,
+        "longitude": 32.299461359999995
+    },
+    {
+        "osm_id": "way/1340811929",
+        "governorate": "السويس",
+        "name": "Project Land",
+        "address": "Project Land، طريق جنيفا، السويس",
+        "latitude": 30.0291333,
+        "longitude": 32.5421949
+    },
+    {
+        "osm_id": "way/1375417802",
+        "governorate": "القاهرة",
+        "name": "مسشتفى الجمهورية التعليمى (El-Gomhoria Teaching Hospital)",
+        "address": "مسشتفى الجمهورية التعليمى، شارع البراموني، السقايين، عابدين، القاهرة",
+        "latitude": 30.039456228571428,
+        "longitude": 31.248420585714285
+    },
+    {
+        "osm_id": "way/1422257968",
+        "governorate": "القاهرة",
+        "name": "Alaa Ezzat Hospital",
+        "address": "طريق مصر حلوان الزراعي، الخبيرى الغربيه، معادي الخبيري، الفاروقية، القاهرة",
+        "latitude": 29.96279452,
+        "longitude": 31.249718740000002
+    },
+    {
+        "osm_id": "way/1427682320",
+        "governorate": "الجيزة",
+        "name": "مستشفى بهية (Baheya Hospital)",
+        "address": "مستشفى بهية، شارع 30، الحى 1، تارا ريزيدنس، الجيزة",
+        "latitude": 30.03654768,
+        "longitude": 31.01081382
+    },
+    {
+        "osm_id": "way/1428551185",
+        "governorate": "القاهرة",
+        "name": "مستشفي الماسة (Al MASSA hospital)",
+        "address": "شارع محمد متولي الشعراوي، مدينة نصر، القاهرة",
+        "latitude": 30.05327434,
+        "longitude": 31.379175399999998
+    },
+    {
+        "osm_id": "way/1456875687",
+        "governorate": "الجيزة",
+        "name": "المعهد القومى للأورام (National Cancer Institute)",
+        "address": "المعهد القومى للأورام، شارع البستان، المجاورة 5، مونلاند، الجيزة",
+        "latitude": 30.029665823529413,
+        "longitude": 31.015348847058824
+    },
+    {
+        "osm_id": "way/1458329371",
+        "governorate": "القاهرة",
+        "name": "مستشفى د/ جمال أبو العزايم للطب النفسي وعلاج الإدمان",
+        "address": "مستشفى د/ جمال أبو العزايم للطب النفسي وعلاج الإدمان، شارع عبد الحميد جوده السحار، أحياء البنفسج، القاهرة",
+        "latitude": 30.06047886,
+        "longitude": 31.468543620000002
+    },
+    {
+        "osm_id": "way/1470229524",
+        "governorate": "القاهرة",
+        "name": "مستشفى الامراض الصدرية بالعباسية (Abassya Chest Diseases Hospital)",
+        "address": "مستشفى الامراض الصدرية بالعباسية، شارع السكه البيضاء، ثان مدينة نصر، القاهرة",
+        "latitude": 30.057127614285715,
+        "longitude": 31.29494348571429
+    },
+    {
+        "osm_id": "way/1492030036",
+        "governorate": "الجيزة",
+        "name": "مستشفي ميلينيوم (Millennium Hospital)",
+        "address": "شارع احمد الشاطورى، الدقى، الجيزة",
+        "latitude": 30.033114360000003,
+        "longitude": 31.210554899999998
+    },
+    {
+        "osm_id": "way/1497393443",
+        "governorate": "الغربية",
+        "name": "Alshorouk Hospital",
+        "address": "شارع على بك الكبير، احمد عواجه، طنطا، الغربية",
+        "latitude": 30.79641994,
+        "longitude": 31.003917219999998
+    },
+    {
+        "osm_id": "way/1525678372",
+        "governorate": "مطروح",
+        "name": "مستشفى العلمين النموذجي (Alamen Model Hospital)",
+        "address": "الطريق الساحلى الدولى، Latin District، سيدى عبد الرحمن، مطروح",
+        "latitude": 30.842803492857144,
+        "longitude": 28.939649461904764
+    }
+]

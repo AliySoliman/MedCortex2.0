@@ -1,64 +1,56 @@
-// frontend/hooks/useEgyptianDoctors.ts
+// frontend/hooks/useEgyptianHospitals.ts
 // ─────────────────────────────────────────────────────────────────────────────
-// Hook for Egyptian doctors search
+// Hook for Egyptian hospitals search
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useState, useCallback } from "react";
 
-interface EgyptianDoctor {
+interface EgyptianHospital {
   name: string;
-  specialty: string;
+  governorate: string;
   address: string;
   latitude: number;
   longitude: number;
-  phone: string;
-  reviews: number;
-  rating: number;
-  url: string;
   distance: number | null;
-  similarity: number;
-  location_match: boolean;
   source: string;
 }
 
-interface EgyptianDoctorsResponse {
-  doctors: EgyptianDoctor[];
+interface EgyptianHospitalsResponse {
+  hospitals: EgyptianHospital[];
   count: number;
   source: string;
 }
 
-interface EgyptianDoctorsState {
-  doctors: EgyptianDoctor[];
+interface EgyptianHospitalsState {
+  hospitals: EgyptianHospital[];
   loading: boolean;
   error: string | null;
 }
 
-export function useEgyptianDoctors() {
-  const [state, setState] = useState<EgyptianDoctorsState>({
-    doctors: [],
+export function useEgyptianHospitals() {
+  const [state, setState] = useState<EgyptianHospitalsState>({
+    hospitals: [],
     loading: false,
     error: null,
   });
 
-  const searchEgyptianDoctors = useCallback(async (
-    query: string,
-    location?: string,
-    specialty?: string,
-    userCoordinates?: { lat: number; lng: number }
+  const searchEgyptianHospitals = useCallback(async (
+    query?: string,
+    userCoordinates?: { lat: number; lng: number },
+    governorate?: string
   ) => {
     setState((prev) => ({ ...prev, loading: true, error: null }));
 
     try {
-      const response = await fetch("/api/egyptian-doctors", {
+      const response = await fetch("/api/egyptian-hospitals", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           query,
-          location,
-          specialty,
           userCoordinates,
+          governorate,
         }),
       });
 
@@ -66,9 +58,9 @@ export function useEgyptianDoctors() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data: EgyptianDoctorsResponse = await response.json();
+      const data: EgyptianHospitalsResponse = await response.json();
       setState({
-        doctors: data.doctors,
+        hospitals: data.hospitals,
         loading: false,
         error: null,
       });
@@ -76,13 +68,13 @@ export function useEgyptianDoctors() {
       setState((prev) => ({
         ...prev,
         loading: false,
-        error: error instanceof Error ? error.message : "Failed to search Egyptian doctors",
+        error: error instanceof Error ? error.message : "Failed to search Egyptian hospitals",
       }));
     }
   }, []);
 
   return {
     ...state,
-    searchEgyptianDoctors,
+    searchEgyptianHospitals,
   };
 }
