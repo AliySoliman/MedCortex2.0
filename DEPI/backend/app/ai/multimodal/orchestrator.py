@@ -54,6 +54,7 @@ class MultimodalOrchestrator:
         filename: str,
         mime_type: str,
         file_bytes: bytes,
+        upload_type: str = "document",
     ) -> ProcessingContext:
         """
         Main entrypoint for any uploaded file.
@@ -67,7 +68,7 @@ class MultimodalOrchestrator:
         MultimodalLogger.log_stage_start(
             PipelineStage.UPLOAD_RECEIVED,
             upload_id,
-            {"filename": filename, "mime_type": mime_type},
+            {"filename": filename, "mime_type": mime_type, "upload_type": upload_type},
         )
 
         try:
@@ -99,6 +100,7 @@ class MultimodalOrchestrator:
                 filename=filename,
                 mime_type=mime_type,
                 file_bytes=file_bytes,
+                upload_type=upload_type,
                 unified_context=unified_context,
             )
 

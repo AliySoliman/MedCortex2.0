@@ -25,6 +25,7 @@ from app.ai.graph.multimodal_nodes import (
     lab_node,
     maybe_drug,
     maybe_lab,
+    medical_image_node,
     ocr_node,
     route_after_route,
     route_node,
@@ -43,6 +44,7 @@ def build_multimodal_graph():
     workflow.add_node("vision", vision_node)
     workflow.add_node("ocr", ocr_node)
     workflow.add_node("text", text_node)
+    workflow.add_node("medical_image", medical_image_node)
     workflow.add_node("lab", lab_node)
     workflow.add_node("drug", drug_node)
     workflow.add_node("finalize", finalize_node)
@@ -58,12 +60,13 @@ def build_multimodal_graph():
             "vision": "vision",
             "ocr": "ocr",
             "text": "text",
+            "medical_image": "medical_image",
             "finalize": "finalize",
         },
     )
 
     # Each extraction node flows into the optional lab interpretation step
-    for node in ("vision", "ocr", "text"):
+    for node in ("vision", "ocr", "text", "medical_image"):
         workflow.add_conditional_edges(
             node,
             maybe_lab,

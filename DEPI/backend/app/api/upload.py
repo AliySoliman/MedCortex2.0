@@ -25,6 +25,7 @@ multimodal_graph = get_multimodal_graph()
 @router.post("", summary="Upload a medical document or image for unified processing")
 async def process_upload(
     file: UploadFile = File(...),
+    upload_type: str = "document",
     db: Session = Depends(get_db),
     current_user: Optional[User] = Depends(get_current_user_optional),
 ) -> Dict[str, Any]:
@@ -49,7 +50,8 @@ async def process_upload(
             upload_id=upload_id,
             filename=file.filename,
             mime_type=mime_type,
-            file_bytes=file_bytes
+            file_bytes=file_bytes,
+            upload_type=upload_type
         )
 
         # Phase 2: Execution through the multimodal LangGraph.

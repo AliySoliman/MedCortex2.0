@@ -171,6 +171,7 @@ class ProcessingContext(BaseModel):
     filename: str
     mime_type: str
     file_bytes: bytes
+    upload_type: str = "document"  # "document" or "medical_image"
     
     modality: ModalityType = ModalityType.UNKNOWN
     document_type: DocumentType = DocumentType.UNKNOWN

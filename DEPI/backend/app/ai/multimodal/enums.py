@@ -68,4 +68,5 @@ class ProcessorType(str, Enum):
     OCR = "OCR"
     VISION = "VISION"
     TEXT = "TEXT"
+    MEDICAL_IMAGE = "MEDICAL_IMAGE"
     UNKNOWN = "UNKNOWN"
