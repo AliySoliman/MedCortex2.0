@@ -242,30 +242,30 @@ POST /chat  { message, conversation_id?, unified_context? }
 └──────────────────────────────┬───────────────────────────────────────────────┘
                                │
                                ▼
-┌──────────────────────────────────────────────────────────────────────────────┐
-│  STEP 4 — Parallel Branch Pre-Computation  (asyncio.gather)                  │
-│                                                                              │
-│  Concurrently runs all 3 specialist branches in thread executors:            │
-│                                                                              │
-│   ┌────────────────────┐  ┌──────────────────────┐  ┌──────────────────────┐ │
-│   │  Drug Branch       │  │  Nutrition Branch    │  │  Rehab Branch        │ │
-│   │  (drug_branch.py)  │  │ (nutrition_branch.py)│  │  (rehab_branch.py)   │ │
-│   │  Llama-3.1-8b-     │  │  Llama-3.1-8b-       │  │  Llama-3.1-8b-       │ │
-│   │  instant           │  │  instant             │  │  instant             │ │
-│   │                    │  │                      │  │                      │ │
-│   │  Input context:    │  │  Input context:      │  │  Input context:      │ │
-│   │  · final_answer    │  │  · final_answer      │  │  · final_answer      │ │
-│   │  · conditions      │  │  · conditions        │  │  · conditions        │ │
-│   │  · symptoms        │  │  · symptoms          │  │  · symptoms          │ │
-│   │    (from vision    │  │    (from vision OR   │  │    (from vision OR   │ │
-│   │     OR RAG)        │  │     RAG)             │  │     RAG)             │ │
-│   └────────┬───────────┘  └──────────┬───────────┘  └──────────┬───────────┘ │
-│            └──────────────────────────┼────────────────────────┘             │
-│                                       │                                      │
-│   Stored in ChatResponse:             │                                      │
-│     drugs_answer, nutrition_answer, rehab_answer                             │
-│   Saved to DB message metadata — persist across sessions ✅                  │
-└──────────────────────────────┬───────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────────┐
+│  STEP 4 — Parallel Branch Pre-Computation  (asyncio.gather)                   │
+│                                                                               │
+│  Concurrently runs all 3 specialist branches in thread executors:             │
+│                                                                               │
+│   ┌────────────────────┐  ┌──────────────────────┐  ┌──────────────────────┐  │
+│   │  Drug Branch       │  │  Nutrition Branch    │  │  Rehab Branch        │  │
+│   │  (drug_branch.py)  │  │ (nutrition_branch.py)│  │  (rehab_branch.py)   │  │
+│   │  Llama-3.1-8b-     │  │  Llama-3.1-8b-       │  │  Llama-3.1-8b-       │  │
+│   │  instant           │  │  instant             │  │  instant             │  │
+│   │                    │  │                      │  │                      │  │
+│   │  Input context:    │  │  Input context:      │  │  Input context:      │  │
+│   │  · final_answer    │  │  · final_answer      │  │  · final_answer      │  │
+│   │  · conditions      │  │  · conditions        │  │  · conditions        │  │
+│   │  · symptoms        │  │  · symptoms          │  │  · symptoms          │  │ 
+│   │    (from vision    │  │    (from vision OR   │  │    (from vision OR   │  │
+│   │     OR RAG)        │  │     RAG)             │  │     RAG)             │  │
+│   └────────┬───────────┘  └──────────┬───────────┘  └──────────┬───────────┘  │
+│            └──────────────────────────┼────────────────────────┘              │
+│                                       │                                       │
+│   Stored in ChatResponse:             │                                       │
+│     drugs_answer, nutrition_answer, rehab_answer                              │
+│   Saved to DB message metadata — persist across sessions                      │
+└──────────────────────────────┬────────────────────────────────────────────────┘
                                │
                                ▼
                     ChatResponse returned:
