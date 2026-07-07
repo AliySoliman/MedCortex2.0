@@ -86,10 +86,11 @@ export async function sendMessage(message: string, unified_context?: any): Promi
   return response.data;
 }
 
-export async function uploadFile(file: File): Promise<any> {
+export async function uploadFile(file: File, uploadType: string = "document"): Promise<any> {
   const token = localStorage.getItem("token");
   const formData = new FormData();
   formData.append("file", file);
+  formData.append("upload_type", uploadType);
 
   const response = await axios.post(
     `${API_BASE}/upload`,
