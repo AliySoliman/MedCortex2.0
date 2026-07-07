@@ -15,13 +15,13 @@ independently and are invoked by different API endpoints.
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                        MedCortex Backend Architecture                           │
 │                                                                                 │
-│   POST /upload ──────► MULTIMODAL PIPELINE  (LangGraph — multimodal_builder)   │
+│   POST /upload ──────► MULTIMODAL PIPELINE  (LangGraph — multimodal_builder)    │
 │                              ↓  UnifiedMedicalContext                           │
-│   POST /chat ────────► CHAT / RAG PIPELINE  (chat.py — direct invocation)      │
+│   POST /chat ────────► CHAT / RAG PIPELINE  (chat.py — direct invocation)       │
 │        ↑ (with unified_context)   OR   (text-only RAG)                          │
 │                                                                                 │
-│   Supporting systems: ResponseValidator · MemoryService · ConversationService  │
-│   Specialized tabs:   Drugs · Nutrition · Rehab · Egyptian Doctors             │
+│   Supporting systems: ResponseValidator · MemoryService · ConversationService   │
+│   Specialized tabs:   Drugs · Nutrition · Rehab · Egyptian Doctors              │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -41,14 +41,14 @@ POST /upload  (multipart file)
 │  PHASE 1 — MultimodalOrchestrator  (app/ai/multimodal/orchestrator.py)       │
 │                                                                              │
 │  1. Validate upload (non-empty check; MIME inspection)                       │
-│  2. GroqOrchestratorBrain.decide()  ← Llama-3.3-70B (text-only routing call)│
+│  2. GroqOrchestratorBrain.decide()  ← Llama-3.3-70B (text-only routing call) │
 │       Input:  filename + MIME type (no bytes sent — fast & cheap)            │
 │       Output: OrchestrationDecision                                          │
 │               { modality, document_type, processor, confidence, reasoning }  │
 │  3. On brain failure → heuristic fallback                                    │
 │       DefaultClassifier (MIME rules) + DefaultRouter (enum mapping)          │
 │       processing_metadata.fallback_used = True                               │
-│  4. DefaultPreprocessor.preprocess() → resize images / pass docs through    │
+│  4. DefaultPreprocessor.preprocess() → resize images / pass docs through     │
 │                                                                              │
 │  Output: ProcessingContext with processor_type set, ready for Phase 2        │
 └─────────────────────────────────────┬────────────────────────────────────────┘
@@ -77,29 +77,29 @@ ENTRY
                                │  conditional edge (route_after_route)
           ┌────────────────────┼────────────────────┬──────────────┬────────────┐
           ▼                    ▼                     ▼              ▼            ▼
-   ┌────────────┐       ┌────────────┐        ┌───────────┐  ┌──────────┐  ┌─────────────┐
-   │ vision_node│       │  ocr_node  │        │ text_node │  │ finalize │  │medical_     │
-   │ VisionSvc  │       │ OCRService │        │ SharedMed │  │  _node   │  │image_node   │
-   │ Gemini     │       │ PaddleOCR/ │        │icalParser │  │(skip all)│  │Groq Vision  │
-   │ (w/ retry) │       │ EasyOCR    │        │  (LLM)    │  └────┬─────┘  │+ HF Fallback│
-   └──────┬─────┘       └──────┬─────┘        └─────┬─────┘       │          └──────┬──────┘
-          │                   │                     │              │                 │
-          └───────────────────┼─────────────────────┘              │                 │
-                              ▼                                     │
-                  SharedMedicalParser.parse()                       │
-                  Extracts structured JSON:                         │
-                  { patient, medications[], diagnoses[],            │
-                    lab_values[], clinical_findings[],              │
-                    recommendations[], notes[] }                    │
-                              │                                     │
-                              ▼  conditional (maybe_lab)           │
-                   ┌──────────────────────┐                        │
-                   │      lab_node        │ ─── (skip if no labs) ─►│
-                   │ LabInterpretation    │                         │
+   ┌────────────┐       ┌────────────┐        ┌───────────┐    ┌──────────┐  ┌─────────────┐
+   │ vision_node│       │  ocr_node  │        │ text_node │    │ finalize │  │medical_     │
+   │ VisionSvc  │       │ OCRService │        │ SharedMed │    │  _node   │  │image_node   │
+   │ Gemini     │       │ PaddleOCR/ │        │icalParser │    │(skip all)│  │Groq Vision  │
+   │ (w/ retry) │       │ EasyOCR    │        │  (LLM)    │    └────┬─────┘  │+ HF Fallback│
+   └──────┬─────┘       └──────┬─────┘        └─────┬─────┘         │        └──────┬──────┘
+          │                   │                     │               │               │
+          └───────────────────┼─────────────────────┘               │               │
+                              ▼                                     │               │    
+                  SharedMedicalParser.parse()                       │               │
+                  Extracts structured JSON:                         │               │
+                  { patient, medications[], diagnoses[],            │               │
+                    lab_values[], clinical_findings[],              │               │
+                    recommendations[], notes[] }                    │               │
+                              │                                     │               │
+                              ▼  conditional (maybe_lab)            │               │
+                   ┌──────────────────────┐                         │               │
+                   │      lab_node        │ ─── (skip if no labs) ─►│               │               
+                   │ LabInterpretation    │                         │◄──────────────┘
                    │ Service (rules-based)│                         │
                    └──────────┬───────────┘                         │
                               │  conditional (maybe_drug)           │
-                   ┌──────────────────────┐                        │
+                   ┌──────────────────────┐                         │
                    │      drug_node       │ ─── (skip if <2 meds) ─►│
                    │ InteractionChecker   │                         │
                    │  (rules, no LLM)     │                         │
@@ -185,17 +185,17 @@ POST /chat  { message, conversation_id?, unified_context? }
                                │
                                ▼
             ┌──────────────────────────────────────┐
-            │   unified_context present?            │
+            │   unified_context present?           │
             └─────────────┬────────────────────────┘
                           │
            YES ───────────┤─────────────── NO
            │              │                │
            ▼              │                ▼
-  ┌──────────────────┐    │      ┌──────────────────────┐
+  ┌──────────────────┐    │      ┌───────────────────────┐
   │ _build_document  │    │      │    run_rag()          │
   │ _response()      │    │      │ Pinecone vector search│
   │                  │    │      │ → ClinicalGenerator   │
-  │ Reads from       │    │      │   (Llama-3.3-70B)    │
+  │ Reads from       │    │      │   (Llama-3.3-70B)     │
   │ UnifiedMedical   │    │      │ Extracts:             │
   │ Context:         │    │      │  suspected_conditions │
   │  · vision_output │    │      │  symptoms             │
@@ -221,7 +221,7 @@ POST /chat  { message, conversation_id?, unified_context? }
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │  STEP 2 — Lifestyle + Doctors                                                │
 │  get_lifestyle_recommendations(suspected_conditions, symptoms)               │
-│    → Groq LLM (Llama-3.3-70B) → JSON:                                      │
+│    → Groq LLM (Llama-3.3-70B) → JSON:                                        │
 │      { foods_to_eat, foods_to_avoid, drinks, exercises, doctor_specialties } │
 │  find_doctors(doctor_specialties) → List[Doctor]                             │
 └──────────────────────────────┬───────────────────────────────────────────────┘
@@ -247,10 +247,10 @@ POST /chat  { message, conversation_id?, unified_context? }
 │                                                                              │
 │  Concurrently runs all 3 specialist branches in thread executors:            │
 │                                                                              │
-│   ┌────────────────────┐  ┌─────────────────────┐  ┌──────────────────────┐ │
+│   ┌────────────────────┐  ┌──────────────────────┐  ┌──────────────────────┐ │
 │   │  Drug Branch       │  │  Nutrition Branch    │  │  Rehab Branch        │ │
 │   │  (drug_branch.py)  │  │ (nutrition_branch.py)│  │  (rehab_branch.py)   │ │
-│   │  Llama-3.1-8b-     │  │  Llama-3.1-8b-      │  │  Llama-3.1-8b-       │ │
+│   │  Llama-3.1-8b-     │  │  Llama-3.1-8b-       │  │  Llama-3.1-8b-       │ │
 │   │  instant           │  │  instant             │  │  instant             │ │
 │   │                    │  │                      │  │                      │ │
 │   │  Input context:    │  │  Input context:      │  │  Input context:      │ │
@@ -260,7 +260,7 @@ POST /chat  { message, conversation_id?, unified_context? }
 │   │    (from vision    │  │    (from vision OR   │  │    (from vision OR   │ │
 │   │     OR RAG)        │  │     RAG)             │  │     RAG)             │ │
 │   └────────┬───────────┘  └──────────┬───────────┘  └──────────┬───────────┘ │
-│            └──────────────────────────┼────────────────────────┘            │
+│            └──────────────────────────┼────────────────────────┘             │
 │                                       │                                      │
 │   Stored in ChatResponse:             │                                      │
 │     drugs_answer, nutrition_answer, rehab_answer                             │
