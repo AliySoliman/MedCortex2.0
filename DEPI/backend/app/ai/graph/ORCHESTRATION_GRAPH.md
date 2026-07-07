@@ -1,7 +1,8 @@
 # MedCortex — Complete Orchestration & Pipeline Documentation
 
-> **Last Updated:** 2026-07-06 — reflects all Phase 1–3 node additions (Drugs, Nutrition, Rehab,
-> Egyptian Doctors), parallel pre-computation, vision-to-RAG symptom flow, and all bug-fix patches.
+> **Last Updated:** 2026-07-07 — reflects all Phase 1–3 node additions (Drugs, Nutrition, Rehab,
+> Egyptian Doctors), parallel pre-computation, vision-to-RAG symptom flow, medical image analyzer
+> for wound/skin condition detection, and all bug-fix patches.
 
 ---
 
@@ -71,18 +72,19 @@ ENTRY
 │  route_node                                                                  │
 │  Mirrors context.processor_type into graph state.                            │
 │  Sets intent flags: needs_lab_interpretation, needs_drug_interaction         │
+│  Overrides processor_type to MEDICAL_IMAGE if upload_type == "medical_image" │
 └──────────────────────────────┬───────────────────────────────────────────────┘
                                │  conditional edge (route_after_route)
-          ┌────────────────────┼────────────────────┬──────────────┐
-          ▼                    ▼                     ▼              ▼
-   ┌────────────┐       ┌────────────┐        ┌───────────┐  ┌──────────┐
-   │ vision_node│       │  ocr_node  │        │ text_node │  │ finalize │
-   │ VisionSvc  │       │ OCRService │        │ SharedMed │  │  _node   │
-   │ Gemini     │       │ PaddleOCR/ │        │icalParser │  │(skip all)│
-   │ (w/ retry) │       │ EasyOCR    │        │  (LLM)    │  └────┬─────┘
-   └──────┬─────┘       └──────┬─────┘        └─────┬─────┘       │
-          │                   │                     │              │
-          └───────────────────┼─────────────────────┘              │
+          ┌────────────────────┼────────────────────┬──────────────┬────────────┐
+          ▼                    ▼                     ▼              ▼            ▼
+   ┌────────────┐       ┌────────────┐        ┌───────────┐  ┌──────────┐  ┌─────────────┐
+   │ vision_node│       │  ocr_node  │        │ text_node │  │ finalize │  │medical_     │
+   │ VisionSvc  │       │ OCRService │        │ SharedMed │  │  _node   │  │image_node   │
+   │ Gemini     │       │ PaddleOCR/ │        │icalParser │  │(skip all)│  │Groq Vision  │
+   │ (w/ retry) │       │ EasyOCR    │        │  (LLM)    │  └────┬─────┘  │+ HF Fallback│
+   └──────┬─────┘       └──────┬─────┘        └─────┬─────┘       │          └──────┬──────┘
+          │                   │                     │              │                 │
+          └───────────────────┼─────────────────────┘              │                 │
                               ▼                                     │
                   SharedMedicalParser.parse()                       │
                   Extracts structured JSON:                         │
@@ -129,6 +131,28 @@ The vision node is the primary extraction path for images and PDFs:
 > **Symptom extraction is live and fully connected.** Diagnoses and clinical findings extracted
 > here flow directly into the Chat Pipeline when `unified_context` is passed to `POST /chat`.
 
+### Medical Image Analyzer Detail
+
+The medical image node is a specialized processor for wound/skin condition analysis:
+
+1. **Frontend Selection**: User selects "Medical Image" from the upload dropdown (FileUpload.tsx)
+2. **Upload Type**: `upload_type="medical_image"` is sent to the backend via FormData
+3. **Routing Override**: `route_node` checks `context.upload_type` and overrides `processor_type` to `MEDICAL_IMAGE`
+4. **Analysis**: `medical_image_node` calls `MedicalImageAnalyzer.analyze_medical_image()`:
+   - **Primary**: Groq Vision models (llama-4-scout-17b-16e-instruct, llama-4-maverick-17b-128e-instruct)
+   - **Fallback**: HuggingFace BLIP image captioning (free, no API key required)
+5. **Output Structure**:
+   - Primary diagnosis (most likely condition with probability)
+   - Ranked alternative possibilities (2-3 options)
+   - Visual observations (color, texture, shape, size, distribution)
+   - General care & treatment tips (immediate care, home remedies, what to avoid, warning signs)
+   - Recommended next step (clear actionable recommendation)
+6. **Storage**: Results stored in `context.unified_context.vision_output` and `clinical_findings[]`
+
+> **GROQ_API_KEY Required**: The medical image analyzer requires a valid `GROQ_API_KEY` in the backend `.env` file.
+> Without it, the system will fall back to the free HuggingFace BLIP model which provides general image descriptions
+> but lacks advanced medical diagnostic capability.
+
 ### Phase 2 Node Summary
 
 | Node | Service | Model / Engine | Output |
@@ -136,6 +160,7 @@ The vision node is the primary extraction path for images and PDFs:
 | `vision_node` | `VisionService` → `VisionProvider` | Gemini `gemini-2.5-flash` (fallback `gemini-2.5-pro`) | `vision_output` raw text + parsed JSON |
 | `ocr_node` | `OCRService` → `RobustOCRExtractor` | PaddleOCR → EasyOCR (local, no LLM) | `ocr_output` raw text + parsed JSON |
 | `text_node` | `SharedMedicalParser` | Gemini → Groq fallback | Parsed JSON entities |
+| `medical_image_node` | `MedicalImageAnalyzer` | Groq Vision (llama-4-scout/maverick) → HF BLIP fallback | Primary diagnosis + ranked alternatives + care tips |
 | `lab_node` | `LabInterpretationService` | Rules (reference ranges lookup) | Interpreted lab flags |
 | `drug_node` | `InteractionChecker` | Rules (curated drug pairs) | Interaction warnings |
 | `finalize_node` | — | — | Blended confidence, completion flag |

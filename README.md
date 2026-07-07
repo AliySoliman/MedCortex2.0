@@ -43,13 +43,15 @@ The system uses a **FastAPI backend** with a **Next.js 14 frontend**, featuring 
 |---|---|
 | 🔍 **Dual Knowledge Base** | NIH MedlinePlus API (4,822 chunks) + 4 curated medical textbooks (9,513 vectors) |
 | 👁️ **Vision Analysis** | Gemini 3.5 Flash for lab reports, prescriptions, and medical document interpretation |
-| 🎤 **Speech-to-Text** | Whisper Large V3 Turbo for voice input transcription |
+| � **Medical Image Analyzer** | Groq Vision models for wound/skin condition analysis with HuggingFace fallback |
+| �🎤 **Speech-to-Text** | Whisper Large V3 Turbo for voice input transcription |
 | 📊 **Structured Parsing** | Extract patient info, medications, diagnoses, lab values from documents |
 | 🧠 **High-Dimensional Embeddings** | `BAAI/bge-large-en-v1.5` producing 1024-dimension vectors for precise semantic search |
 | ⚡ **Fast Inference** | Llama 3.3 70B via Groq + Gemini 3.5 Flash for vision tasks |
 | 🎯 **Cited Answers** | Every response cites the exact book and section the information came from |
 | 🚫 **No Hallucinations** | Strictly grounded — refuses to answer if the context doesn't contain the answer |
 | 👨‍⚕️ **Doctor Recommendations** | Egypt-specific clinic/doctor search with Google Maps integration |
+| 🏥 **Hospital Search** | Location-based hospital search using Egyptian hospitals database |
 | 💊 **Pre-computed tabs** | Parallel preloaded Specialist tabs (Drugs, Nutrition, Rehab) using optimized 8B models |
 | 🔐 **Full Auth System** | JWT-based login/signup with optional Google OAuth |
 | 💬 **Conversation History** | Persistent chat sessions with message history and preloaded clinical plans |
