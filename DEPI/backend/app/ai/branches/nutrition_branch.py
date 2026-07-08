@@ -17,7 +17,7 @@ def _get_nutrition_llm() -> ChatGroq:
     global _nutrition_llm
     if _nutrition_llm is None:
         _nutrition_llm = ChatGroq(
-            model       = "llama-3.1-8b-instant",
+            model       = "llama-3.3-70b-versatile",
             temperature = 0.5,
             max_tokens  = 1500,
             api_key     = os.environ.get("GROQ_API_KEY", "").strip()

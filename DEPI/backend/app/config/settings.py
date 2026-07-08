@@ -34,7 +34,7 @@ class Settings(BaseSettings):
     MODEL_VISION: str = "gemini-3.5-flash"
     MODEL_VISION_FALLBACK: str = "gemini-2.5-flash"
     MODEL_DOCUMENT: str = "gemini-2.5-flash"
-    MODEL_REWRITE: str = "llama-3.1-8b"
+    MODEL_REWRITE: str = "llama-3.3-70b-versatile"
     MODEL_OCR: str = "paddleocr"
     MODEL_EMBEDDING: str = "BAAI/bge-large-en-v1.5"
 

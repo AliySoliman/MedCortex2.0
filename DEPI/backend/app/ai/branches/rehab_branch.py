@@ -17,7 +17,7 @@ def _get_rehab_llm() -> ChatGroq:
     global _rehab_llm
     if _rehab_llm is None:
         _rehab_llm = ChatGroq(
-            model       = "llama-3.1-8b-instant",
+            model       = "llama-3.3-70b-versatile",
             temperature = 0.4,
             max_tokens  = 1500,
             api_key     = os.environ.get("GROQ_API_KEY", "").strip()

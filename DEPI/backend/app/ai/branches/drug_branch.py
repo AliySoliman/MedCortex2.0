@@ -17,7 +17,7 @@ def _get_drug_llm() -> ChatGroq:
     global _drug_llm
     if _drug_llm is None:
         _drug_llm = ChatGroq(
-            model       = "llama-3.1-8b-instant",
+            model       = "llama-3.3-70b-versatile",
             temperature = 0.3,
             max_tokens  = 1500,
             api_key     = os.environ.get("GROQ_API_KEY", "").strip()

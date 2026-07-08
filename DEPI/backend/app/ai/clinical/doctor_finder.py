@@ -20,7 +20,7 @@ GOOGLE_PLACES_TEXT_SEARCH_URL = "https://places.googleapis.com/v1/places:searchT
 GOOGLE_PLACES_FIELD_MASK = (
     "places.id,places.displayName,places.formattedAddress,places.nationalPhoneNumber"
 )
-DOCTOR_LOOKUP_DEFAULT_CITY = os.getenv("DOCTOR_LOOKUP_DEFAULT_CITY", "Cairo")
+DOCTOR_LOOKUP_DEFAULT_CITY = os.getenv("DOCTOR_LOOKUP_DEFAULT_CITY", "Alexandria")
 DOCTOR_LOOKUP_COUNTRY = os.getenv("DOCTOR_LOOKUP_COUNTRY", "Egypt")
 
 NPPES_BASE_URL = "https://npiregistry.cms.hhs.gov/api/"
