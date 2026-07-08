@@ -4,10 +4,8 @@
 // Handles all API calls to the FastAPI /chat endpoint
 // ─────────────────────────────────────────────────────────────────────────────
 
-import axios from "axios";
+import api, { API_BASE_URL } from "./api";
 import type { DoctorReferral } from "@/lib/extractDoctorReferral";
-
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // TYPES — mirror the FastAPI ChatResponse schema exactly
@@ -70,38 +68,20 @@ export interface ChatThread {
 // API CALLS
 // ─────────────────────────────────────────────────────────────────────────────
 export async function sendMessage(message: string, unified_context?: any): Promise<ChatResponse> {
-  const token = localStorage.getItem("token");
-
-  const response = await axios.post<ChatResponse>(
-    `${API_BASE}/chat`,
-    { message, unified_context },
-    {
-      headers: {
-        "Content-Type": "application/json",
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      },
-    }
-  );
-
+  const response = await api.post<ChatResponse>("/chat", { message, unified_context });
   return response.data;
 }
 
 export async function uploadFile(file: File, uploadType: string = "document"): Promise<any> {
-  const token = localStorage.getItem("token");
   const formData = new FormData();
   formData.append("file", file);
   formData.append("upload_type", uploadType);
 
-  const response = await axios.post(
-    `${API_BASE}/upload`,
-    formData,
-    {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      },
-    }
-  );
+  const response = await api.post("/upload", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
 
   return response.data;
 }

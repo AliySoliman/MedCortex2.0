@@ -5,13 +5,15 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { query, context, language } = body;
 
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/rehab`,
+      `${API_BASE_URL}/rehab`,
       {
         method: "POST",
         headers: {

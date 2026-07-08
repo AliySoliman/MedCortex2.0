@@ -20,6 +20,7 @@ for _env_path in (
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.config.settings import get_settings
 from app.database.database import Base, engine
 import app.models  # noqa: F401
 from app.api.auth import router as auth_router
@@ -35,11 +36,13 @@ from app.api.drugs import router as drugs_router
 from app.api.nutrition import router as nutrition_router
 from app.api.rehab import router as rehab_router
 
+settings = get_settings()
 app = FastAPI(title="MedCortex API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=settings.ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://.*\.ngrok-free\.(dev|app)",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -64,8 +64,10 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
     # ── CORS ──────────────────────────────────────────────────────────────────
-    CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
-
+    ALLOWED_ORIGINS: List[str] = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
     # ── Timeouts (seconds) ────────────────────────────────────────────────────
     AI_TIMEOUT_CHAT: float = 30.0
     AI_TIMEOUT_REASONING: float = 60.0
