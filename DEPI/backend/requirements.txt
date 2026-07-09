@@ -6,6 +6,7 @@ pydantic[email]
 python-jose[cryptography]
 passlib[bcrypt]
 google-auth
+google-genai>=1.66.0
 requests
 httpx
 langchain-core

@@ -81,6 +81,7 @@ class MultimodalOrchestrator:
                 upload_id=upload_id,
                 filename=filename,
                 mime_type=mime_type,
+                upload_type=upload_type,
             )
             unified_context.processing_history.append(
                 ProcessingHistoryEntry(

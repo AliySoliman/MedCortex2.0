@@ -121,7 +121,7 @@ ENTRY
 The vision node is the primary extraction path for images and PDFs:
 
 1. `VisionProvider.analyze_image(bytes, mime, upload_id)` — base64-encodes the file, sends to Gemini
-   (`settings.MODEL_VISION` — default `gemini-2.5-flash`) with a clinical extraction prompt.
+   (`settings.MODEL_VISION` — default `gemini-3.1-flash-lite`) with a clinical extraction prompt.
    - Automatic retry (tenacity, 3 attempts)
    - Auto-fallback model on 429/5xx
 2. `context.unified_context.vision_output = raw_text` — raw Gemini clinical narrative stored
@@ -157,7 +157,7 @@ The medical image node is a specialized processor for wound/skin condition analy
 
 | Node | Service | Model / Engine | Output |
 |------|---------|----------------|--------|
-| `vision_node` | `VisionService` → `VisionProvider` | Gemini `gemini-2.5-flash` (fallback `gemini-2.5-pro`) | `vision_output` raw text + parsed JSON |
+| `vision_node` | `VisionService` → `VisionProvider` | Gemini `gemini-3.1-flash-lite` (fallback `gemini-2.5-pro`) | `vision_output` raw text + parsed JSON |
 | `ocr_node` | `OCRService` → `RobustOCRExtractor` | PaddleOCR → EasyOCR (local, no LLM) | `ocr_output` raw text + parsed JSON |
 | `text_node` | `SharedMedicalParser` | Gemini → Groq fallback | Parsed JSON entities |
 | `medical_image_node` | `MedicalImageAnalyzer` | Groq Vision (llama-4-scout/maverick) → HF BLIP fallback | Primary diagnosis + ranked alternatives + care tips |
@@ -324,8 +324,8 @@ These endpoints allow the frontend tabs to call individual branches directly whe
 | Upload routing brain | `llama-3.3-70b-versatile` | Groq | 70B TPD limit |
 | RAG clinical generator | `llama-3.3-70b-versatile` | Groq | 70B TPD limit |
 | Lifestyle recommendations | `llama-3.3-70b-versatile` | Groq | 70B TPD limit |
-| Vision extraction | `gemini-2.5-flash` (→ `gemini-2.5-pro`) | Gemini | Separate quota |
-| Document text parsing | `gemini-2.5-flash` (→ Groq fallback) | Gemini | Separate quota |
+| Vision extraction | `gemini-3.1-flash-lite` (→ `gemini-2.5-pro`) | Gemini | Separate quota |
+| Document text parsing | `gemini-3.1-flash-lite` (→ Groq fallback) | Gemini | Separate quota |
 | **Drug tab** | **`llama-3.1-8b-instant`** | **Groq** | **8B TPD limit (10× higher)** |
 | **Nutrition tab** | **`llama-3.1-8b-instant`** | **Groq** | **8B TPD limit (10× higher)** |
 | **Rehab tab** | **`llama-3.1-8b-instant`** | **Groq** | **8B TPD limit (10× higher)** |

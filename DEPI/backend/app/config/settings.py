@@ -32,8 +32,8 @@ class Settings(BaseSettings):
     MODEL_CHAT: str = "llama-3.3-70b-versatile"
     MODEL_REASONING: str = "qwen-3.6-27b"
     MODEL_VISION: str = "gemini-3.5-flash"
-    MODEL_VISION_FALLBACK: str = "gemini-2.5-flash"
-    MODEL_DOCUMENT: str = "gemini-2.5-flash"
+    MODEL_VISION_FALLBACK: str = "gemini-3.1-flash-lite"
+    MODEL_DOCUMENT: str = "gemini-3.1-flash-lite"
     MODEL_REWRITE: str = "llama-3.3-70b-versatile"
     MODEL_OCR: str = "paddleocr"
     MODEL_EMBEDDING: str = "BAAI/bge-large-en-v1.5"
@@ -107,11 +107,15 @@ class Settings(BaseSettings):
     AI_CONTEXT_LENGTH_LONG: int = 32768
 
     # ── Vision Generation ─────────────────────────────────────────────────────
-    # Output-token budget for the vision model. Gemini 3.x/2.5 Flash are
+    # Output-token budget for the vision model. Gemini 3.x Flash models are
     # "thinking" models whose maxOutputTokens budget is shared between internal
     # reasoning and the visible answer, so this must be generous to allow a full
     # doctor-grade lab/prescription report to complete.
     AI_MAX_TOKENS_VISION: int = 16384
+    # Keep Gemini uploads deterministic and fast by default. Set to -1 to let
+    # Gemini choose an automatic thinking budget, or a positive token count when
+    # deeper reasoning is worth the extra latency.
+    AI_GEMINI_THINKING_BUDGET: int = 0
     # Hard upper bound (seconds) applied on top of AI_TIMEOUT_VISION to avoid
     # waiting indefinitely on a single vision generation.
     AI_MAX_TIMEOUT_VISION: float = 90.0

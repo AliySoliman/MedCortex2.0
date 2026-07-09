@@ -3,13 +3,11 @@
 # Vision Provider
 # ─────────────────────────────────────────────────────────────────────────────
 
-import base64
-import time
 import asyncio
-from typing import List, Dict, Any, Optional
+import time
+from typing import Dict, Any, Optional
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
-
-from app.ai.providers.provider_factory import ProviderFactory
+from app.ai.vision.gemini_vision_provider import GeminiVisionProvider
 from app.ai.multimodal.logger import MultimodalLogger, PipelineStage
 from app.ai.multimodal.exceptions import VisionError
 from app.config.settings import get_settings
@@ -22,7 +20,7 @@ from app.ai.prompts.vision_prompts import (
 class VisionProvider:
     """
     Provider for extracting unstructured findings from medical images and PDFs
-    using Vision-Language Models (Gemini 3.5 Flash with Gemini 2.5 Flash fallback).
+    using Vision-Language Models (Gemini 3.5 Flash with current Gemini fallback models).
     Includes retries, generous timeouts, and a thinking-model-friendly token budget.
     """
 
@@ -32,9 +30,15 @@ class VisionProvider:
         self.model_name = model_name or settings.MODEL_VISION
         self.fallback_provider_name = "gemini"
         self.fallback_model_name = settings.MODEL_VISION_FALLBACK
-        self._provider = ProviderFactory.get_provider(self.provider_name)
-
-        # Token budget: Gemini 3.x/2.5 Flash are "thinking" models whose
+        self.fallback_model_names = _dedupe_models(
+            [
+                settings.MODEL_VISION_FALLBACK,
+                "gemini-3.1-flash-lite",
+                "gemini-3.5-flash",
+            ]
+        )
+        self._provider = GeminiVisionProvider(self.model_name)
+        # Token budget: Gemini 3.x Flash models are "thinking" models whose
         # maxOutputTokens budget is shared between internal reasoning and the
         # visible answer. A generous budget is required for a full report.
         self.max_tokens = settings.AI_MAX_TOKENS_VISION
@@ -45,65 +49,56 @@ class VisionProvider:
             float(settings.AI_MAX_TIMEOUT_VISION),
         )
 
-    def _build_generation_kwargs(self) -> Dict[str, Any]:
-        """
-        Extra kwargs passed to the provider.generate call.
-
-        For Gemini "thinking" models we cap the internal reasoning budget so the
-        bulk of the output-token budget is spent on the visible doctor report
-        instead of being consumed by hidden chain-of-thought. We pass this as a
-        plain dict; the Gemini provider forwards unknown kwargs straight to the
-        SDK, and we swallow any rejection at the call site.
-        """
-        return {"thinkingConfig": {"thinkingBudget": -1}}
-
+    # ------------------------------------------------------------------
+    # FIX: _analyze_with_retry now takes the raw bytes + mime_type that
+    # GeminiVisionProvider.analyze() actually needs.  Previously it
+    # accepted a `messages` list that it never used, while the nested
+    # _generate() closure tried (and failed) to reference `image_bytes`
+    # and `mime_type` from analyze_image()'s call-stack frame — names
+    # that are NOT in _analyze_with_retry's lexical scope and therefore
+    # always raised NameError inside the executor thread.
+    #
+    # Five bugs fixed here:
+    #  1. image_bytes / mime_type are now proper parameters — no more
+    #     NameError inside the executor thread.
+    #  2. _generate() now returns the result of provider.analyze() so
+    #     the awaited future carries the actual text back.
+    #  3. Signature now matches the fallback call site in analyze_image().
+    #  4. Dead locals (max_tokens, model_name, extra_kwargs) removed.
+    #  5. The messages / data-URL indirection is removed; raw bytes go
+    #     straight to GeminiVisionProvider, matching the standalone path.
+    # ------------------------------------------------------------------
     @retry(
         stop=stop_after_attempt(3),
         wait=wait_exponential(multiplier=1, min=2, max=10),
-        retry=retry_if_exception_type((TimeoutError, ConnectionError, Exception)),
+        # Only retry on transient network/connection errors.
+        # asyncio.TimeoutError is intentionally excluded — a timeout means
+        # the 45 s budget is already gone; retrying would triple the wait.
+        retry=retry_if_exception_type(ConnectionError),
         reraise=True,
     )
-    async def _analyze_with_retry(self, messages: List[Dict[str, Any]]) -> str:
-        """Helper to run the provider generation with timeout and retries."""
+    async def _analyze_with_retry(self, image_bytes: bytes, mime_type: str) -> str:
+        """Run GeminiVisionProvider.analyze() in a thread with timeout and retries.
+
+        GeminiVisionProvider.analyze() is synchronous (blocking network I/O).
+        We offload it to the default ThreadPoolExecutor so the event loop is
+        never blocked, then guard the whole call with asyncio.wait_for.
+        """
         loop = asyncio.get_running_loop()
-        max_tokens = self.max_tokens
-        model_name = self.model_name
-        extra_kwargs = self._build_generation_kwargs()
         provider = self._provider
 
-        def _generate():
-            try:
-                return provider.generate(
-                    messages,
-                    model=model_name,
-                    temperature=0.2,
-                    max_tokens=max_tokens,
-                    **extra_kwargs,
-                )
-            except TypeError:
-                # Provider/SDK does not accept thinkingConfig — retry without it.
-                return provider.generate(
-                    messages,
-                    model=model_name,
-                    temperature=0.2,
-                    max_tokens=max_tokens,
-                )
+        def _generate() -> str:
+            # Both image_bytes and mime_type are captured from THIS function's
+            # parameters — they are in the lexical scope of _generate's closure.
+            return provider.analyze(
+                image_bytes=image_bytes,
+                mime_type=mime_type,
+                system_prompt=VISION_SYSTEM_INSTRUCTION,
+                user_prompt=VISION_ANALYSIS_PROMPT,
+            )
 
         future = loop.run_in_executor(None, _generate)
         return await asyncio.wait_for(future, timeout=self.timeout_seconds)
-
-    def _build_messages(self, image_url: str) -> List[Dict[str, Any]]:
-        """Construct the multimodal payload (system + user with text + image)."""
-        return [
-            {"role": "system", "content": VISION_SYSTEM_INSTRUCTION},
-            {
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": VISION_ANALYSIS_PROMPT},
-                    {"type": "image_url", "image_url": {"url": image_url}},
-                ],
-            },
-        ]
 
     async def analyze_image(self, image_bytes: bytes, mime_type: str, upload_id: str) -> Dict[str, Any]:
         """
@@ -116,31 +111,11 @@ class VisionProvider:
         start_time = time.time()
 
         try:
-            # Base64 encode the image / PDF document
-            encoded_image = base64.b64encode(image_bytes).decode("utf-8")
-            image_url = f"data:{mime_type};base64,{encoded_image}"
-            messages = self._build_messages(image_url)
-
-            try:
-                response_text = await self._analyze_with_retry(messages)
-            except Exception as exc:
-                if (
-                    _should_fallback_for_model_error(exc)
-                    and self.model_name != self.fallback_model_name
-                ):
-                    MultimodalLogger.log_event(
-                        PipelineStage.VISION_STARTED,
-                        upload_id,
-                        f"Primary vision model unavailable or timed out "
-                        f"({self.provider_name}:{self.model_name}); falling back to "
-                        f"{self.fallback_provider_name}:{self.fallback_model_name}",
-                    )
-                    self.provider_name = self.fallback_provider_name
-                    self.model_name = self.fallback_model_name
-                    self._provider = ProviderFactory.get_provider(self.provider_name)
-                    response_text = await self._analyze_with_retry(messages)
-                else:
-                    raise
+            response_text = await self._analyze_with_fallbacks(
+                image_bytes=image_bytes,
+                mime_type=mime_type,
+                upload_id=upload_id,
+            )
 
             processing_time = (time.time() - start_time) * 1000
 
@@ -165,6 +140,42 @@ class VisionProvider:
             MultimodalLogger.log_stage_error(PipelineStage.VISION_COMPLETED, upload_id, str(e))
             raise VisionError(f"Vision analysis failed: {str(e)}", provider=self.provider_name)
 
+    async def _analyze_with_fallbacks(self, image_bytes: bytes, mime_type: str, upload_id: str) -> str:
+        # Pass raw bytes directly — no base64 / data-URL round-trip needed
+        # because GeminiVisionProvider.analyze() accepts bytes natively.
+        try:
+            return await self._analyze_with_retry(image_bytes, mime_type)
+        except Exception as primary_exc:
+            if not _should_fallback_for_model_error(primary_exc):
+                raise
+
+            failed_models = {self.model_name}
+            last_exc: Exception = primary_exc
+
+            for fallback_model in self.fallback_model_names:
+                if fallback_model in failed_models:
+                    continue
+
+                MultimodalLogger.log_event(
+                    PipelineStage.VISION_STARTED,
+                    upload_id,
+                    f"Vision model unavailable ({self.provider_name}:{self.model_name}); "
+                    f"falling back to {self.fallback_provider_name}:{fallback_model}",
+                )
+                self.provider_name = self.fallback_provider_name
+                self.model_name = fallback_model
+                self._provider = GeminiVisionProvider(fallback_model)
+
+                try:
+                    return await self._analyze_with_retry(image_bytes, mime_type)
+                except Exception as fallback_exc:
+                    last_exc = fallback_exc
+                    failed_models.add(fallback_model)
+                    if not _should_fallback_for_model_error(fallback_exc):
+                        raise
+
+            raise last_exc
+
 
 def _should_fallback_for_model_error(exc: Exception) -> bool:
     """Decide whether a vision failure should trigger the fallback model."""
@@ -185,4 +196,13 @@ def _should_fallback_for_model_error(exc: Exception) -> bool:
         or "timed out" in message
         or "overloaded" in message
         or "unavailable" in message
+        or "no longer available" in message
     )
+
+
+def _dedupe_models(models: list[str]) -> list[str]:
+    result: list[str] = []
+    for model in models:
+        if model and model not in result:
+            result.append(model)
+    return result

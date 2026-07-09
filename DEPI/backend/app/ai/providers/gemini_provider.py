@@ -4,8 +4,12 @@
 # Wraps Google's Gen AI SDK for multimodal document and image understanding
 # ─────────────────────────────────────────────────────────────────────────────
 
+import base64
+import binascii
+import logging
 import os
-from typing import Any, Dict, Iterable, List, Optional
+import time
+from typing import Any, Dict, List, Optional
 
 from google import genai
 from google.genai import types
@@ -13,16 +17,18 @@ from google.genai import types
 from app.ai.providers.base import BaseAIProvider, BaseChatProvider
 
 
+logger = logging.getLogger("medcortex.gemini")
+
+
 class GeminiProvider(BaseAIProvider, BaseChatProvider):
     """Gemini provider implementation for multimodal understanding."""
 
     AVAILABLE_MODELS = [
         "gemini-3.5-flash",
-        "gemini-2.5-flash",
-        "gemini-2.5-pro",
+        "gemini-3.1-flash-lite",
     ]
 
-    DEFAULT_MODEL = "gemini-2.5-pro"
+    DEFAULT_MODEL = "gemini-3.1-flash-lite"
 
     def __init__(self, api_key: Optional[str] = None, **kwargs):
         resolved_key = api_key or os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
@@ -60,24 +66,64 @@ class GeminiProvider(BaseAIProvider, BaseChatProvider):
         temperature = kwargs.pop("temperature", self.config.get("temperature", 0.0))
         max_tokens = kwargs.pop("max_tokens", self.config.get("max_tokens", 1024))
         response_schema = kwargs.pop("response_schema", None)
-        response_mime_type = kwargs.pop("response_mime_type", "application/json" if response_schema else "text/plain")
+        # Consume (and discard) any extra keys that callers pass but the SDK
+        # does not accept — prevents TypeError from strict GenerateContentConfig.
+        kwargs.pop("response_mime_type", None)
+        # Drain any remaining unknown kwargs silently so we never forward them
+        # to the SDK config (which is Pydantic-strict and rejects unknown fields).
+        kwargs.clear()
 
         system_instruction = _extract_system_instruction(messages)
         contents = _build_contents(messages)
+        response_mime_type = "application/json" if response_schema else "text/plain"
+
+        # The google-genai SDK requires responseSchema to be a types.Schema
+        # object, not a raw dict.  Convert if necessary, but only when a
+        # schema was actually provided — passing responseSchema=None with
+        # responseMimeType="text/plain" is the correct no-schema path.
+        sdk_schema: Optional[types.Schema] = None
+        if response_schema is not None:
+            if isinstance(response_schema, dict):
+                try:
+                    sdk_schema = types.Schema(**response_schema)
+                except Exception:
+                    # Schema conversion failed — fall back to plain text to
+                    # avoid crashing the whole parser call.
+                    response_mime_type = "text/plain"
+                    sdk_schema = None
+            else:
+                sdk_schema = response_schema  # already a types.Schema
 
         config = types.GenerateContentConfig(
             temperature=temperature,
-            maxOutputTokens=max_tokens,
-            responseMimeType=response_mime_type,
-            responseSchema=response_schema,
-            systemInstruction=system_instruction or None,
-            **kwargs,
+            max_output_tokens=max_tokens,
+            response_mime_type=response_mime_type,
+            response_schema=sdk_schema,
+            system_instruction=system_instruction or None,
         )
 
+        started = time.perf_counter()
+        logger.info(
+            "Gemini generate request prepared",
+            extra={
+                "gemini": {
+                    "model": model,
+                    "content_count": len(contents),
+                    "content_shapes": _content_shapes(contents),
+                    "system_instruction_chars": len(system_instruction or ""),
+                    "config": config.model_dump(exclude_none=True, by_alias=False),
+                }
+            },
+        )
         response = self._get_client().models.generate_content(
             model=model,
             contents=contents,
             config=config,
+        )
+        elapsed_ms = (time.perf_counter() - started) * 1000
+        logger.info(
+            "Gemini generate response received",
+            extra={"gemini": {"model": model, "elapsed_ms": elapsed_ms}},
         )
         return _extract_response_text(response)
 
@@ -90,8 +136,8 @@ class GeminiProvider(BaseAIProvider, BaseChatProvider):
 
         config = types.GenerateContentConfig(
             temperature=temperature,
-            maxOutputTokens=max_tokens,
-            systemInstruction=system_instruction or None,
+            max_output_tokens=max_tokens,
+            system_instruction=system_instruction or None,
             **kwargs,
         )
 
@@ -113,16 +159,21 @@ def _extract_system_instruction(messages: List[Dict[str, Any]]) -> str:
     return "\n".join(parts)
 
 
-def _build_contents(messages: List[Dict[str, Any]]) -> List[Any]:
-    contents: List[Any] = []
+def _build_contents(messages: List[Dict[str, Any]]) -> List[types.Content]:
+    contents: List[types.Content] = []
     for message in messages:
-        role = message.get("role", "user")
+        role = _to_gemini_role(str(message.get("role", "user")))
         if role == "system":
             continue
 
         content = message.get("content", "")
         if isinstance(content, str):
-            contents.append(content)
+            contents.append(
+                types.Content(
+                    role=role,
+                    parts=[types.Part.from_text(text=content)],
+                )
+            )
             continue
 
         if isinstance(content, list):
@@ -142,13 +193,16 @@ def _build_contents(messages: List[Dict[str, Any]]) -> List[Any]:
                     part = _part_from_data_url(url)
                     if part is not None:
                         parts.append(part)
-            if len(parts) == 1:
-                contents.append(parts[0])
-            elif parts:
-                contents.append(parts)
+            if parts:
+                contents.append(types.Content(role=role, parts=parts))
             continue
 
-        contents.append(str(content))
+        contents.append(
+            types.Content(
+                role=role,
+                parts=[types.Part.from_text(text=str(content))],
+            )
+        )
     return contents
 
 
@@ -157,9 +211,34 @@ def _part_from_data_url(url: str) -> Optional[types.Part]:
         return None
     mime_type, encoded = url.split(";base64,", 1)
     mime_type = mime_type.replace("data:", "")
-    import base64
+    try:
+        data = base64.b64decode(encoded, validate=True)
+    except (binascii.Error, ValueError):
+        return None
+    return types.Part.from_bytes(data=data, mime_type=mime_type)
 
-    return types.Part.from_bytes(data=base64.b64decode(encoded), mime_type=mime_type)
+
+def _to_gemini_role(role: str) -> str:
+    if role == "system":
+        return "system"
+    if role in {"assistant", "model"}:
+        return "model"
+    return "user"
+
+
+def _content_shapes(contents: List[types.Content]) -> List[Dict[str, Any]]:
+    shapes: List[Dict[str, Any]] = []
+    for content in contents:
+        shapes.append(
+            {
+                "role": content.role,
+                "parts": [
+                    "text" if getattr(part, "text", None) is not None else "inline_data"
+                    for part in content.parts or []
+                ],
+            }
+        )
+    return shapes
 
 
 def _extract_response_text(response: Any) -> str:

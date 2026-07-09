@@ -125,9 +125,14 @@ async def medical_image_node(state: Dict[str, Any]) -> Dict[str, Any]:
         result = medical_image_analyzer.analyze_medical_image(image_bytes, mime_type)
         
         # Store the analysis result in the unified context
+        context.unified_context.upload_type = "medical_image"
+        context.unified_context.modality = context.modality
+        context.unified_context.classification = context.document_type
         context.unified_context.vision_output = result["answer"]
         context.unified_context.processing_metadata.provider = "Groq" if result["source_type"] == "vision_groq" else "HuggingFace"
         context.unified_context.processing_metadata.model_name = result["model_used"]
+        context.unified_context.structured_entities["analysis_type"] = "medical_image"
+        context.unified_context.structured_entities["source_type"] = result["source_type"]
         
         # Add to clinical findings
         context.unified_context.clinical_findings.append(result["answer"])

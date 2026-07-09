@@ -118,11 +118,11 @@ class ModelRegistry:
         )
         self.register_model(
             ModelInfo(
-                name="gemini-2.5-flash",
+                name="gemini-3.1-flash-lite",
                 provider="gemini",
                 model_type=ModelType.VISION,
                 context_length=1048576,
-                description="Gemini 2.5 Flash - Faster multimodal fallback",
+                description="Gemini 3.1 Flash-Lite - Fast multimodal fallback",
             )
         )
         self.register_model(

@@ -27,6 +27,100 @@ type EgyptianDoctor = {
   source: string;
 };
 
+// ── Junk-word cleaning ────────────────────────────────────────────────────────
+const JUNK_WORDS_EN = [
+  /\bClinic\b/gi, /\bMedical Clinic\b/gi, /\bMedical Center\b/gi,
+  /\bHealthcare Center\b/gi, /\bHealth Center\b/gi,
+  /\bHospital\b/gi, /\bOffice\b/gi, /\bCenter\b/gi,
+  /\bDoctor\b/gi, /\bDr\.?\s*/gi,
+];
+const JUNK_WORDS_AR = [
+  /عيادة/g, /مركز طبي/g, /مركز/g, /مستشفى/g,
+  /طبيب/g, /دكتور/g, /مجمع/g,
+];
+
+function cleanDoctorName(name: string): string {
+  if (!name) return name;
+  let cleaned = name;
+  // Remove Arabic junk
+  for (const re of JUNK_WORDS_AR) cleaned = cleaned.replace(re, "");
+  // Remove English junk
+  for (const re of JUNK_WORDS_EN) cleaned = cleaned.replace(re, "");
+  // Remove lone hyphens, extra spaces, leading/trailing punctuation
+  cleaned = cleaned.replace(/\s*-\s*$/g, "").replace(/^\s*-\s*/g, "");
+  cleaned = cleaned.replace(/\s{2,}/g, " ").trim();
+  return cleaned || name; // fallback to original if fully wiped
+}
+
+function cleanOnePart(part: string): string {
+  if (!part) return part;
+  let cleaned = part;
+  for (const re of JUNK_WORDS_AR) cleaned = cleaned.replace(re, "");
+  for (const re of JUNK_WORDS_EN) cleaned = cleaned.replace(re, "");
+  cleaned = cleaned.replace(/\s*[,،\-]\s*$/, "").replace(/^\s*[,،\-]\s*/, "").replace(/\s{2,}/g, " ").trim();
+  return cleaned;
+}
+
+/**
+ * From a comma-separated specialty string, pick the single term that best
+ * matches the user's referral specialist + suspected conditions.
+ * Falls back to the first non-empty cleaned part.
+ */
+function pickBestSpecialty(specialty: string, referralSpecialist?: string | null, conditions?: string[]): string {
+  if (!specialty) return "";
+
+  const parts = specialty
+    .split(/[,،]/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  if (parts.length === 0) return "";
+  if (parts.length === 1) return cleanOnePart(parts[0]!) || "";
+
+  // Build a lowercase context string from referral + conditions
+  const ctx = [
+    referralSpecialist ?? "",
+    ...(conditions ?? []),
+  ]
+    .join(" ")
+    .toLowerCase()
+    .replace(/[^a-z\u0600-\u06ff\s]/g, " ");
+
+  const ctxWords = ctx.split(/\s+/).filter((w) => w.length > 2);
+
+  // Score each part: count overlapping words with context
+  const scored = parts.map((raw) => {
+    const cleaned = cleanOnePart(raw);
+    if (!cleaned) return { cleaned: "", score: -1 };
+    const lower = cleaned.toLowerCase();
+    const score = ctxWords.reduce((acc, w) => acc + (lower.includes(w) || w.includes(lower) ? 1 : 0), 0);
+    return { cleaned, score };
+  });
+
+  // Best match by score, then first non-empty fallback
+  scored.sort((a, b) => b.score - a.score);
+  const best = scored.find((s) => s.cleaned && s.score > 0) ?? scored.find((s) => s.cleaned);
+  return best?.cleaned ?? "";
+}
+
+// ── Distance ring helpers ─────────────────────────────────────────────────────
+const DISTANCE_RINGS = [
+  { label: "Within 20 km", emoji: "🟢", max: 20, color: "text-emerald-700", bg: "bg-emerald-50 border-emerald-200" },
+  { label: "20 – 40 km",   emoji: "🟡", max: 40, color: "text-amber-700",   bg: "bg-amber-50 border-amber-200" },
+  { label: "40 – 60 km",   emoji: "🟠", max: 60, color: "text-orange-700",  bg: "bg-orange-50 border-orange-200" },
+  { label: "60+ km",       emoji: "🔴", max: Infinity, color: "text-red-700", bg: "bg-red-50 border-red-200" },
+];
+
+function getRing(distance: number | null) {
+  if (distance === null) return null;
+  return DISTANCE_RINGS.find((r) => distance <= r.max) ?? DISTANCE_RINGS[DISTANCE_RINGS.length - 1];
+}
+
+function formatDistance(distance: number | null): string {
+  if (distance === null) return "";
+  return distance < 1 ? `${(distance * 1000).toFixed(0)} m` : `${distance.toFixed(1)} km`;
+}
+
 interface ResponseCardProps {
   data: ChatResponse;
   referral?: DoctorReferral | null;
@@ -183,13 +277,13 @@ export default function ResponseCard({ data, referral = null, coordinates = null
   useEffect(() => {
     if (activeTab === "doctors" && activeDoctorTab === "egyptian") {
       const specialty = referral?.specialist || data.suspected_conditions[0] || "general";
-      searchEgyptianDoctors(specialty, undefined, undefined, coordinates);
+      searchEgyptianDoctors(specialty, undefined, undefined, coordinates ?? undefined);
     }
   }, [activeTab, activeDoctorTab, referral, data.suspected_conditions, searchEgyptianDoctors, coordinates]);
 
   useEffect(() => {
     if (activeTab === "hospitals") {
-      searchEgyptianHospitals(undefined, coordinates);
+      searchEgyptianHospitals(undefined, coordinates ?? undefined);
     }
   }, [activeTab, coordinates, searchEgyptianHospitals]);
 
@@ -242,19 +336,45 @@ export default function ResponseCard({ data, referral = null, coordinates = null
     }
   }, [rehabAnswer, rehabLoading, getRehabInfo, diagnosisContext, data.suspected_conditions]);
 
-  const egyptianDoctorsForDisplay: DisplayDoctor[] = egyptianDoctors.map((doc) => ({
-    name: doc.name,
-    specialty: doc.specialty,
+  // Context used to pick the most relevant specialty from category lists
+  const specialtyContext = referral?.specialist ?? null;
+  const conditionsContext = data.suspected_conditions;
+
+  // Map doctors, picking the single most-relevant specialty per doctor
+  const egyptianDoctorsRaw = egyptianDoctors.map((doc) => ({
+    name: cleanDoctorName(doc.name),
+    specialty: pickBestSpecialty(doc.specialty, specialtyContext, conditionsContext),
     address: doc.address,
     phone: doc.phone || null,
     mapsUrl: doc.url || null,
     rating: doc.rating,
     reviewCount: doc.reviews,
-    badgeLabel: "Egypt doctor/clinic",
-    badgeTone: "border-emerald-200 bg-emerald-50 text-emerald-700",
-    sourceText: "Egyptian database",
-    reference: null,
+    distance: doc.distance,
+    similarity: doc.similarity,
   }));
+
+  // Sort: distance asc (nulls last), then rating desc, then review-count desc
+  const egyptianDoctorsSorted = [...egyptianDoctorsRaw].sort((a, b) => {
+    if (a.distance === null && b.distance === null) return (b.rating ?? 0) - (a.rating ?? 0);
+    if (a.distance === null) return 1;
+    if (b.distance === null) return -1;
+    if (a.distance !== b.distance) return a.distance - b.distance;
+    if (a.rating !== b.rating) return (b.rating ?? 0) - (a.rating ?? 0);
+    return b.reviewCount - a.reviewCount;
+  });
+
+  // Group into distance rings (order preserved from sort above)
+  const egyptianDoctorsByRing: { ring: typeof DISTANCE_RINGS[0]; doctors: typeof egyptianDoctorsSorted }[] = [];
+  for (const ring of DISTANCE_RINGS) {
+    const ringIndex = DISTANCE_RINGS.indexOf(ring);
+    const prevMax = ringIndex === 0 ? -1 : (DISTANCE_RINGS[ringIndex - 1]?.max ?? 0);
+    const group = egyptianDoctorsSorted.filter((d) =>
+      d.distance !== null ? d.distance > prevMax && d.distance <= ring.max : false
+    );
+    if (group.length > 0) egyptianDoctorsByRing.push({ ring, doctors: group });
+  }
+  // Doctors with unknown distance go at the end, sorted by rating
+  const unknownDistanceDoctors = egyptianDoctorsSorted.filter((d) => d.distance === null);
 
   const tabs: { key: Tab; label: string; emoji: string }[] = [
     { key: "diagnosis", label: "Diagnosis", emoji: "🩺" },
@@ -415,26 +535,60 @@ export default function ResponseCard({ data, referral = null, coordinates = null
             
             {activeDoctorTab === "egyptian" && (
               <div className="space-y-3">
-                <p className="text-xs text-[#8f8f95]">
-                  Egyptian doctors are searched based on your location and medical specialty using our local database.
-                </p>
+                {coordinates ? (
+                  <p className="text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+                    📍 Using your GPS location to find nearby doctors.
+                  </p>
+                ) : (
+                  <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+                    ⚠️ Location not available — showing results for Cairo area. Allow location access for accurate distance sorting.
+                  </p>
+                )}
                 {egyptianLoading ? (
                   <div className="space-y-3">
-                    <div className="animate-pulse rounded-xl border border-[#ebebef] bg-[#fafafa] p-4">
-                      <div className="h-4 w-40 rounded bg-[#ececf2]" />
-                      <div className="mt-3 h-3 w-64 rounded bg-[#ececf2]" />
-                    </div>
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i} className="animate-pulse rounded-xl border border-[#ebebef] bg-[#fafafa] p-4">
+                        <div className="h-4 w-40 rounded bg-[#ececf2]" />
+                        <div className="mt-3 h-3 w-64 rounded bg-[#ececf2]" />
+                        <div className="mt-2 h-3 w-48 rounded bg-[#ececf2]" />
+                      </div>
+                    ))}
                   </div>
                 ) : egyptianError ? (
                   <p className="py-6 text-center text-sm text-red-600">
                     {egyptianError}
                   </p>
-                ) : egyptianDoctorsForDisplay.length === 0 ? (
+                ) : egyptianDoctorsRaw.length === 0 ? (
                   <p className="py-6 text-center text-sm text-[#8f8f95]">
                     No Egyptian doctor results available. Try the foreign doctors tab or provide more specific location information.
                   </p>
                 ) : (
-                  egyptianDoctorsForDisplay.map((doc, i) => <DoctorCard key={i} doctor={doc} />)
+                  <div className="space-y-4">
+                    {egyptianDoctorsByRing.map(({ ring, doctors }) => (
+                      <div key={ring.label}>
+                        <div className={`flex items-center gap-2 rounded-lg border px-3 py-2 mb-2 ${ring.bg}`}>
+                          <span className="text-base">{ring.emoji}</span>
+                          <span className={`text-xs font-bold uppercase tracking-widest ${ring.color}`}>{ring.label}</span>
+                          <span className={`ml-auto text-[11px] font-medium ${ring.color}`}>{doctors.length} doctor{doctors.length !== 1 ? "s" : ""}</span>
+                        </div>
+                        <div className="space-y-2">
+                          {doctors.map((doc, i) => <EgyptianDoctorCard key={i} doctor={doc} />)}
+                        </div>
+                      </div>
+                    ))}
+                    {unknownDistanceDoctors.length > 0 && (
+                      <div>
+                        <div className="flex items-center gap-2 rounded-lg border border-[#ebebef] bg-[#fafafa] px-3 py-2 mb-2">
+                          <span className="text-base">📍</span>
+                          <span className="text-xs font-bold uppercase tracking-widest text-[#7b7b88]">Distance Unknown</span>
+                          <span className="ml-auto text-[11px] font-medium text-[#7b7b88]">{unknownDistanceDoctors.length} doctor{unknownDistanceDoctors.length !== 1 ? "s" : ""}</span>
+                        </div>
+                        <div className="space-y-2">
+                          {unknownDistanceDoctors.map((doc, i) => <EgyptianDoctorCard key={i} doctor={doc} />)}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             )}
@@ -858,6 +1012,62 @@ function DoctorCard({ doctor }: { doctor: DisplayDoctor }) {
           {doctor.reference ? (
             <p className="mt-1 text-[11px] text-[#b09adf]">{doctor.reference}</p>
           ) : null}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Dedicated Egyptian Doctor Card with distance badge ─────────────────────────
+type EgyptianDoctorDisplay = {
+  name: string;
+  specialty: string;
+  address: string;
+  phone: string | null;
+  mapsUrl: string | null;
+  rating: number;
+  reviewCount: number;
+  distance: number | null;
+  similarity: number;
+};
+
+function EgyptianDoctorCard({ doctor }: { doctor: EgyptianDoctorDisplay }) {
+  const ring = getRing(doctor.distance);
+  return (
+    <div className="rounded-xl border border-[#ebebef] bg-[#fafafa] p-4 transition hover:border-[#d9c5ff]">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex-1 min-w-0">
+          <p className="font-semibold text-[#111] leading-tight">{doctor.name}</p>
+          {doctor.specialty && (
+            <p className="text-sm text-[#6f4ef2] mt-0.5">{doctor.specialty}</p>
+          )}
+          <p className="mt-1 text-xs text-[#6b6b76]">{doctor.address}</p>
+          {doctor.phone ? <p className="mt-0.5 text-xs text-[#6b6b76]">{doctor.phone}</p> : null}
+          <div className="mt-1.5 flex flex-wrap items-center gap-2">
+            {doctor.rating > 0 ? (
+              <span className="text-xs text-[#6b6b76]">⭐ {doctor.rating.toFixed(1)} ({doctor.reviewCount} reviews)</span>
+            ) : null}
+            {doctor.distance !== null && (
+              <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${ring?.bg} ${ring?.color}`}>
+                📍 {formatDistance(doctor.distance)}
+              </span>
+            )}
+          </div>
+          {doctor.mapsUrl ? (
+            <a
+              href={doctor.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-block text-xs font-medium text-[#6f4ef2] hover:underline"
+            >
+              View on Maps →
+            </a>
+          ) : null}
+        </div>
+        <div className="shrink-0 text-right">
+          <span className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-xs font-medium text-emerald-700">
+            🇪🇬 Egyptian
+          </span>
         </div>
       </div>
     </div>

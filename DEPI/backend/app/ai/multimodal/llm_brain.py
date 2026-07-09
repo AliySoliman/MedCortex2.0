@@ -41,7 +41,7 @@ class GroqOrchestratorBrain(BaseOrchestratorBrain):
     Provider and model are constructor arguments so any future model of any
     kind can be wired in without touching this class:
 
-        brain = GroqOrchestratorBrain(provider_name="gemini", model_name="gemini-2.5-flash")
+        brain = GroqOrchestratorBrain(provider_name="gemini", model_name="gemini-3.1-flash-lite")
     """
 
     def __init__(

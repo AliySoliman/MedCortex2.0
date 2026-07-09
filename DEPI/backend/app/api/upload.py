@@ -4,7 +4,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 from typing import Optional, Dict, Any
-from fastapi import APIRouter, UploadFile, File, HTTPException, status, Depends
+from fastapi import APIRouter, UploadFile, File, Form, HTTPException, status, Depends
 from sqlalchemy.orm import Session
 import uuid
 
@@ -25,7 +25,7 @@ multimodal_graph = get_multimodal_graph()
 @router.post("", summary="Upload a medical document or image for unified processing")
 async def process_upload(
     file: UploadFile = File(...),
-    upload_type: str = "document",
+    upload_type: str = Form("document"),
     db: Session = Depends(get_db),
     current_user: Optional[User] = Depends(get_current_user_optional),
 ) -> Dict[str, Any]:
@@ -67,9 +67,11 @@ async def process_upload(
         }
 
     except Exception as e:
+        import traceback
+        tb = traceback.format_exc()
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Upload processing failed: {str(e)}"
+            detail=f"Upload processing failed: {type(e).__name__}: {str(e)}"
         )
 
 # Future endpoints

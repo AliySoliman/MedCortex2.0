@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import List, Dict, Any, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from app.ai.multimodal.enums import (
     ModalityType,
     DocumentType,
@@ -98,6 +98,15 @@ class PatientInformation(BaseModel):
     dob: Optional[str] = None
     gender: Optional[str] = None
 
+    @field_validator("age", mode="before")
+    @classmethod
+    def coerce_age_to_str(cls, v: Any) -> Optional[str]:
+        """LLMs sometimes return age as an integer (e.g. 73).
+        Coerce to string so the field contract is always satisfied."""
+        if v is None:
+            return None
+        return str(v)
+
 class DocumentInformation(BaseModel):
     document_id: Optional[str] = None
     title: Optional[str] = None
@@ -120,6 +129,7 @@ class UnifiedMedicalContext(BaseModel):
     upload_id: str
     filename: str
     mime_type: str
+    upload_type: str = "document"
     
     # Information Blocks
     patient_information: PatientInformation = Field(default_factory=PatientInformation)

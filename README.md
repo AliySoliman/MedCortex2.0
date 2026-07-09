@@ -233,7 +233,7 @@ backend/
 #### AI Providers
 
 - **GroqProvider**: Wraps LangChain's ChatGroq for Llama 3.3 70B, Llama 3.1 70B, and other Groq models
-- **GeminiProvider**: Wraps Google Gen AI SDK for Gemini 3.5 Flash and 2.5 Flash (vision)
+- **GeminiProvider**: Wraps Google Gen AI SDK for Gemini 3.5 Flash and 3.1 Flash-Lite (vision)
 - **ModelRegistry**: Central registry for all available AI models
 
 #### Vision Pipeline
@@ -267,7 +267,7 @@ Key settings in `app/config/settings.py`:
 # AI Models
 MODEL_CHAT = "llama-3.3-70b-versatile"
 MODEL_VISION = "gemini-3.5-flash"
-MODEL_VISION_FALLBACK = "gemini-2.5-flash"
+MODEL_VISION_FALLBACK = "gemini-3.1-flash-lite"
 
 # Vision-specific settings
 AI_MAX_TOKENS_VISION = 16384
@@ -495,7 +495,7 @@ Run the notebooks in order:
 | **Frontend Framework** | Next.js 14 (App Router) |
 | **Language** | Frontend: TypeScript 5.0+, Backend: Python 3.10+ |
 | **LLM (Chat)** | Llama 3.3 70B via Groq API |
-| **LLM (Vision)** | Gemini 3.5 Flash, Gemini 2.5 Flash via Google Gen AI |
+| **LLM (Vision)** | Gemini 3.5 Flash, Gemini 3.1 Flash-Lite via Google Gen AI |
 | **Speech-to-Text** | Whisper Large V3 Turbo via Groq API |
 | **Embeddings** | BAAI/bge-large-en-v1.5 (1024d) |
 | **Vector DB** | Pinecone (Serverless, AWS us-east-1) |

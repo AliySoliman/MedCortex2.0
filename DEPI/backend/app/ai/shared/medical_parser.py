@@ -97,7 +97,7 @@ class SharedMedicalParser(BaseMedicalParser):
             
             # Populate unified context IN PLACE
             patient = parsed_data.get("patient", {}) or {}
-            provider = parsed_data.get("doctor", {}) or {}
+            doctor = parsed_data.get("doctor", {}) or {}
             medications = _coerce_list_of_dicts(parsed_data.get("medications", []))
             diagnoses = _coerce_list_of_strings(parsed_data.get("diagnoses", []))
             lab_values = _coerce_list_of_dicts(parsed_data.get("lab_values", []))
@@ -106,7 +106,7 @@ class SharedMedicalParser(BaseMedicalParser):
 
             context.unified_context.structured_entities = {
                 "patient": patient,
-                "doctor": provider,
+                "doctor": doctor,
                 "medications": medications,
                 "diagnoses": diagnoses,
                 "lab_values": lab_values,
@@ -119,12 +119,12 @@ class SharedMedicalParser(BaseMedicalParser):
             context.unified_context.document_information.title = (
                 parsed_data.get("document_title")
                 or parsed_data.get("report_type")
-                or provider.get("name")
+                or doctor.get("name")
             )
             context.unified_context.document_information.date = parsed_data.get("test_date")
-            context.unified_context.provider_information.name = provider.get("name")
-            context.unified_context.provider_information.specialty = provider.get("specialty")
-            context.unified_context.provider_information.organization = provider.get("organization")
+            context.unified_context.provider_information.name = doctor.get("name")
+            context.unified_context.provider_information.specialty = doctor.get("specialty")
+            context.unified_context.provider_information.organization = doctor.get("organization")
 
             context.unified_context.medications = [_build_medication(item) for item in medications]
             context.unified_context.diagnoses = [_build_diagnosis(item) for item in diagnoses]
@@ -209,13 +209,24 @@ def _build_lab_value(payload: Dict[str, Any]) -> LabValue:
 
 
 def _parse_json_response(response_str: str) -> Dict[str, Any]:
-    if "```json" in response_str:
-        json_str = response_str.split("```json", 1)[1].split("```", 1)[0].strip()
-    elif "```" in response_str:
-        json_str = response_str.split("```", 1)[1].strip()
-    else:
-        json_str = response_str.strip()
-    return json.loads(json_str)
+    """Parse LLM JSON response, stripping markdown fences if present."""
+    if not response_str or not response_str.strip():
+        return {}
+    text = response_str.strip()
+    if "```json" in text:
+        text = text.split("```json", 1)[1].split("```", 1)[0].strip()
+    elif "```" in text:
+        text = text.split("```", 1)[1].split("```", 1)[0].strip()
+    # Isolate the outermost JSON object in case there is surrounding prose
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        text = text[start : end + 1]
+    try:
+        result = json.loads(text)
+        return result if isinstance(result, dict) else {}
+    except json.JSONDecodeError:
+        return {}
 
 
 def _medical_extraction_schema() -> Dict[str, Any]:
@@ -226,7 +237,7 @@ def _medical_extraction_schema() -> Dict[str, Any]:
                 "type": "object",
                 "properties": {
                     "name": {"type": "string"},
-                    "age": {"type": "string"},
+                    "age": {"anyOf": [{"type": "string"}, {"type": "number"}]},
                     "gender": {"type": "string"},
                     "patient_id": {"type": "string"},
                     "dob": {"type": "string"},

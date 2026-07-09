@@ -98,7 +98,7 @@ class MedicalImageAnalyzer:
                         }
                     ],
                     temperature=0.2,
-                    max_tokens=800,
+                    max_tokens=1400,
                 )
                 return completion.choices[0].message.content, model_name
             except Exception as e:

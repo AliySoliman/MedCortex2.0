@@ -77,10 +77,14 @@ export async function uploadFile(file: File, uploadType: string = "document"): P
   formData.append("file", file);
   formData.append("upload_type", uploadType);
 
+  // Vision pipeline can take up to 90 s (AI_MAX_TIMEOUT_VISION on the backend).
+  // The global Axios timeout of 30 s is too short — override it for this call only
+  // so the global timeout for chat and other fast endpoints is unaffected.
   const response = await api.post("/upload", formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
+    timeout: 120_000, // 2 minutes — comfortably above the 90 s backend ceiling
   });
 
   return response.data;

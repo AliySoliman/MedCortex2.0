@@ -67,6 +67,60 @@ def _build_sources(source_items: list[dict[str, str]]) -> list[Source]:
     return [Source(book=item.get("book", ""), section=item.get("section", "")) for item in source_items]
 
 
+def _is_medical_image_context(unified_context: dict) -> bool:
+    structured = unified_context.get("structured_entities") or {}
+    metadata = unified_context.get("processing_metadata") or {}
+    return bool(
+        unified_context.get("upload_type") == "medical_image"
+        or structured.get("analysis_type") == "medical_image"
+        or (
+            unified_context.get("vision_output")
+            and str(metadata.get("model_name") or "").startswith("meta-llama/llama-4")
+        )
+    )
+
+
+def _extract_image_conditions(answer: str) -> list[str]:
+    conditions: list[str] = []
+    patterns = [
+        r"\*\*([^*\n]+)\*\*\s+—\s+Probability",
+        r"^\s*\d+\.\s+\*\*([^*\n]+)\*\*",
+    ]
+    for pattern in patterns:
+        for match in re.finditer(pattern, answer, flags=re.MULTILINE):
+            condition = match.group(1).strip()
+            if condition and condition not in conditions:
+                conditions.append(condition)
+    return conditions[:4]
+
+
+def _build_medical_image_response(unified_context: dict) -> tuple[str, list[str], list[str], list[Source]]:
+    answer = str(unified_context.get("vision_output") or "").strip()
+    if not answer:
+        answer = (
+            "The medical image analyzer did not return a visual impression. "
+            "Please try uploading the image again or seek direct clinical review."
+        )
+
+    metadata = unified_context.get("processing_metadata") or {}
+    model_name = str(metadata.get("model_name") or "unknown model").strip()
+    provider = str(metadata.get("provider") or "visual analyzer").strip()
+
+    suspected_conditions = _extract_image_conditions(answer)
+    symptoms = [
+        item
+        for item in ("redness", "swelling", "pain", "rash", "wound", "burn", "skin change")
+        if item in answer.lower()
+    ]
+    sources = [
+        Source(
+            book="Visual analysis only",
+            section=f"provider: {provider} — model used: {model_name}",
+        )
+    ]
+    return answer, suspected_conditions, symptoms, sources
+
+
 def _build_recommendations(payload: dict[str, object]) -> LifestyleRecommendations:
     foods_to_eat: list[str] = []
     foods_to_avoid: list[str] = []
@@ -517,10 +571,15 @@ async def chat(
 
         # ── Step 1: Prefer uploaded-document analysis when available ──
         if unified_context:
-            final_answer, suspected_conditions, symptoms, sources = _build_document_response(
-                unified_context=unified_context,
-                user_message=request.message,
-            )
+            if _is_medical_image_context(unified_context):
+                final_answer, suspected_conditions, symptoms, sources = _build_medical_image_response(
+                    unified_context=unified_context,
+                )
+            else:
+                final_answer, suspected_conditions, symptoms, sources = _build_document_response(
+                    unified_context=unified_context,
+                    user_message=request.message,
+                )
             rag_result = {
                 "answer": final_answer,
                 "suspected_conditions": suspected_conditions,

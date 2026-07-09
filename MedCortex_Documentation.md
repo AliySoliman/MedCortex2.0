@@ -41,7 +41,7 @@ The project started as a team effort — one contributor (frontend + backend inf
 | Orchestration | LangChain LCEL → migrating to LangGraph |
 | Vector store | Pinecone serverless (AWS us-east-1) |
 | Primary LLM | Llama 3.3 70B via Groq |
-| Vision LLM | Gemini 3.5 Flash (fallback Gemini 2.5 Flash / Pro) |
+| Vision LLM | Gemini 3.5 Flash (fallback Gemini 3.1 Flash-Lite) |
 | Embeddings | BAAI/bge-large-en-v1.5 |
 | Auth | JWT + Google OAuth |
 
@@ -132,7 +132,7 @@ flowchart TB
 
     subgraph External["External Services"]
         GROQ[(Groq\nLlama 3.3 70B / 3.1 8B / Whisper)]
-        GEMINI[(Gemini\n3.5 Flash / 2.5 Flash-Pro)]
+        GEMINI[(Gemini\n3.5 Flash / 3.1 Flash-Lite)]
         PINECONE[(Pinecone\nmedical-assistant index)]
         NPPES[(NPPES NPI Registry)]
         GPLACES[(Google Places)]
@@ -413,8 +413,8 @@ This is the fully-owned, fully-documented subsystem for this hand-off. It is the
 | Role | Model | Provider | Notes |
 |---|---|---|---|
 | Primary vision-language model | **Gemini 3.5 Flash** (`gemini-3.5-flash`) | Google Gemini | `settings.MODEL_VISION`. Ingests images **and PDFs natively** — no separate OCR step needed for the primary path. |
-| Fallback vision-language model | **Gemini 2.5 Flash** (`gemini-2.5-flash`) | Google Gemini | `settings.MODEL_VISION_FALLBACK`. Triggered automatically on 429/5xx, rate limit, quota, timeout, "overloaded", or model-decommissioned errors from the primary. |
-| Document/structured-extraction model | **Gemini 2.5 Flash** (`settings.MODEL_DOCUMENT`), fallback **Groq Llama 3.3 70B** | Gemini → Groq | Used by `SharedMedicalParser` to turn the vision model's free-text clinical narrative into structured JSON (patient, medications, diagnoses, lab values, notes, clinical findings, recommendations). |
+| Fallback vision-language model | **Gemini 3.1 Flash-Lite** (`gemini-3.1-flash-lite`) | Google Gemini | `settings.MODEL_VISION_FALLBACK`. Triggered automatically on 429/5xx, rate limit, quota, timeout, "overloaded", or model-decommissioned errors from the primary. |
+| Document/structured-extraction model | **Gemini 3.1 Flash-Lite** (`settings.MODEL_DOCUMENT`), fallback **Groq Llama 3.3 70B** | Gemini → Groq | Used by `SharedMedicalParser` to turn the vision model's free-text clinical narrative into structured JSON (patient, medications, diagnoses, lab values, notes, clinical findings, recommendations). |
 | Registry-listed alternative | `gemini-2.5-pro` | Gemini | Registered in `ModelRegistry` as a general-purpose Gemini vision option; not currently wired as the active default or fallback. |
 | Groq vision fallback (registered, not wired) | `llama-4-scout` | Groq | Present in `ModelRegistry`/`ModelRouter` as a theoretical Groq-side vision fallback; the actual `VisionProvider` fallback chain only uses Gemini↔Gemini today. |
 
@@ -434,17 +434,17 @@ Every document that reaches `VisionService.process()` goes through **two separat
 sequenceDiagram
     participant U as Upload
     participant VP as VisionProvider
-    participant Gemini as Gemini (3.5 Flash → 2.5 Flash fallback)
+    participant Gemini as Gemini (3.5 Flash → 3.1 Flash-Lite fallback)
     participant SMP as SharedMedicalParser
     participant Gemini2 as Gemini/Groq (structured extraction)
     participant Ctx as UnifiedMedicalContext
 
     U->>VP: analyze_image(image_bytes, mime_type, upload_id)
-    VP->>VP: base64-encode, build messages\n(system: doctor-voice instruction,\nuser: VISION_ANALYSIS_PROMPT + image_url data URI)
-    VP->>Gemini: generate(messages, thinkingConfig={thinkingBudget:-1})
+        VP->>VP: build Gemini Content\n(system: doctor-voice instruction,\nuser: VISION_ANALYSIS_PROMPT + raw file bytes)
+    VP->>Gemini: generate_content(contents, thinking_config={thinking_budget:0})
     alt primary model fails (429/5xx/timeout/decommissioned/etc.)
         VP->>VP: switch provider/model to fallback
-        VP->>Gemini: retry with gemini-2.5-flash
+        VP->>Gemini: retry with gemini-3.1-flash-lite
     end
     Gemini-->>VP: raw_text (free-form doctor-voice Markdown report)
     VP-->>Ctx: unified_context.vision_output = raw_text\nvision_confidence = 0.85 (fixed estimate)
@@ -482,7 +482,7 @@ This is a deliberately engineered prompt, not a generic "describe this image" ca
 | Oversized images | `DefaultPreprocessor` (`app/ai/multimodal/preprocessing.py`) downsizes any image over 30M pixels or 6000px on the long edge before it reaches the vision model, preserving format (JPEG/PNG/WEBP) and handling RGBA→RGB flattening for JPEG output. |
 | Transient provider failure | `tenacity`-based retry: 3 attempts, exponential backoff (2–10s) around every `generate()` call. |
 | Hard timeout | `min(AI_TIMEOUT_VISION, AI_MAX_TIMEOUT_VISION)` — configurable soft timeout capped by an absolute ceiling (default 45s soft / 90s hard). |
-| Model-level failure (429/5xx/quota/decommissioned/etc.) | Automatic, one-time provider/model swap to the fallback (`gemini-2.5-flash`), then retried with the same retry policy. |
+| Model-level failure (429/5xx/quota/decommissioned/etc.) | Automatic fallback through the configured Gemini fallback chain, starting with `gemini-3.1-flash-lite`, then retried with the same retry policy. |
 | Structured-parse failure | Non-fatal — raw vision narrative is preserved; `parser_confidence` set to 0 and a warning logged instead of raising. |
 | Confidence reporting | Fixed heuristic estimates today (`vision_confidence = 0.85`, `parser_confidence = 0.95` on success) rather than a model-reported score — flagged here for anyone later wiring in real confidence signals. |
 
@@ -581,10 +581,10 @@ Each of the following is a placeholder. **Please keep the same sub-heading struc
 | Upload orchestration brain | `llama-3.3-70b-versatile` | Groq |
 | Reasoning (registered, not actively routed) | `qwen-3.6-27b` | Groq |
 | Vision (primary) | `gemini-3.5-flash` | Gemini |
-| Vision (fallback) | `gemini-2.5-flash` | Gemini |
+| Vision (fallback) | `gemini-3.1-flash-lite` | Gemini |
 | Vision (registered alt.) | `gemini-2.5-pro` | Gemini |
 | Vision (registered, unused Groq fallback) | `llama-4-scout` | Groq |
-| Document/structured parsing | `gemini-2.5-flash` → `llama-3.3-70b-versatile` fallback | Gemini → Groq |
+| Document/structured parsing | `gemini-3.1-flash-lite` → `llama-3.3-70b-versatile` fallback | Gemini → Groq |
 | Query rewrite (registered, not actively routed) | `llama-3.1-8b` | Groq |
 | Drug / Nutrition / Rehab branches | `llama-3.1-8b-instant` | Groq |
 | Location extraction (Egyptian doctor search) | `llama-3.1-8b-instant` | Groq |

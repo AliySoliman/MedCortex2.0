@@ -11,6 +11,9 @@ interface Props {
 }
 
 function getDocumentLabel(context: any) {
+  if (context?.upload_type === "medical_image" || context?.structured_entities?.analysis_type === "medical_image") {
+    return "Medical image";
+  }
   const classification = context?.classification || context?.document_type || context?.modality;
   if (typeof classification === "string" && classification.trim()) {
     return classification;
@@ -23,7 +26,7 @@ function getDocumentTitle(context: any) {
   const title = context?.document_information?.title;
   if (typeof title === "string" && title.trim()) return title;
   if (typeof filename === "string" && filename.trim()) return filename;
-  return "Uploaded document";
+  return context?.upload_type === "medical_image" ? "Uploaded medical image" : "Uploaded document";
 }
 
 function buildDocumentSummary(context: any) {
@@ -46,6 +49,15 @@ function buildDocumentSummary(context: any) {
 }
 
 function buildSuggestedPrompts(context: any) {
+  if (context?.upload_type === "medical_image" || context?.structured_entities?.analysis_type === "medical_image") {
+    return [
+      "Explain the visual findings.",
+      "What are the warning signs?",
+      "What should I do next?",
+      "When should I seek urgent care?",
+    ];
+  }
+
   const classification = String(context?.classification || context?.document_type || "").toLowerCase();
   const prompts: string[] = [
     "Summarize this document for me.",
@@ -81,7 +93,11 @@ export default function InputBar({ onSend, disabled }: Props) {
 
   const handleSend = () => {
     if ((!text.trim() && !uploadedContext) || disabled) return;
-    const fallbackPrompt = "Summarize this uploaded medical document and highlight anything important.";
+    const isMedicalImage = uploadedContext?.upload_type === "medical_image"
+      || uploadedContext?.structured_entities?.analysis_type === "medical_image";
+    const fallbackPrompt = isMedicalImage
+      ? "Analyze this uploaded medical image and explain the most likely condition, alternatives, visual observations, care tips, and next step."
+      : "Summarize this uploaded medical document and highlight anything important.";
     onSend(text.trim() || fallbackPrompt, uploadedContext);
     setText("");
     setVoiceError(null);
@@ -125,7 +141,7 @@ export default function InputBar({ onSend, disabled }: Props) {
           <div className="flex items-start justify-between gap-4">
             <div className="min-w-0">
               <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#7b7b88]">
-                Document ready
+                {uploadedContext?.upload_type === "medical_image" ? "Medical image ready" : "Document ready"}
               </p>
               <p className="mt-1 truncate text-sm font-semibold text-[#111]">
                 {getDocumentTitle(uploadedContext)}
@@ -161,7 +177,7 @@ export default function InputBar({ onSend, disabled }: Props) {
           </div>
 
           <p className="mt-2 text-xs text-[#8f8f95]">
-            Ask a follow-up while this document stays attached, or clear it to start a new topic.
+            Ask a follow-up while this upload stays attached, or clear it to start a new topic.
           </p>
         </div>
       )}
@@ -184,7 +200,7 @@ export default function InputBar({ onSend, disabled }: Props) {
           onKeyDown={handleKeyDown}
           onInput={handleInput}
           disabled={disabled}
-          placeholder={uploadedContext ? "Ask about this document…" : "Ask me anything…"}
+          placeholder={uploadedContext ? "Ask about this upload…" : "Ask me anything…"}
           rows={1}
           className="max-h-36 min-h-[44px] flex-1 resize-none bg-transparent text-sm leading-relaxed text-[#111] outline-none placeholder:text-[#a8a8b0] disabled:opacity-50"
         />

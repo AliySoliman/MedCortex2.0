@@ -1,5 +1,5 @@
 import asyncio
-from unittest.mock import AsyncMock, MagicMock, patch
+from unittest.mock import ANY, AsyncMock, MagicMock, patch
 
 from PIL import Image
 from io import BytesIO
@@ -11,7 +11,7 @@ from app.ai.multimodal.schemas import (
 )
 from app.ai.multimodal.preprocessing import DefaultPreprocessor
 from app.ai.shared.medical_parser import SharedMedicalParser
-from app.ai.providers.gemini_provider import GeminiProvider
+from app.ai.providers.gemini_provider import GeminiProvider, _build_contents
 from app.ai.providers.provider_factory import ProviderFactory
 from app.ai.clinical.lab_interpreter import StandardLabInterpreter, resolve_reference_range
 from app.ai.vision.provider import VisionProvider
@@ -124,7 +124,7 @@ def test_shared_medical_parser_structures_unstructured_text():
 def test_shared_medical_parser_defaults_to_gemini():
     parser = SharedMedicalParser()
     assert parser.provider_name == "gemini"
-    assert parser.model_name == "gemini-2.5-flash"
+    assert parser.model_name == "gemini-3.1-flash-lite"
 
 
 def test_provider_factory_registers_gemini():
@@ -132,54 +132,83 @@ def test_provider_factory_registers_gemini():
     assert isinstance(provider, GeminiProvider)
 
 
-def test_vision_provider_uses_provider_factory_alias():
-    dummy_provider = MagicMock()
-    dummy_provider.generate.return_value = "Vision read: prescription image with clear text"
+def test_gemini_provider_builds_explicit_multimodal_content():
+    contents = _build_contents(
+        [
+            {"role": "system", "content": "system prompt"},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": "read this"},
+                    {
+                        "type": "image_url",
+                        "image_url": {"url": "data:image/png;base64,aW1hZ2UtYnl0ZXM="},
+                    },
+                ],
+            },
+        ]
+    )
 
-    with patch("app.ai.vision.provider.ProviderFactory.get_provider", return_value=dummy_provider):
+    assert len(contents) == 1
+    assert contents[0].role == "user"
+    assert len(contents[0].parts) == 2
+    assert contents[0].parts[0].text == "read this"
+    assert contents[0].parts[1].inline_data.mime_type == "image/png"
+    assert contents[0].parts[1].inline_data.data == b"image-bytes"
+
+
+def test_vision_provider_uses_gemini_vision_provider():
+    dummy_provider = MagicMock()
+    dummy_provider.analyze.return_value = "Vision read: prescription image with clear text"
+
+    with patch("app.ai.vision.provider.GeminiVisionProvider", return_value=dummy_provider):
         provider = VisionProvider(provider_name="groq", model_name="test-vision-model")
         result = asyncio.run(provider.analyze_image(b"image-bytes", "image/png", "upload-123"))
 
     assert result["raw_text"] == "Vision read: prescription image with clear text"
     assert result["model_used"] == "test-vision-model"
+    dummy_provider.analyze.assert_called_with(
+        image_bytes=b"image-bytes",
+        mime_type="image/png",
+        system_prompt=ANY,
+        user_prompt=ANY,
+    )
 
 
 def test_vision_provider_falls_back_when_model_is_decommissioned():
     dummy_provider = MagicMock()
 
-    def generate(messages, **kwargs):
-        model = kwargs.get("model", "")
-        if model == "gemini-2.5-pro":
+    def analyze(**kwargs):
+        if dummy_provider.analyze.call_count == 1:
             raise RuntimeError("model_decommissioned")
         return "Fallback vision summary"
 
-    dummy_provider.generate.side_effect = generate
+    dummy_provider.analyze.side_effect = analyze
 
-    with patch("app.ai.vision.provider.ProviderFactory.get_provider", return_value=dummy_provider):
+    with patch("app.ai.vision.provider.GeminiVisionProvider", return_value=dummy_provider):
         provider = VisionProvider(provider_name="gemini", model_name="gemini-2.5-pro")
         result = asyncio.run(provider.analyze_image(b"image-bytes", "image/png", "upload-456"))
 
     assert result["raw_text"] == "Fallback vision summary"
-    assert result["model_used"] == "gemini-2.5-flash"
+    assert result["model_used"] == "gemini-3.1-flash-lite"
 
 
 def test_vision_provider_falls_back_when_model_is_not_found():
     dummy_provider = MagicMock()
 
-    def generate(messages, **kwargs):
-        model = kwargs.get("model", "")
-        if model == "gemini-2.5-pro":
+    def analyze(**kwargs):
+        if dummy_provider.analyze.call_count == 1:
             raise RuntimeError("model_not_found")
         return "Fallback vision summary"
 
-    dummy_provider.generate.side_effect = generate
+    dummy_provider.analyze.side_effect = analyze
 
-    with patch("app.ai.vision.provider.ProviderFactory.get_provider", return_value=dummy_provider):
+    with patch("app.ai.vision.provider.GeminiVisionProvider", return_value=dummy_provider):
         provider = VisionProvider(provider_name="gemini", model_name="gemini-2.5-pro")
         result = asyncio.run(provider.analyze_image(b"image-bytes", "image/png", "upload-789"))
 
     assert result["raw_text"] == "Fallback vision summary"
-    assert result["model_used"] == "gemini-2.5-flash"
+    assert result["model_used"] == "gemini-3.1-flash-lite"
 
 
 def test_preprocessor_resizes_oversized_images():
