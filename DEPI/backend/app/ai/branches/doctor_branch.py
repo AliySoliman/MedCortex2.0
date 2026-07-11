@@ -262,6 +262,31 @@ def build_geo_filter(ref_lat, ref_lng, polygon, max_ring_km):
     }
 
 
+# ── Specialty extraction ───────────────────────────────
+SPECIALTY_EXTRACTION_SYSTEM_PROMPT = """
+You are an expert medical classification engine. 
+Your only job is to extract the main medical specialty or department from the user's query.
+Convert it into a single english standard medical term or keywords (e.g., "dentist", "dermatologist", "pediatrician", "orthopedics", "ophthalmologist", "cardiologist", "gynecologist").
+Rules: Return ONLY valid JSON. If no specific medical specialty is found, return null.
+Output format: {"specialty": "<extracted_specialty>"} or {"specialty": null}
+"""
+
+def extract_specialty(query: str) -> Optional[str]:
+    """يستخرج التخصص الطبي من سؤال المستخدم باستخدام الـ LLM"""
+    try:
+        llm = _get_llm_extract()
+        result = llm.invoke(
+            f"{SPECIALTY_EXTRACTION_SYSTEM_PROMPT}\n\nUser message: {query}\n"
+        )
+        raw_text = result.content if hasattr(result, "content") else str(result)
+        raw_text = raw_text.strip().replace("```json", "").replace("```", "").strip()
+        parsed = json.loads(raw_text)
+        spec = parsed.get("specialty")
+        return spec.lower().strip() if spec else None
+    except Exception:
+        return None
+
+
 # ── Location extraction ───────────────────────────────
 LOCATION_EXTRACTION_SYSTEM_PROMPT =  """
 You are a strict text-splitting location extraction engine.
@@ -355,6 +380,9 @@ def search_egyptian_doctors(query: str, location: str = None, specialty: str = N
     raw_place, geo_lat, geo_lng, display_name, boundary_polygon = \
         extract_location_from_query(location or search_query)
 
+    # Always extract the target specialty via the LLM (ignores whether `specialty` was passed in)
+    target_specialty = extract_specialty(query)
+
     search_skipped   = (boundary_polygon == SUB_AREA_NOT_FOUND)
     doctors          = []
     location_detected = False
@@ -396,6 +424,16 @@ def search_egyptian_doctors(query: str, location: str = None, specialty: str = N
     seen_keys = set()
     for match in results.matches:
         meta     = match.metadata
+
+        # Strict specialty filter: skip any doctor whose title/categories/subTitle
+        # don't mention the LLM-extracted specialty, so it never reaches ranking.
+        if target_specialty:
+            title      = (meta.get("title") or "").lower()
+            categories = (meta.get("categories") or "").lower()
+            sub_title  = (meta.get("subTitle") or "").lower()
+            if (target_specialty not in title) and (target_specialty not in categories) and (target_specialty not in sub_title):
+                continue
+
         dedup_key = meta.get("url") or (meta.get("title"), meta.get("address"))
         if dedup_key in seen_keys:
             continue
